@@ -9,7 +9,24 @@
   <div id="total_num">
   </div>
   <div id="blogger_area">
+<?
+	$query 		= "SELECT * FROM ".$_gl['blogger_info_table']."";
+	$result 	= mysqli_query($my_db, $query);
+	
+	$i = 0;
+	while ($b_data = mysqli_fetch_array($result))
+	{
+		$b_info[$i]['b_name']	= $b_data['blogger_name'];
+		$b_info[$i]['b_photo']	= $b_data['blogger_photo'];
+		$b_info[$i]['b_sstory']	= $b_data['blogger_short_story'];
+		$b_info[$i]['b_story']	= $b_data['blogger_story'];
+		$b_info[$i]['b_recommend']	= $b_data['recommend_cnt'];
+		$i++;
+	}
+	shuffle($b_info);
+?>
     <div>
+<?=$b_info[0]['b_name']?>
     </div>
   </div>
   </body>
