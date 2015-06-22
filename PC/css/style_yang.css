@@ -360,6 +360,56 @@ body{
 	padding-top:47px;
 }
 
+.popup_wrap .p_position.p_mid_comment{
+	background:url(../images/popup/bg_comment.png) no-repeat top left;
+	position:relative;
+	width:500px;
+	height:450px;
+}
+.popup_wrap .p_position.p_mid_comment .title{
+	padding-top:30px;
+}
+.popup_wrap .p_position.p_mid_comment .block_input {
+	padding-top:55px;
+}
+.popup_wrap .p_position.p_mid_comment .block_input .input_one {
+	width:100%;
+}
+.popup_wrap .p_position.p_mid_comment .block_input .input_one.textarea {
+	padding-top:7px;
+	padding-bottom:90px;
+}
+.popup_wrap .p_position.p_mid_comment .block_input .input_one.textarea textarea{
+	width:300px;
+	height:80px;
+	font-size:14px;
+	line-height:18px;
+	font-weight:bold;
+	background:none;
+	border:none;
+	padding:5px 3px;
+}
+.popup_wrap .p_position.p_mid_comment .block_input .input_one .label{
+	display:none;
+}
+.popup_wrap .p_position.p_mid_comment .block_input .input_one .input{
+	padding-left:125px;
+}
+.popup_wrap .p_position.p_mid_comment .block_input .input_one .input input{
+    border:none;
+	padding:5px 3px;
+	width:160px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	line-height:18px;
+	color:#000;
+	background:none;
+}
+
+
+
+
 .popup_wrap .p_position.p_mid .block_content .check_num .inner{
 	width:100%;
 }
