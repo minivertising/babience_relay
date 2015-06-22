@@ -20,24 +20,63 @@
 
 	<!--경품 목록 체크-->
 	<div class="popup_wrap">
-   	  <div class="p_mid_event p_position">
+   	  <div class="p_mid p_position">
             <div class="block_close clearfix">
                 <a href="#" class="btn_close"><img src="images/popup/btn_close.png" /></a>
             </div>
             <div class="block_content">
             	<div class="inner">
                 	<div class="title">
-       	    	    	경품목록체크
+       	    	    	<img src="images/popup/title_num_check.png" />
                     </div>
-                    <div class="movie">
-                    전화번호를 넣어 체크체크
+                    
+                    <div class="check_num">
+                    	<div class="inner clearfix">
+                        	<div class="in"><input type="tel"></div>
+                            <div class="in"><input type="tel"></div>
+                            <div class="in"><input type="tel"></div>
+              				<div class="btn"><a href="#"><img src="images/popup/btn_ok.png" /></a></div>
+                        </div>
                     </div>
-                    <div class="txt_notice">
-                    <img src="images/popup/txt_notice_movie.png" alt=""/>
+                    
+                    <!--선물리스트-->
+                    <div class="yes_gift">
+                    
+                        <div class="block_label">
+                        	선물이름
+                            선물번호
+                        </div>
+                        
+                        <div class="block_gift_num">
+                        	<div class="inner">
+                                <div class="txt">베비언스 쿠폰 3000원</div>
+                                <div class="txt">asdfwers123</div>
+                                <div class="btn"><a href="#"><img src="images/popup/btn_copy.png" /></a></div>
+                            </div>
+                        </div>
+                        
+                        
+                    	<div class="block_go_home">
+                            <div class="btn_block">
+                                <a href="#"><img src="images/popup/btn_go_home.png" alt=""/></a>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class="btn_block">
-                        <a href="#"><img src="images/popup/btn_end_view.png" alt=""/></a>
+                    <!--end:선물리스트-->
+                    
+                    <!--한번도 참여 안함 유저일 경우-->
+                    <div class="no_gift" style="display:none;">
+                        <div class="txt_notice">
+                        	<img src="images/popup/notice_num_check_no.png" alt=""/>
+                        </div>
+                        <div class="btn_block">
+                            <a href="#"><img src="images/popup/btn_go_story.png" alt=""/></a>
+                        </div>
                     </div>
+                    <!--end:한번도 참여 안함 유저일 경우-->
+                    
+                    
                 </div><!--inner-->
             </div>
         </div>
