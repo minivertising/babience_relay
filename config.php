@@ -4,11 +4,11 @@
 	//환경설정 파일
 	include_once "include/global.php"; 			//변수정보
 	include_once "include/function.php"; 		//함수정보
-	//include_once "include/dbi.php"; 			//DB 연결정보
+	include_once "include/dbi.php"; 			//DB 연결정보
 	include_once "include/page.class.php";		//페이징 처리 CLASS
 	include_once "include/phprandom.php";		//난수번호 생성 CLASS
 
-	//mysqli_query ($my_db,"set names utf8");
+	mysqli_query ($my_db,"set names utf8");
 
 	$mobile_agent = array("iPhone","iPod","iPad","Android","Blackberry","SymbianOS|SCH-M\d+","Opera Mini", "Windows ce", "Nokia", "sony" );
 	$check_mobile = "N";
@@ -41,6 +41,9 @@
 		$gubun = "PC";
 
 	if (!$_SESSION['ss_media'])
-		$_SESSION['ss_media'] = $media;
+	{
+		$media						= $_REQUEST['media'];
+		$_SESSION['ss_media']	= $media;
+	}
 
 ?>

@@ -1,6 +1,6 @@
 <?
 	// 유입매체 정보 입력
-	function VK_InsertTrackingInfo($media, $gubun)
+	function BR_InsertTrackingInfo($media, $gubun)
 	{
 		global $_gl;
 		global $my_db;
@@ -9,11 +9,88 @@
 		$result		= mysqli_query($my_db, $query);
 	}
 
-	// 난수 생성
-	function VK_SerialNumber()
+	function BR_winner_draw()
 	{
-		$randcode = md5( mktime() . $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT'] ); ;
-		return $randcode; // 난수 생성
+		global $_gl;
+		global $my_db;
+
+		$today_water	= 3;
+		$today_coffee	= 10;
+		/*$water_array = array("Y","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N");
+		$coffee_array = array("Y","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N","N");
+		
+		// 오늘의 경품별 당첨자 수 구하기
+		$query		= "SELECT mb_winner, count(mb_winner) cnt FROM ".$_gl['member_info_table']." WHERE mb_regdate like '%".date("Y-m-d")."%' GROUP BY mb_winner";
+		$result		= mysqli_query($my_db, $query);
+
+		while ($prize_data = mysqli_fetch_array($result))
+		{
+			$winner_data[$prize_data['mb_winner']]	= $prize_data['cnt'];
+		}
+		// 오늘의 경품별 당첨자 수 구하기 끝
+
+		if ($winner_data['WATER'] >= $today_water)
+		{
+			if ($winner_data['COFFEE'] >= $today_coffee)
+			{
+				$winner	= "CASH";
+			}else{
+				shuffle($coffee_array);
+				if ($coffee_array[0] == "Y")
+					$winner	= "COFFEE";
+				else
+					$winner	= "CASH";
+			}
+		}else{
+			shuffle($water_array);
+			if ($water_array[0] == "Y")
+			{
+				$winner	= "WATER";
+			}else{
+				if ($winner_data['COFFEE'] >= $today_coffee)
+				{
+					$winner	= "CASH";
+				}else{
+					shuffle($coffee_array);
+					if ($coffee_array[0] == "Y")
+						$winner	= "COFFEE";
+					else
+						$winner	= "CASH";
+				}
+			}
+		}*/
+		$water_array = array(450,1850,4550);
+		$coffee_array = array(530,1560,2050,2250,2550,3050,4050,5050,6050,7050);
+
+		// 오늘의 이벤트 참여자 수 구하기
+		$total_query		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_regdate like '%".date("Y-m-d")."%'";
+		$total_result		= mysqli_query($my_db, $total_query);
+		$total_num		= mysqli_num_rows($total_result);
+		
+		foreach ($coffee_array as $key => $val)
+		{
+			if ($total_num == $val)
+			{
+				$winner = "COFFEE";
+				break;
+			}
+			$winner = "CASH";
+		}
+
+		if ($winner == "CASH")
+		{
+			foreach ($water_array as $key => $val)
+			{
+				if ($total_num == $val)
+				{
+					$winner = "WATER";
+					break;
+				}
+				$winner = "CASH";
+			}
+		}
+
+		return $winner;
 	}
 
 	// LMS 발송 
