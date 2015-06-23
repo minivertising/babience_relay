@@ -210,7 +210,7 @@ body{
 }
 .popup_wrap .p_position .block_content .inner,
 .popup_wrap .p_position.big.input .block_content .inner{
-	padding:10% 0 7%;
+	padding:12% 0 8%;
 	width:100%;
 }
 .popup_wrap .p_position.big .block_content .inner{
@@ -295,7 +295,7 @@ body{
 	width:75%;
 }
 .popup_wrap .p_position .block_content .inner .block_input .input_txt img{
-	width:85%;
+	width:95%;
 }
 .popup_wrap .p_position .block_content .inner .block_input .input_txt input,
 .popup_wrap .p_position .block_content .inner .block_input .input_txt select,
@@ -316,7 +316,7 @@ body{
 }
 
 .popup_wrap .p_position .block_content .inner .block_input .input_txt textarea{
-	height:80px;
+	height:60px;
 }
 .popup_wrap .p_position .block_content .inner .block_input .input_txt.name input{
 	width:91%;
