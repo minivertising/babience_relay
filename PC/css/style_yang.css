@@ -111,10 +111,17 @@ body{
 	width:100%;
 }
 
-
+.sec_navi{
+	position:fixed;
+	top:0;left:0;z-index:70;
+	width:100%;
+	background:#eee;
+}
 .navi{
-	position:fixed;height:50px;width:100%;top:0;left:0;z-index:70;
-	border-bottom:7px solid #ffe600;
+	width:950px;
+	margin:0 auto;
+	height:50px;
+	position:relative;
 	background:#fff;
 	padding-top:15px;
 }
