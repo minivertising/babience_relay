@@ -4,6 +4,7 @@
 	$_gl['share_info_table']			= "share_info";			//공유정보 테이블
 	$_gl['sms_info_table']				= "sms_info";			//공유정보 테이블
 	$_gl['blogger_info_table']			= "blogger_info";			//블로거정보 테이블
+	$_gl['serial_info_table']			= "serial_info_";			//블로거정보 테이블
 
 	//$_gl['youtube_url']				= "https://www.youtube.com/embed/h16U39DzIBc?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
 
