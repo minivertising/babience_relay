@@ -319,7 +319,7 @@ body{
 }
 .popup_wrap .p_position.p_mid.posting .block_content .btn_block {
 	width:600px;
-	padding-top:100px;
+	padding-top:90px;
 	padding-left:270px;
 }
 .popup_wrap .p_position.p_mid.posting .block_content .btn_block .cnt,
@@ -341,6 +341,7 @@ body{
 }
 .popup_wrap .p_position.p_mid.posting .block_content .txt_posting{
 	text-align:center;
+	padding-top:10px;
 }
 
 
