@@ -224,6 +224,7 @@ function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
 
     ImageTTFText($nImage, $objFont->size, $objFont->angle, $nX, $nY, $nFontColor, $objFont->font, $objFont->text);
 
+	chmod($nImage, 777);
     switch ($arrImgInfo[2])
     {
 		case 1:
@@ -236,12 +237,12 @@ function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
 			break;
 		case 3:
 			# PNG
-			ImagePNG($nImage,'./certi_images/simpletext.png');
+			ImagePNG($nImage,'./certi_images/'.$serial.'.jpg',100);
 			break;
 		default:
 			return FALSE;
     }
-	//imagedestroy($nImage);
+	imagedestroy($nImage);
     return TRUE;
 }
 

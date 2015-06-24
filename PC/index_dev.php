@@ -4,7 +4,6 @@
 	$comment_info = select_comment();
 	print_r($comment_info);
 
-
 ?>
   <div id="total_num">
 <?
