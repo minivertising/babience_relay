@@ -224,12 +224,13 @@ function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 
     ImageTTFText($nImage, $objFont->size, $objFont->angle, $nX, $nY, $nFontColor, $objFont->font, $objFont->text);
 
-$mydir = "testfolder"; 
- if(@mkdir($mydir, 0777)) { 
-    if(is_dir($mydir)) { 
-        @chmod($mydir, 0777); 
-    } 
- }
+	$mydir = "certi_images/".date("d"); 
+	 if(@mkdir($mydir, 0777)) { 
+		if(is_dir($mydir)) { 
+			@chmod($mydir, 0777); 
+		} 
+	 }
+
     switch ($arrImgInfo[2])
     {
 		case 1:
