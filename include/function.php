@@ -241,7 +241,7 @@ function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
 		default:
 			return FALSE;
     }
-	imagedestroy($nImage);
+	//imagedestroy($nImage);
     return TRUE;
 }
 
