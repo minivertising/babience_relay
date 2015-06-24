@@ -502,7 +502,7 @@ body{
 }
 .popup_wrap .p_position.p_mid .block_content .yes_gift .block_gift_num {
 	padding:10px 0;
-	overflow:scroll;
+	overflow:auto;
 	height:150px;
 }
 .popup_wrap .p_position.p_mid .block_content .yes_gift .block_gift_num .inner{

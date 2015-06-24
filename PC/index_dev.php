@@ -1,6 +1,9 @@
 <?
 	include_once   "./header.php";
 	
+	$comment_info = select_comment();
+	print_r($comment_info);
+
 ?>
   <div id="total_num">
 <?
@@ -8,22 +11,32 @@
 	$member_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
 	echo $member_cnt;
+
 ?>
   </div>
   <div id="blogger_area">
 <?
-	$query 		= "SELECT * FROM ".$_gl['blogger_info_table']."";
+	$query 		= "SELECT * FROM ".$_gl['blogger_info_table']." WHERE week_num=1";
 	$result 	= mysqli_query($my_db, $query);
 	
-	$i = 0;
+	$i = 1;
 	while ($b_data = mysqli_fetch_array($result))
 	{
 		$b_info[$i]['idx']					= $b_data['idx'];
+		$b_info[$i]['b_idx']				= $b_data['blogger_idx'];
 		$b_info[$i]['b_name']			= $b_data['blogger_name'];
 		$b_info[$i]['b_photo']			= $b_data['blogger_photo'];
 		$b_info[$i]['b_sstory']			= $b_data['blogger_short_story'];
 		$b_info[$i]['b_story']			= $b_data['blogger_story'];
 		$b_info[$i]['b_recommend']	= $b_data['recommend_cnt'];
+
+		$d_info[$i]['idx']					= $b_data['idx'];
+		$d_info[$i]['b_idx']				= $b_data['blogger_idx'];
+		$d_info[$i]['b_name']			= $b_data['blogger_name'];
+		$d_info[$i]['b_photo']			= $b_data['blogger_photo'];
+		$d_info[$i]['b_sstory']			= $b_data['blogger_short_story'];
+		$d_info[$i]['b_story']			= $b_data['blogger_story'];
+		$d_info[$i]['b_recommend']	= $b_data['recommend_cnt'];
 		$i++;
 	}
 	shuffle($b_info);
@@ -31,37 +44,37 @@
     <div>
 <?=$b_info[0]['b_name']?>
       <a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[0]['idx']?>');">상세보기</a>
+	  <a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[0]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[1]['b_name']?>
       <a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[1]['idx']?>');">상세보기</a>
+	  <a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[1]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[2]['b_name']?>
       <a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[2]['idx']?>');">상세보기</a>
+	  <a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[2]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[3]['b_name']?>
       <a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[3]['idx']?>');">상세보기</a>
+	  <a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[3]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[4]['b_name']?>
       <a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[4]['idx']?>');">상세보기</a>
+	  <a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[4]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[5]['b_name']?>
       <a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[5]['idx']?>');">상세보기</a>
+	  <a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[5]['b_recommend']?>의 맘
     </div>
   </div>
@@ -127,6 +140,39 @@ function auto_count()
 		}
 	});
 }
+var timerId = 0;
+function auto_comment(num)
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"		: "view_comment",
+			"num"		: num
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			var comment_txt	= response.split("||");
+			$("#comment_view").html(comment_txt[0]);
+			timerId = setInterval("comment_rolling("+comment_txt[1]+","+num+")",1500);
+		}
+	});
+
+}
+var rolling_num		= 1;
+function comment_rolling(cnt, num)
+{
+	//alert(cnt);
+	$("#ct_"+rolling_num).fadeOut("fast");
+	$("#cn_"+rolling_num).fadeOut("fast",function(){
+		if (rolling_num == cnt)
+		{
+			rolling_num	= 0;
+		}
+		rolling_num = rolling_num + 1;
+		$("#cn_"+rolling_num).fadeIn("fast");
+		$("#ct_"+rolling_num).fadeIn("fast");
+	});
+}
 
 function go_recom(num)
 {
@@ -134,6 +180,22 @@ function go_recom(num)
 	{
 		popup_desc('pop_event_input', num);
 	}
+}
+
+function go_detail(num)
+{
+	if (num == 1)
+		popup_desc('pop_detail_view1', 0);
+	else if (num == 2)
+		popup_desc('pop_detail_view2', 0);
+	else if (num == 3)
+		popup_desc('pop_detail_view3', 0);
+	else if (num == 4)
+		popup_desc('pop_detail_view4', 0);
+	else if (num == 5)
+		popup_desc('pop_detail_view5', 0);
+	else if (num == 6)
+		popup_desc('pop_detail_view6', 0);
 }
 
 function go_gift()
@@ -164,10 +226,42 @@ function popup_desc(param, num)
 				if (param == "pop_thanks_div")
 				{
 					$("#serial_number").html();
+				}else if (param == "pop_detail_view1"){
+					auto_comment('1');
+				}else if (param == "pop_detail_view2"){
+					auto_comment('2');
+				}else if (param == "pop_detail_view3"){
+					auto_comment('3');
+				}else if (param == "pop_detail_view4"){
+					auto_comment('4');
+				}else if (param == "pop_detail_view5"){
+					auto_comment('5');
+				}else if (param == "pop_detail_view6"){
+					auto_comment('6');
 				}
 			},
 			close: function() {
 				chk_ins = 0;
+				if (param == "pop_detail_view1"){
+					$("#comment_view").html("");
+					clearInterval(timerId);
+					rolling_num = 1;
+				}else if (param == "pop_detail_view2"){
+					$("#comment_view").html("");
+					clearInterval(timerId);
+				}else if (param == "pop_detail_view3"){
+					$("#comment_view").html("");
+					clearInterval(timerId);
+				}else if (param == "pop_detail_view4"){
+					$("#comment_view").html("");
+					clearInterval(timerId);
+				}else if (param == "pop_detail_view5"){
+					$("#comment_view").html("");
+					clearInterval(timerId);
+				}else if (param == "pop_detail_view6"){
+					$("#comment_view").html("");
+					clearInterval(timerId);
+				}
 				//chk_ins2 = 0;
 				//$("#mb_receive").val("");
 				//$("#mb_send").val("");
@@ -319,8 +413,65 @@ function search_gift()
 		},
 		url: "../main_exec.php",
 		success: function(response){
+			$(".no_gift").hide();
+			$(".yes_gift").show();
+
+			$(".block_gift_num").html(response);
+		}
+	});
+}
+
+function input_comment()
+{
+	var mb_nickname	= $("#mb_nickname").val();
+	var mb_comment	= $("#mb_comment").val();
+	var blogger_idx		= $("#blogger_idx").val();
+	if (mb_nickname== "")
+	{
+		alert('닉네임을 입력해 주세요.');
+
+		$("#mb_nickname").focus();
+		return false;
+	}
+
+	if (mb_comment == "")
+	{
+		alert('응원 댓글을 입력해 주세요.');
+
+		$("#mb_comment").focus();
+		return false;
+	}
+
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "insert_comment",
+			"mb_nickname"	: mb_nickname,
+			"mb_comment"		: mb_comment,
+			"blogger_idx"		: blogger_idx
+		},
+		url: "../main_exec.php",
+		success: function(response){
 			alert(response);
-			$("#search_result").html(response);
+			if (response == "Y")
+			{
+				if (blogger_idx == 1)
+				{
+					popup_desc("pop_detail_view1", 0);
+				}else if (blogger_idx == 2){
+					popup_desc("pop_detail_view2", 0);
+				}else if (blogger_idx == 3){
+					popup_desc("pop_detail_view3", 0);
+				}else if (blogger_idx == 4){
+					popup_desc("pop_detail_view4", 0);
+				}else if (blogger_idx == 5){
+					popup_desc("pop_detail_view5", 0);
+				}else if (blogger_idx == 6){
+					popup_desc("pop_detail_view6", 0);
+				}
+			}else{
+				alert("접속자가 많아 지연되고 있습니다. 다시 시도해 주세요.");
+			}
 		}
 	});
 

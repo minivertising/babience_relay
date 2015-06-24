@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="check_block">
-          <div class="check_one clearfix">
+          <div class="check_one first clearfix">
             <div class="in_check">
               <input type="checkbox" name="all_agree" id="all_agree" class="all_chk_cl">
             </div>
@@ -163,27 +163,592 @@
 </div>
 <!--------------------- 파워블로거 상세보기 팝업 --------------------->
 
-<!--------------------- 파워블로거 상세보기 팝업 --------------------->
-<div id="pop_search_gift" class="zoom-anim-dialog mfp-hide" style="background:white;width:600px;height:700px;margin-left:-300px;margin-top:-350px;position:absolute;top:50%;left:50%">
-  <div>
-    이름 : <input type="text" name="s_name" id="s_name"><br />
-	전화번호 : 
-	<select name="s_phone1" id="s_phone1">
-	  <option value="010">010</option>
-	  <option value="011">011</option>
-	  <option value="016">016</option>
-	  <option value="017">017</option>
-	  <option value="018">018</option>
-	  <option value="019">019</option>
-	</select> - 
-	<input type="text" name="s_phone2" id="s_phone2"> - 
-	<input type="text" name="s_phone3" id="s_phone3">
-	<a href="#" onclick="search_gift();">확인</a>
-  </div>
-  <div id="search_result">
+<!--------------------- 나의 선물함 팝업 --------------------->
+<div id="pop_search_gift" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
+  <div class="p_mid gift_check p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="title">
+          <img src="images/popup/title_num_check.png" />
+        </div>
+        <div class="check_name">
+          <!--이름 체크-->
+          <div class="in">	
+            <input type="text" name="s_name" id="s_name">
+          </div>
+        </div>
+        <div class="check_num">
+          <!--전번 체크-->
+          <div class="inner clearfix">
+            <div class="in"><input type="tel" name="s_phone1" id="s_phone1"></div>
+            <div class="in"><input type="tel" name="s_phone2" id="s_phone2"></div>
+            <div class="in"><input type="tel" name="s_phone3" id="s_phone3"></div>
+            <div class="btn"><a href="#" onclick="search_gift();"><img src="images/popup/btn_gift_check_ok.png" /></a></div>
+          </div>
+        </div>
+        <!--선물리스트-->
+        <div class="yes_gift" style="display:none;">
+          <div class="inner_yes_gift">
+            <div class="block_label clearfix">
+              <div class="name"><img src="images/popup/label_gift.png" /></div>
+              <div class="num"><img src="images/popup/label_gift_num.png" /></div>
+            </div>
+            <div class="block_gift_num">
+              <!-- one gift -->
+              <div class="inner clearfix">
+                <div class="txt">베비언스 쿠폰 3000원</div>
+                <div class="txt num">asdfwers123</div>
+                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
+              </div>
+              <!-- one gift -->
+              <div class="inner clearfix">
+                <div class="txt">베비언스 쿠폰 3000원</div>
+                <div class="txt num">asdfwers123</div>
+                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
+              </div>   
+              <!-- one gift -->
+              <div class="inner clearfix">
+                <div class="txt">베비언스 쿠폰 3000원</div>
+                <div class="txt num">asdfwers123</div>
+                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
+              </div>
+              <!-- one gift -->
+              <div class="inner clearfix">
+                <div class="txt">베비언스 쿠폰 3000원</div>
+                <div class="txt num">asdfwers123</div>
+                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
+              </div> 
+              <!-- one gift -->
+              <div class="inner clearfix">
+                <div class="txt">베비언스 쿠폰 3000원</div>
+                <div class="txt num">asdfwers123</div>
+                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
+              </div>
+              <!-- one gift -->
+              <div class="inner clearfix">
+                <div class="txt">베비언스 쿠폰 3000원</div>
+                <div class="txt num">asdfwers123</div>
+                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
+              </div>                              
+            </div>
+          </div>
+          <div class="block_go_home">
+            <div class="btn_block">
+              <a href="http://www.babience.co.kr/index.jsp"><img src="images/popup/btn_go_home.png" alt=""/></a>
+            </div>
+            <div class="notice">
+              <img src="images/popup/notice_gift_num.png" alt=""/>
+            </div>
+          </div>
+        </div>
+        <!--end:선물리스트-->
+        <!--한번도 참여 안함 유저일 경우-->
+        <div class="no_gift" >
+          <div class="btn_block">
+            <a href="#" onclick="$.magnificPopup.close();"><img src="images/popup/img_no_gift.png" alt=""/></a>
+          </div>
+        </div>
+        <!--end:한번도 참여 안함 유저일 경우-->
+      </div><!--inner-->
+    </div>
   </div>
 </div>
-<!--------------------- 파워블로거 상세보기 팝업 --------------------->
+<!--------------------- 나의 선물함 팝업 --------------------->
+
+<!--------------------- 파워블로거1 상세보기 팝업 --------------------->
+<div id="pop_detail_view1" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:950px;left:50%;margin-left:-475px">
+  <div class="p_mid posting p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="post_top clearfix">
+          <div class="title">
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+          </div>
+          <div class="tab_menu">
+            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+          </div>
+        </div>
+        <div class="txt_posting">
+          <img src="images/popup/bloger_img_1.png" alt=""/>
+        </div>
+        <div class="btn_block clearfix">
+          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[1]['b_recommend'])?>의 맘</div></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        </div>
+        <div class="block_comment clearfix">
+          <div class="txt" id="comment_view">
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+          </div>
+          <div class="bt">
+            <a href="#pop_comment_input1" class="popup-with-zoom-anim"><img src="images/popup/bt_cm.png" alt=""/></a>
+          </div>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거1 상세보기 팝업 --------------------->
+
+<!--------------------- 파워블로거1 코멘트 입력 팝업 --------------------->
+<div id="pop_comment_input1" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
+  <input type="hidden" name="blogger_idx" id="blogger_idx" value="1">
+  <div class="p_mid_comment p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="title">
+          <img src="images/popup/title_comment.png" />
+        </div>
+        <div class="block_input">
+          <div class="input_one clearfix">
+            <div class="label">
+            닉네임
+            </div>
+            <div class="input">
+              <input type="text" name="mb_nickname" id="mb_nickname">
+            </div>
+          </div>
+          <div class="input_one textarea clearfix">
+            <div class="label">
+            댓글
+            </div>
+            <div class="input">
+              <textarea name="mb_comment" id="mb_comment"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거1 코멘트 입력 팝업 --------------------->
+
+<!--------------------- 파워블로거2 상세보기 팝업 --------------------->
+<div id="pop_detail_view2" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:950px;left:50%;margin-left:-475px">
+  <div class="p_mid posting p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="post_top clearfix">
+          <div class="title">
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+          </div>
+          <div class="tab_menu">
+            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+          </div>
+        </div>
+        <div class="txt_posting">
+          <img src="images/popup/bloger_img_1.png" alt=""/>
+        </div>
+        <div class="btn_block clearfix">
+          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[2]['b_recommend'])?>의 맘</div></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        </div>
+        <div class="block_comment clearfix">
+          <div class="txt" id="comment_view">
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+          </div>
+          <div class="bt">
+            <a href="#pop_comment_input2" class="popup-with-zoom-anim"><img src="images/popup/bt_cm.png" alt=""/></a>
+          </div>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거2 상세보기 팝업 --------------------->
+
+<!--------------------- 파워블로거2 코멘트 입력 팝업 --------------------->
+<div id="pop_comment_input2" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
+  <input type="hidden" name="blogger_idx" id="blogger_idx" value="2">
+  <div class="p_mid_comment p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="title">
+          <img src="images/popup/title_comment.png" />
+        </div>
+        <div class="block_input">
+          <div class="input_one clearfix">
+            <div class="label">
+            닉네임
+            </div>
+            <div class="input">
+              <input type="text" name="mb_nickname" id="mb_nickname">
+            </div>
+          </div>
+          <div class="input_one textarea clearfix">
+            <div class="label">
+            댓글
+            </div>
+            <div class="input">
+              <textarea name="mb_comment" id="mb_comment"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거2 코멘트 입력 팝업 --------------------->
+
+<!--------------------- 파워블로거3 상세보기 팝업 --------------------->
+<div id="pop_detail_view3" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:950px;left:50%;margin-left:-475px">
+  <div class="p_mid posting p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="post_top clearfix">
+          <div class="title">
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+          </div>
+          <div class="tab_menu">
+            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+          </div>
+        </div>
+        <div class="txt_posting">
+          <img src="images/popup/bloger_img_1.png" alt=""/>
+        </div>
+        <div class="btn_block clearfix">
+          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[3]['b_recommend'])?>의 맘</div></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        </div>
+        <div class="block_comment clearfix">
+          <div class="txt" id="comment_view">
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+          </div>
+          <div class="bt">
+            <a href="#pop_comment_input3" class="popup-with-zoom-anim"><img src="images/popup/bt_cm.png" alt=""/></a>
+          </div>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거3 상세보기 팝업 --------------------->
+
+<!--------------------- 파워블로거3 코멘트 입력 팝업 --------------------->
+<div id="pop_comment_input3" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
+  <input type="hidden" name="blogger_idx" id="blogger_idx" value="3">
+  <div class="p_mid_comment p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="title">
+          <img src="images/popup/title_comment.png" />
+        </div>
+        <div class="block_input">
+          <div class="input_one clearfix">
+            <div class="label">
+            닉네임
+            </div>
+            <div class="input">
+              <input type="text" name="mb_nickname" id="mb_nickname">
+            </div>
+          </div>
+          <div class="input_one textarea clearfix">
+            <div class="label">
+            댓글
+            </div>
+            <div class="input">
+              <textarea name="mb_comment" id="mb_comment"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거3 코멘트 입력 팝업 --------------------->
+
+<!--------------------- 파워블로거4 상세보기 팝업 --------------------->
+<div id="pop_detail_view4" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:950px;left:50%;margin-left:-475px">
+  <div class="p_mid posting p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="post_top clearfix">
+          <div class="title">
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+          </div>
+          <div class="tab_menu">
+            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+          </div>
+        </div>
+        <div class="txt_posting">
+          <img src="images/popup/bloger_img_1.png" alt=""/>
+        </div>
+        <div class="btn_block clearfix">
+          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[4]['b_recommend'])?>의 맘</div></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        </div>
+        <div class="block_comment clearfix">
+          <div class="txt" id="comment_view">
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+          </div>
+          <div class="bt">
+            <a href="#pop_comment_input4" class="popup-with-zoom-anim"><img src="images/popup/bt_cm.png" alt=""/></a>
+          </div>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거4 상세보기 팝업 --------------------->
+
+<!--------------------- 파워블로거4 코멘트 입력 팝업 --------------------->
+<div id="pop_comment_input4" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
+  <input type="hidden" name="blogger_idx" id="blogger_idx" value="4">
+  <div class="p_mid_comment p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="title">
+          <img src="images/popup/title_comment.png" />
+        </div>
+        <div class="block_input">
+          <div class="input_one clearfix">
+            <div class="label">
+            닉네임
+            </div>
+            <div class="input">
+              <input type="text" name="mb_nickname" id="mb_nickname">
+            </div>
+          </div>
+          <div class="input_one textarea clearfix">
+            <div class="label">
+            댓글
+            </div>
+            <div class="input">
+              <textarea name="mb_comment" id="mb_comment"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거4 코멘트 입력 팝업 --------------------->
+
+<!--------------------- 파워블로거5 상세보기 팝업 --------------------->
+<div id="pop_detail_view5" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:950px;left:50%;margin-left:-475px">
+  <div class="p_mid posting p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="post_top clearfix">
+          <div class="title">
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+          </div>
+          <div class="tab_menu">
+            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+          </div>
+        </div>
+        <div class="txt_posting">
+          <img src="images/popup/bloger_img_1.png" alt=""/>
+        </div>
+        <div class="btn_block clearfix">
+          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[5]['b_recommend'])?>의 맘</div></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        </div>
+        <div class="block_comment clearfix">
+          <div class="txt" id="comment_view">
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+          </div>
+          <div class="bt">
+            <a href="#pop_comment_input5" class="popup-with-zoom-anim"><img src="images/popup/bt_cm.png" alt=""/></a>
+          </div>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거5 상세보기 팝업 --------------------->
+
+<!--------------------- 파워블로거5 코멘트 입력 팝업 --------------------->
+<div id="pop_comment_input5" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
+  <input type="hidden" name="blogger_idx" id="blogger_idx" value="5">
+  <div class="p_mid_comment p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="title">
+          <img src="images/popup/title_comment.png" />
+        </div>
+        <div class="block_input">
+          <div class="input_one clearfix">
+            <div class="label">
+            닉네임
+            </div>
+            <div class="input">
+              <input type="text" name="mb_nickname" id="mb_nickname">
+            </div>
+          </div>
+          <div class="input_one textarea clearfix">
+            <div class="label">
+            댓글
+            </div>
+            <div class="input">
+              <textarea name="mb_comment" id="mb_comment"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거5 코멘트 입력 팝업 --------------------->
+
+<!--------------------- 파워블로거6 상세보기 팝업 --------------------->
+<div id="pop_detail_view6" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:950px;left:50%;margin-left:-475px">
+  <div class="p_mid posting p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="post_top clearfix">
+          <div class="title">
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+          </div>
+          <div class="tab_menu">
+            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
+            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+          </div>
+        </div>
+        <div class="txt_posting">
+          <img src="images/popup/bloger_img_1.png" alt=""/>
+        </div>
+        <div class="btn_block clearfix">
+          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[6]['b_recommend'])?>의 맘</div></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        </div>
+        <div class="block_comment clearfix">
+          <div class="txt" id="comment_view">
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+            <span>베비언스** </span>
+            <span class="t">좋아요! 너무 좋아요</span>
+          </div>
+          <div class="bt">
+            <a href="#pop_comment_input6" class="popup-with-zoom-anim"><img src="images/popup/bt_cm.png" alt=""/></a>
+          </div>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거6 상세보기 팝업 --------------------->
+
+<!--------------------- 파워블로거6 코멘트 입력 팝업 --------------------->
+<div id="pop_comment_input6" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
+  <input type="hidden" name="blogger_idx" id="blogger_idx" value="6">
+  <div class="p_mid_comment p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="title">
+          <img src="images/popup/title_comment.png" />
+        </div>
+        <div class="block_input">
+          <div class="input_one clearfix">
+            <div class="label">
+            닉네임
+            </div>
+            <div class="input">
+              <input type="text" name="mb_nickname" id="mb_nickname">
+            </div>
+          </div>
+          <div class="input_one textarea clearfix">
+            <div class="label">
+            댓글
+            </div>
+            <div class="input">
+              <textarea name="mb_comment" id="mb_comment"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="btn_block">
+          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 파워블로거6 코멘트 입력 팝업 --------------------->
 
 <!--------------------- 개인정보 동의 약관 팝업 --------------------->
 <div id="pop_use_agree" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:400px;left:50%;margin-left:-200px">

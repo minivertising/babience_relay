@@ -234,8 +234,53 @@
 		return TRUE;
 	}
 
+	function select_comment()
+	{
+		global $_gl;
+		global $my_db;
 
+		$query		= "SELECT blogger_idx, mb_nickname, mb_message FROM ".$_gl['comment_info_table']." WHERE viewYN='Y'";
+		$result		= mysqli_query($my_db, $query);
 
+		while ($c_data	= mysqli_fetch_array($result))
+		{
+			if ($c_data['blogger_idx']	== "1")
+			{
+				$blogger_info[$c_data['blogger_idx']][$c_data['mb_nickname']]		= $c_data['mb_message'];
+			}else if ($c_data['blogger_idx']	== "2"){
+				$blogger_info[$c_data['blogger_idx']][$c_data['mb_nickname']]		= $c_data['mb_message'];
+			}else if ($c_data['blogger_idx']	== "3"){
+				$blogger_info[$c_data['blogger_idx']][$c_data['mb_nickname']]		= $c_data['mb_message'];
+			}else if ($c_data['blogger_idx']	== "4"){
+				$blogger_info[$c_data['blogger_idx']][$c_data['mb_nickname']]		= $c_data['mb_message'];
+			}else if ($c_data['blogger_idx']	== "5"){
+				$blogger_info[$c_data['blogger_idx']][$c_data['mb_nickname']]		= $c_data['mb_message'];
+			}else if ($c_data['blogger_idx']	== "6"){
+				$blogger_info[$c_data['blogger_idx']][$c_data['mb_nickname']]		= $c_data['mb_message'];
+			}
+		}
+	
+		return $blogger_info;
+	}
+
+	function today_week()
+	{
+		global $_gl;
+		global $my_db;
+
+		if (date("Y-m-d") < "2015-07-08")
+		{
+			$week_num	= $_gl['week']['1'];
+		}else if (date("Y-m-d") >= "2015-07-08" && date("Y-m-d") < "2015-07-15"){
+			$week_num	= $_gl['week']['2'];
+		}else if (date("Y-m-d") >= "2015-07-15" && date("Y-m-d") < "2015-07-22"){
+			$week_num	= $_gl['week']['3'];
+		}else if (date("Y-m-d") >= "2015-07-22"){
+			$week_num	= $_gl['week']['4'];
+		}
+
+		return $week_num;
+	}
 	// LMS 발송 
 	function send_lms($phone, $s_url)
 	{

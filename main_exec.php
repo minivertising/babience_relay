@@ -101,11 +101,52 @@ switch ($_REQUEST['exec'])
 		$innerHTML	= "";
 		while ($search_data = mysqli_fetch_array($result))
 		{
-			$innerHTML		.="<div>";
-			$innerHTML		.=$search_data['mb_winner']."||".$search_data['mb_serialnumber']."<a href='#' onclick=copy_url('".$search_data['mb_serialnumber']."')>복사하기</a>";
+			$innerHTML		.="<div class='inner clearfix'>";
+			$innerHTML		.="<div class='txt'>".$search_data['mb_winner']."</div>";
+			$innerHTML		.="<div class='txt num'>".$search_data['mb_serialnumber']."</div>";
+			$innerHTML		.="<div class='btn'><a href='#' onclick=copy_url('".$search_data['mb_serialnumber']."')><img src='images/popup/btn_copy2.png' /></a></div>";
 			$innerHTML		.="</div>";
 		}
 		echo $innerHTML;
+	break;
+
+	case "insert_comment" :
+		$mb_nickname		= $_REQUEST['mb_nickname'];
+		$mb_comment		= $_REQUEST['mb_comment'];
+		$blogger_idx		= $_REQUEST['blogger_idx'];
+
+		$week_num			= today_week();
+
+		$query 	= "INSERT INTO ".$_gl['comment_info_table']."(ip_addr, blogger_idx, week_num, mb_nickname, mb_message, regdate) values('".$_SERVER['REMOTE_ADDR']."','".$blogger_idx."','".$week_num."','".$mb_nickname."','".$mb_comment."','".date("Y-m-d H:i:s")."')";
+		$result 	= mysqli_query($my_db, $query);
+
+		if ($result)
+			$flag = "Y";
+		else
+			$flag = "N";
+
+		echo $flag;
+	break;
+
+	case "view_comment" :
+		$num		= $_REQUEST['num'];
+		$comment_info = select_comment();
+		
+		$innerHTML	= "";
+		$i = 1;
+		$gubun = "";
+		if ($comment_info[$num])
+		{
+			foreach($comment_info[$num] as $key => $val)
+			{
+				if ($i > 1)
+					$gubun	= "style='display:none'";
+				$innerHTML	.="<span id='cn_".$i."' ".$gubun.">".$key." </span>";
+				$innerHTML	.="<span id='ct_".$i."' class='t'' ".$gubun.">".$val."</span>";
+				$i++;
+			}
+		}
+		echo $innerHTML."||".sizeof($comment_info[$num]);
 	break;
 	//case "insert_recom" :
 

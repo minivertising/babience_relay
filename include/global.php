@@ -1,10 +1,11 @@
 <?
-	$_gl['member_info_table']		= "member_info";		//참여자 정보 테이블
-	$_gl['tracking_info_table']			= "tracking_info";		//유입경로 테이블
-	$_gl['share_info_table']			= "share_info";			//공유정보 테이블
-	$_gl['sms_info_table']				= "sms_info";			//공유정보 테이블
+	$_gl['member_info_table']		= "member_info";			//참여자 정보 테이블
+	$_gl['tracking_info_table']			= "tracking_info";			//유입경로 테이블
+	$_gl['share_info_table']			= "share_info";				//공유정보 테이블
+	$_gl['sms_info_table']				= "sms_info";				//공유정보 테이블
 	$_gl['blogger_info_table']			= "blogger_info";			//블로거정보 테이블
-	$_gl['serial_info_table']			= "serial_info_";			//블로거정보 테이블
+	$_gl['serial_info_table']			= "serial_info_";				//블로거정보 테이블
+	$_gl['comment_info_table']		= "comment_info";		//덧글 정보 테이블
 
 	//$_gl['youtube_url']				= "https://www.youtube.com/embed/h16U39DzIBc?controls=0&loop=1&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
 
@@ -25,5 +26,11 @@
 	$_gl['prize']['water']				= "WATER";		// 베이비워터
 	$_gl['prize']['coffee']				= "COFFEE";		// 스타벅스 기프티콘
 	$_gl['prize']['cash']					= "CASH";		// 베이언스 3,000원 쿠폰
+
+	$_gl['week']['1']					= "1";		// 1주차
+	$_gl['week']['2']					= "2";		// 2주차
+	$_gl['week']['3']					= "3";		// 3주차
+	$_gl['week']['4']					= "4";		// 4주차
+
 
 ?>
