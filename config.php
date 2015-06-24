@@ -55,5 +55,5 @@
 		$_SESSION['ss_media']	= $media;
 	}
 
-
+	print_r($_SESSION);
 ?>
