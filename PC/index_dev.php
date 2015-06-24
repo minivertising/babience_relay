@@ -4,6 +4,21 @@
 	$comment_info = select_comment();
 	print_r($comment_info);
 
+$mb_baby_name = "김연아";
+$serial				= "fdf33";
+			# 사용예제
+			$objFont = new Font;
+
+			$objFont->text  = $mb_baby_name;
+			$objFont->size  = 15;
+			$objFont->color = 0x000000;
+			//$objFont->angle = 45;
+			$objFont->font  = "nanum.ttf";
+
+			$szFilePath     = "test_image.png";
+
+			$cImage = getPrintToImage($szFilePath, $objFont, $serial, LEFT | MIDDLE);
+
 ?>
   <div id="total_num">
 <?
