@@ -65,7 +65,6 @@ function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
     }
 
     header ("Content-type: ".$szContentType);
-
     # 이미지 파일을 읽어 이미지를 생성한다.
     $fp = fopen($szFilePath, "rb");
     $szContent = fread($fp, filesize($szFilePath));
@@ -137,15 +136,16 @@ function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
 	imagedestroy($nImage);
     return TRUE;
 }
+	$baby = "김연아";
 
 # 사용예제
 $objFont = new Font;
 
-$objFont->text  = "test image";
+$objFont->text  = $baby;
 $objFont->size  = 25;
 $objFont->color = 0x000000;
 //$objFont->angle = 45;
-$objFont->font  = "./arial.ttf";
+$objFont->font  = "./nanum.ttf";
 
 $szFilePath     = "test_image.jpg";
 

@@ -60,7 +60,7 @@ switch ($_REQUEST['exec'])
 			# 사용예제
 			$objFont = new Font;
 
-			$objFont->text  = "baby";
+			$objFont->text  = $mb_baby_name;
 			$objFont->size  = 15;
 			$objFont->color = 0x000000;
 			//$objFont->angle = 45;
@@ -68,7 +68,7 @@ switch ($_REQUEST['exec'])
 
 			$szFilePath     = "test_image.png";
 
-			$cImage = getPrintToImage($szFilePath, $objFont, $mb_baby_name, $serial, LEFT | MIDDLE);
+			$cImage = getPrintToImage($szFilePath, $objFont, $serial, LEFT | MIDDLE);
 
 
 			$image_url	= "http://www.babience-giveandtake.com/certi_images/".$serial.".png";

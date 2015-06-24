@@ -109,7 +109,7 @@
 	}
 
 
-	function getPrintToImage($szFilePath, &$objFont, $baby, $serial, $nFontAlign = 0x12)
+	function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 	{
 		# 이미지 파일이 존재하는지 체크한다.
 		if (!file_exists($szFilePath))
@@ -176,7 +176,7 @@
 		$nFontColor  = ImageColorAllocate($nImage, $nRed, $nGreen, $nBlue);
 
 		# 프린트할 글의 위치를 결정한다.
-		$arrTTFBBox  = ImageTTFBBox($objFont->size, $objFont->angle, $objFont->font, $baby);
+		$arrTTFBBox  = ImageTTFBBox($objFont->size, $objFont->angle, $objFont->font, $objFont->text);
 
 		$nMax = max($arrTTFBBox[0], $arrTTFBBox[2], $arrTTFBBox[4], $arrTTFBBox[6]);
 		$nMin = min($arrTTFBBox[0], $arrTTFBBox[2], $arrTTFBBox[4], $arrTTFBBox[6]);
@@ -211,7 +211,7 @@
 		}
 		//$nX = 20;
 		//$nY = 120;
-		ImageTTFText($nImage, $objFont->size, $objFont->angle, $nX, $nY, $nFontColor, $objFont->font, $baby);
+		ImageTTFText($nImage, $objFont->size, $objFont->angle, $nX, $nY, $nFontColor, $objFont->font, $objFont->text);
 
 		switch ($arrImgInfo[2])
 		{
