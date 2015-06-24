@@ -8,8 +8,8 @@
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
 
-	print_r($member_info);
-
+	//print_r($member_info);
+	echo phpinfo();
 ?>
 <!doctype html>
 <html>
