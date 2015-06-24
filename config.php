@@ -12,6 +12,7 @@
 
 	if ($_SERVER['REMOTE_ADDR'] != "192.168.0.60")
 	{
+		print_r($_SERVER['REMOTE_ADDR']);
 		echo "사이트 준비중입니다.";
 		exit;
 	}
