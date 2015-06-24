@@ -124,7 +124,7 @@ class Font
     var $font;
 }
 
-function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
+function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 {
     # 이미지 파일이 존재하는지 체크한다.
     if (!file_exists($szFilePath))
@@ -237,7 +237,7 @@ function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
 			break;
 		case 3:
 			# PNG
-			ImagePNG($nImage,'./certi_images/'.$serial.'.jpg',100);
+			ImagePNG($nImage,'./certi_images/'.$serial.'.jpg');
 			break;
 		default:
 			return FALSE;
