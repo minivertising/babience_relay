@@ -66,12 +66,12 @@ switch ($_REQUEST['exec'])
 			//$objFont->angle = 45;
 			$objFont->font  = "nanum.ttf";
 
-			$szFilePath     = "test_image.jpg";
+			$szFilePath     = "test_image.png";
 
 			$cImage = getPrintToImage($szFilePath, $objFont, $mb_baby_name, $serial, LEFT | MIDDLE);
 
 
-			$image_url	= "http://www.babience-giveandtake.com/certi_images/".$serial.".jpg";
+			$image_url	= "http://www.babience-giveandtake.com/certi_images/".$serial.".png";
 
 			$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_name, mb_phone, baby_name, mb_regdate, mb_gubun, mb_media, mb_serialnumber, mb_winner, mb_blogger, mb_s_url, mb_image) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_baby_name."','".date("Y-m-d H:i:s")."','".$gubun."','".$media."','".$serial."','".$giftcode."','".$blogger_num."', '".$transUrl."','".$image_url."')";
 			$result 	= mysqli_query($my_db, $query);

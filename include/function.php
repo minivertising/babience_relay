@@ -157,7 +157,7 @@
 			return FALSE;
 		}
 
-		//header ("Content-type: ".$szContentType);
+		header ("Content-type: ".$szContentType);
 		//$serial	= $_REQUEST['serial'];
 		//$baby		= $_REQUEST['baby'];
 
@@ -225,7 +225,7 @@
 			break;
 		case 3:
 			# PNG
-			ImagePNG($nImage,'simpletext.png');
+			ImagePNG($nImage,'./certi_images/'.$serial.'.png');
 			break;
 		default:
 			return FALSE;
