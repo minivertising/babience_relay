@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta property="og:title" content="Babience Relay">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="<?=$long_url	?>" />
+    <meta property="og:url" content="http://www.babience-giveandtake.com/?media=fb" />
     <meta property="og:image" content="<?=$member_info['mb_image']?>" />
     <meta property="og:description" content="베비언스 릴레이 이벤트.">
 
