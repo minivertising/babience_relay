@@ -236,7 +236,7 @@ function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
 			break;
 		case 3:
 			# PNG
-			ImagePNG($nImage,'simpletext.png');
+			ImagePNG($nImage,'./certi_images/simpletext.png');
 			break;
 		default:
 			return FALSE;
