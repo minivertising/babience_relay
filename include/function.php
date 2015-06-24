@@ -224,7 +224,16 @@ function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 
     ImageTTFText($nImage, $objFont->size, $objFont->angle, $nX, $nY, $nFontColor, $objFont->font, $objFont->text);
 
-	chmod($nImage, 777);
+$mydir = "testfolder"; 
+ if(@mkdir($mydir, 0777)) { 
+    if(is_dir($mydir)) { 
+        @chmod($mydir, 0777); 
+        echo "${mydir} 디렉토리를 생성하였습니다."; 
+    } 
+ } 
+ else { 
+    echo "${mydir} 디렉토리를 생성하지 못했습니다."; 
+ } 
     switch ($arrImgInfo[2])
     {
 		case 1:
@@ -237,7 +246,7 @@ function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 			break;
 		case 3:
 			# PNG
-			ImagePNG($nImage,'./certi_images/'.$serial.'.jpg');
+			ImagePNG($nImage,'./'.$mydir.'/'.$serial.'.png');
 			break;
 		default:
 			return FALSE;
