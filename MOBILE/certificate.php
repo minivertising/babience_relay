@@ -64,7 +64,7 @@ Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
 
 function sns_share(media)
 {
-	if (media == "facebook")
+	if (media == "fb")
 	{
 		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('<?=$long_url?>'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
@@ -76,7 +76,7 @@ function sns_share(media)
 				"media" : media
 			}
 		});
-	}else if (media == "kakao"){
+	}else if (media == "kt"){
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
 		  container: '#kakao-link-btn',
@@ -100,7 +100,7 @@ function sns_share(media)
 				"media" : media
 			}
 		});
-	}else if (media == "twitter"){
+	}else if (media == "tw"){
 		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("VDL MEETS KAKAO FRIENDS! 친구에게 메시지를 보내고 컬렉션 제품이 담긴 VDL FRIENDS KIT를 받으세요! 참여만 해도 5천원 할인 쿠폰을 드려요.") + '&url='+ encodeURIComponent('http://bit.ly/1EiTYuF'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
