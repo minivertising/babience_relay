@@ -1,7 +1,6 @@
 <?
 	include_once "../config.php";
 ?>
-<!--[if IE]><![endif]-->
 <!doctype html>
 <html>
   <head>
