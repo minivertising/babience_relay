@@ -61,7 +61,7 @@ switch ($_REQUEST['exec'])
 			$objFont = new Font;
 
 			$objFont->text  = "baby";
-			$objFont->size  = 25;
+			$objFont->size  = 15;
 			$objFont->color = 0x000000;
 			//$objFont->angle = 45;
 			$objFont->font  = "nanum.ttf";
@@ -79,7 +79,7 @@ switch ($_REQUEST['exec'])
 			$query2 	= "UPDATE ".$_gl['blogger_info_table']." SET recommend_cnt = recommend_cnt + 1 WHERE idx='".$blogger_num."'";
 			$result2 	= mysqli_query($my_db, $query2);
 
-			send_lms($mb_phone, $transUrl);
+			//send_lms($mb_phone, $transUrl);
 			if ($result)
 				$flag = $giftcode."||".$serial;
 			else
