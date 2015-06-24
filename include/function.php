@@ -124,7 +124,7 @@ class Font
     var $font;
 }
 
-function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
+function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 {
     # 이미지 파일이 존재하는지 체크한다.
     if (!file_exists($szFilePath))
@@ -226,20 +226,20 @@ function getPrintToImage($szFilePath, &$objFont, $nFontAlign = 0x12)
 
     switch ($arrImgInfo[2])
     {
-    case 1:
-        # GIF
-        ImageGIF($nImage,'simpletext.gif');
-        break;
-    case 2:
-        # JPG
-        ImageJPEG($nImage,NULL,100);
-        break;
-    case 3:
-        # PNG
-        ImagePNG($nImage,'simpletext.png');
-        break;
-    default:
-        return FALSE;
+		case 1:
+			# GIF
+			ImageGIF($nImage,'simpletext.gif');
+			break;
+		case 2:
+			# JPG
+			ImageJPEG($nImage,'./certi_images/'.$serial.'.jpg',100);
+			break;
+		case 3:
+			# PNG
+			ImagePNG($nImage,'./certi_images/'.$serial.'.png');
+			break;
+		default:
+			return FALSE;
     }
 	imagedestroy($nImage);
     return TRUE;
