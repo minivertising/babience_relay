@@ -55,20 +55,5 @@
 		$_SESSION['ss_media']	= $media;
 	}
 
-	define('LEFT',   0x01);
-	define('CENTER', 0x02);
-	define('RIGHT',  0x04);
-	define('TOP',    0x08);
-	define('MIDDLE', 0x10);
-	define('BOTTOM', 0x20);
-
-	class Font
-	{
-		var $text   = "http://aaa.com";
-		var $color  = 0x000000;
-		var $size   = 10;
-		var $angle  = 0;
-		var $font;
-	}
 
 ?>
