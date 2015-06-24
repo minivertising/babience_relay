@@ -3,7 +3,7 @@
 	include_once "../config.php";
 
 	$serial	= $_REQUEST['serial'];
-	$long_url		= "http://www.babience-giveandtake.com/MOBILE/certificate.php?serial=".$serial."";
+	$long_url		= "http://www.babience-giveandtake.com/MOBILE/certificate.php?serial=".$serial."&media=fb";
 	$query	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serialnumber='".$serial."'";
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
@@ -38,6 +38,16 @@
     <script type='text/javascript' src='../lib/iCheck/icheck.js'></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+<?
+	if ($_REQUEST['media'])
+	{
+?>
+	<script type="text/javascript">
+	location.href="http://www.babience-giveandtake.com/?media=<?=$_REQUEST['media']?>";
+	</script>
+<?
+	}
+?>
     <style>
 	html,body { height: 100%; margin: 0; padding: 0;}
     </style>
@@ -66,7 +76,7 @@ function sns_share(media)
 {
 	if (media == "fb")
 	{
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.babience-giveandtake.com/?media=fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('<?=$long_url?>'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
