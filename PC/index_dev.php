@@ -17,7 +17,7 @@ $serial				= "fdf33";
 
 			$szFilePath     = "test_image.png";
 
-			$cImage = getPrintToImage($szFilePath, $objFont, $serial, LEFT | MIDDLE);
+			$cImage = getPrintToImage($szFilePath, $objFont,LEFT | MIDDLE);
 
 ?>
   <div id="total_num">
