@@ -209,8 +209,8 @@
 		{
 			$nY = $arrImgInfo[1] - $nMax + $arrTTFBBox[1];
 		}
-		$nX = 20;
-		$nY = 120;
+		//$nX = 20;
+		//$nY = 120;
 		ImageTTFText($nImage, $objFont->size, $objFont->angle, $nX, $nY, $nFontColor, $objFont->font, $baby);
 
 		switch ($arrImgInfo[2])
