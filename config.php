@@ -10,6 +10,13 @@
 
 	mysqli_query ($my_db,"set names utf8");
 
+	if ($_SERVER['REMOTE_ADDR'] != "192.168.0.610")
+	{
+		echo "사이트 준비중입니다.";
+		exit;
+	}
+
+
 	$mobile_agent = array("iPhone","iPod","iPad","Android","Blackberry","SymbianOS|SCH-M\d+","Opera Mini", "Windows ce", "Nokia", "sony" );
 	$check_mobile = "N";
 	for($i=0; $i<sizeof($mobile_agent); $i++){
