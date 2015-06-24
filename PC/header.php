@@ -12,7 +12,7 @@
     <meta property="og:image" content="http://www.babience_giveandtake.com/MOBILE/images/img_sns_share_new2.jpg" />
     <meta property="og:description" content="베비언스 릴레이 이벤트.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" type="image/x-icon" href="./images/pavicon.ico" />
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/pavicon.ico" /> -->
     <link rel="stylesheet" type="text/css" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" type="text/css" href="./css/style.css"> 
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
