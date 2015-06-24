@@ -242,7 +242,7 @@ $mydir = "testfolder";
 			break;
 		case 3:
 			# PNG
-			ImagePNG($nImage,'./'.$mydir.'/'.$serial.'.png');
+			ImagePNG($nImage,'/home/babience/'.$mydir.'/'.$serial.'.png');
 			break;
 		default:
 			return FALSE;

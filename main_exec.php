@@ -64,9 +64,9 @@ switch ($_REQUEST['exec'])
 			$objFont->size  = 15;
 			$objFont->color = 0x000000;
 			//$objFont->angle = 45;
-			$objFont->font  = "nanum.ttf";
+			$objFont->font  = "/home/babience/nanum.ttf";
 
-			$szFilePath     = "test_image.png";
+			$szFilePath     = "/home/babience/test_image.png";
 
 			$cImage = getPrintToImage($szFilePath, $objFont, $serial, LEFT | MIDDLE);
 
