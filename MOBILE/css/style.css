@@ -145,6 +145,40 @@ body{
 	border:none;
 }
 
+.popup_wrap .p_mid.p_position.big .block_content.block_gift_num{
+}
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_btn{
+	padding-bottom:30px;
+}
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_btn img{
+	width:100%;
+}
+.popup_wrap .p_position .block_content.block_gift_num .inner .gift_num_list{
+	padding:5px 0;
+}
+.popup_wrap .p_position .block_content.block_gift_num .inner .gift_num_list .inner_gift_num{
+	padding:20px 0;
+	background:#fdf9f4;
+	margin:0 3%;
+}
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input_bg{
+	background: none;
+}
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input .input_txt input{
+	background: #fff;
+}
+
+.popup_wrap .p_position .block_content.block_gift_num .inner .gift_num_list .no_gift{
+	width:100%;
+	padding-bottom:40px;
+}
+
+.popup_wrap .p_position .block_content.block_gift_num .inner .gift_num_list .no_gift img{
+	width:100%;
+}
+
+
+
 .popup_wrap .p_mid.p_position.p_wide .block_content{
 	border:none;
 	background:#fff;
@@ -291,6 +325,11 @@ body{
 	float:left;
 	width:66%;
 }
+.popup_wrap .p_position .block_content .inner .block_input .input_txt.notice{
+	float:left;
+	width:75%;
+	padding-left:3.5%;
+}
 .popup_wrap .p_position .block_content .inner .block_input.comment .input_txt{
 	width:75%;
 }
@@ -431,16 +470,18 @@ body{
 }
 
 .popup_wrap .p_position .block_content .inner .img_gift .gift_num{
-	width:100%;
+	width:92%;
+	margin:0 auto;
+	border-top:1px dashed #ffba92;
+	padding-top:13px;
 }
 .popup_wrap .p_position .block_content .inner .img_gift .gift_num .label{
 	width:30%;
 	float:left;
-	text-align:right;
-	padding-top:5px;
+	padding-top:6px;
 }
 .popup_wrap .p_position .block_content .inner .img_gift .gift_num .label img{
-	width:85%;
+	width:90%;
 }
 .popup_wrap .p_position .block_content .inner .img_gift .gift_num .num{
 	width:35%;
@@ -448,7 +489,7 @@ body{
 	text-align:left;
 	padding-left:3%;
 	color:#ff8c25;
-	padding-top:3px;
+	padding-top:5px;
 }
 .popup_wrap .p_position .block_content .inner .img_gift .gift_num .btn{
 	float: right;
@@ -456,7 +497,7 @@ body{
 	text-align:left;
 }
 .popup_wrap .p_position .block_content .inner .img_gift .gift_num .btn img{
-	width:85%;
+	width:100%;
 }
 
 .block_btn_sns{
@@ -469,7 +510,7 @@ body{
 }
 .block_btn_sns .txt{
 	float:left;
-	width:48%;
+	width:35%;
 	padding-top:3%;
 }
 .block_btn_sns .txt img{
