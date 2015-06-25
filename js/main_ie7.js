@@ -74,18 +74,25 @@ function go_recom(num, detail)
 
 function go_detail(num)
 {
-	if (num == 1)
+	if (num == 1){
 		open_pop('pop_detail_view1',0);
-	else if (num == 2)
+		auto_comment('1');
+	}else if (num == 2){
 		open_pop('pop_detail_view2',0);
-	else if (num == 3)
+		auto_comment('2');
+	}else if (num == 3){
 		open_pop('pop_detail_view3',0);
-	else if (num == 4)
+		auto_comment('3');
+	}else if (num == 4){
 		open_pop('pop_detail_view4',0);
-	else if (num == 5)
+		auto_comment('4');
+	}else if (num == 5){
 		open_pop('pop_detail_view5',0);
-	else if (num == 6)
+		auto_comment('5');
+	}else if (num == 6){
 		open_pop('pop_detail_view6',0);
+		auto_comment('6');
+	}
 }
 
 function go_gift()
@@ -251,6 +258,9 @@ function input_info()
 					alert("사용자가 많아 접속이 지연되고 있습니다. 다시 추천해 주세요.");
 				}else if (response == "D"){
 					open_pop('pop_dupli_div','pop_event_input');
+				}else if (response == "E"){
+					//open_pop('pop_dupli_div','pop_event_input');
+					alert("오늘 참여 횟수 다 썼다!");
 				}else{
 					open_pop('pop_thanks_div','pop_event_input');
 					var giftArr	= response.split("||");
@@ -405,3 +415,4 @@ function close_pop(param)
 	$("#" + param).hide();
 	$(".mask").hide();
 }
+

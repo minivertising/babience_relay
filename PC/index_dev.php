@@ -131,5 +131,10 @@ $(document).ready(function() {
 		$('.zoom-anim-dialog input').iCheck('check');
 	});
 
+	$(".mask").click(function(){
+		$(".mask").fadeOut(300);
+		$(".popup_wrap").fadeOut(300);
+	});
+
 });
 </script>
