@@ -159,9 +159,16 @@ body{
 	top:50%;
 	width:50px;
 }
-.wrap_sec_top{
-	background:url(../images/bg_top.jpg) repeat-x;	
+
+body.main{
+	background:url(../images/bg.jpg) repeat-x center top;	
 }
+
+.wrap_sec_top{
+	background:url(../images/bg_top.jpg) no-repeat center top;	
+}
+
+
 .sec_top{
 	width:1000px;
 	margin:0 auto;
