@@ -51,10 +51,23 @@ function go_recom(num, detail)
 	{
 		if (detail == "main")
 		{
-			popup_desc('pop_event_input', num);
+			//popup_desc('pop_event_input', num);
+			open_pop('pop_event_input','');
 		}else{
-			$.magnificPopup.close();
-			setTimeout("popup_desc('pop_event_input', "+num+");",500);
+			//$.magnificPopup.close();
+			//setTimeout("popup_desc('pop_event_input', "+num+");",500);
+			if (num == 1)
+				open_pop('pop_event_input','pop_detail_view1')
+			else if (num == 2)
+				open_pop('pop_event_input','pop_detail_view2')
+			else if (num == 3)
+				open_pop('pop_event_input','pop_detail_view3')
+			else if (num == 4)
+				open_pop('pop_event_input','pop_detail_view4')
+			else if (num == 5)
+				open_pop('pop_event_input','pop_detail_view5')
+			else if (num == 6)
+				open_pop('pop_event_input','pop_detail_view6')
 		}
 	}
 }
@@ -62,22 +75,22 @@ function go_recom(num, detail)
 function go_detail(num)
 {
 	if (num == 1)
-		popup_desc('pop_detail_view1', 0);
+		open_pop('pop_detail_view1',0);
 	else if (num == 2)
-		popup_desc('pop_detail_view2', 0);
+		open_pop('pop_detail_view2',0);
 	else if (num == 3)
-		popup_desc('pop_detail_view3', 0);
+		open_pop('pop_detail_view3',0);
 	else if (num == 4)
-		popup_desc('pop_detail_view4', 0);
+		open_pop('pop_detail_view4',0);
 	else if (num == 5)
-		popup_desc('pop_detail_view5', 0);
+		open_pop('pop_detail_view5',0);
 	else if (num == 6)
-		popup_desc('pop_detail_view6', 0);
+		open_pop('pop_detail_view6',0);
 }
 
 function go_gift()
 {
-	popup_desc('pop_search_gift', 0);
+	open_pop('pop_search_gift','');
 }
 
 function popup_desc(param, num)
@@ -237,9 +250,9 @@ function input_info()
 				{
 					alert("사용자가 많아 접속이 지연되고 있습니다. 다시 추천해 주세요.");
 				}else if (response == "D"){
-					popup_desc("pop_dupli_div", 0);
+					open_pop('pop_dupli_div','pop_event_input');
 				}else{
-					popup_desc("pop_thanks_div", 0);
+					open_pop('pop_thanks_div','pop_event_input');
 					var giftArr	= response.split("||");
 					if (giftArr[0] == "CASH")
 					{
@@ -337,17 +350,17 @@ function input_comment()
 			{
 				if (blogger_idx == 1)
 				{
-					popup_desc("pop_detail_view1", 0);
+					open_pop('pop_detail_view1','pop_comment_input1');
 				}else if (blogger_idx == 2){
-					popup_desc("pop_detail_view2", 0);
+					open_pop('pop_detail_view2','pop_comment_input2');
 				}else if (blogger_idx == 3){
-					popup_desc("pop_detail_view3", 0);
+					open_pop('pop_detail_view3','pop_comment_input3');
 				}else if (blogger_idx == 4){
-					popup_desc("pop_detail_view4", 0);
+					open_pop('pop_detail_view4','pop_comment_input4');
 				}else if (blogger_idx == 5){
-					popup_desc("pop_detail_view5", 0);
+					open_pop('pop_detail_view5','pop_comment_input5');
 				}else if (blogger_idx == 6){
-					popup_desc("pop_detail_view6", 0);
+					open_pop('pop_detail_view6','pop_comment_input6');
 				}
 			}else{
 				alert("접속자가 많아 지연되고 있습니다. 다시 시도해 주세요.");
@@ -367,8 +380,28 @@ function copy_url(ss_url)
 		// IE처리
 		// 클립보드에 문자열 복사
 		window.clipboardData.setData('text', text);
+		alert("클립보드에 복사되었습니다.");
 	} else {
 		// 비IE 처리    
 		window.prompt ("Ctrl+C를 눌러 나의 선물번호를 복사해주세요!", text);  
 	}
+}
+
+function open_pop(param, param2)
+{
+	$(".mask").width($(window).width());
+	$(".mask").height($(window).height());
+
+	$(".mask").show();
+
+	if (param2 != "")
+		$("#" + param2).hide();
+	
+	$("#" + param).show();
+}
+
+function close_pop(param)
+{
+	$("#" + param).hide();
+	$(".mask").hide();
 }
