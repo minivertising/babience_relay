@@ -1,5 +1,5 @@
 <!--------------------- 이벤트 개인정보 입력 팝업 --------------------->
-<div id="pop_event_input" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:600px;left:50%;margin-left:-300px">
+<div id="pop_event_input" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
   <input type="hidden" name="blogger_num" id="blogger_num">
   <div class="p_mid_input p_position">
     <div class="block_close clearfix">
@@ -268,9 +268,9 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
-          <div class="tab_menu">
+          <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
@@ -278,16 +278,13 @@
           </div>
         </div>
         <div class="txt_posting">
-          <img src="images/popup/bloger_img_1.png" alt=""/>
+          <a href="#"><img src="images/popup/bloger_img_1.png" alt=""/></a>
         </div>
-        <div class="btn_block clearfix">
-          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[1]['b_recommend'])?>의 맘</div></div>
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        <div class="btn_block">
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>','detail');"><span><?=number_format($d_info[1]['b_recommend'])?>의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -350,9 +347,9 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_2.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
-          <div class="tab_menu">
+          <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
@@ -360,16 +357,13 @@
           </div>
         </div>
         <div class="txt_posting">
-          <img src="images/popup/bloger_img_1.png" alt=""/>
+          <a href="#"><img src="images/popup/bloger_img_2.png" alt=""/></a>
         </div>
-        <div class="btn_block clearfix">
-          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[2]['b_recommend'])?>의 맘</div></div>
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        <div class="btn_block">
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>','detail');"><span><?=number_format($d_info[2]['b_recommend'])?>의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -432,9 +426,9 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_3.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
-          <div class="tab_menu">
+          <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
@@ -442,16 +436,13 @@
           </div>
         </div>
         <div class="txt_posting">
-          <img src="images/popup/bloger_img_1.png" alt=""/>
+          <a href="#"><img src="images/popup/bloger_img_3.png" alt=""/></a>
         </div>
-        <div class="btn_block clearfix">
-          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[3]['b_recommend'])?>의 맘</div></div>
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        <div class="btn_block">
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>','detail');"><span><?=number_format($d_info[3]['b_recommend'])?>의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -514,9 +505,9 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_4.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
-          <div class="tab_menu">
+          <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
@@ -524,16 +515,13 @@
           </div>
         </div>
         <div class="txt_posting">
-          <img src="images/popup/bloger_img_1.png" alt=""/>
+          <a href="#"><img src="images/popup/bloger_img_4.png" alt=""/></a>
         </div>
-        <div class="btn_block clearfix">
-          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[4]['b_recommend'])?>의 맘</div></div>
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        <div class="btn_block">
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>','detail');"><span><?=number_format($d_info[4]['b_recommend'])?>의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -596,9 +584,9 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_5.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
-          <div class="tab_menu">
+          <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
@@ -606,16 +594,13 @@
           </div>
         </div>
         <div class="txt_posting">
-          <img src="images/popup/bloger_img_1.png" alt=""/>
+          <a href="#"><img src="images/popup/bloger_img_5.png" alt=""/></a>
         </div>
-        <div class="btn_block clearfix">
-          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[5]['b_recommend'])?>의 맘</div></div>
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        <div class="btn_block">
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>','detail');"><span><?=number_format($d_info[5]['b_recommend'])?>의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -678,9 +663,9 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a>
+            <a href="#" target="_blank"><img src="images/popup/bloger_name_6.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
-          <div class="tab_menu">
+          <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
             <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
@@ -688,16 +673,13 @@
           </div>
         </div>
         <div class="txt_posting">
-          <img src="images/popup/bloger_img_1.png" alt=""/>
+          <a href="#"><img src="images/popup/bloger_img_6.png" alt=""/></a>
         </div>
-        <div class="btn_block clearfix">
-          <div class="cnt"><div class="inner">함께하는 <?=number_format($d_info[6]['b_recommend'])?>의 맘</div></div>
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>');"><img src="images/popup/btn_suggest.png" alt=""/></a></div>
+        <div class="btn_block">
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>','detail');"><span><?=number_format($d_info[6]['b_recommend'])?>의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>

@@ -43,37 +43,37 @@
 ?>
     <div>
 <?=$b_info[0]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>');">추천하기</a>
+      <a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>','main');">추천하기</a>
 	  <a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[0]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[1]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>');">추천하기</a>
+      <a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>','main');">추천하기</a>
 	  <a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[1]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[2]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>');">추천하기</a>
+      <a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>','main');">추천하기</a>
 	  <a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[2]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[3]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>');">추천하기</a>
+      <a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>','main');">추천하기</a>
 	  <a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[3]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[4]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>');">추천하기</a>
+      <a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>','main');">추천하기</a>
 	  <a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[4]['b_recommend']?>의 맘
     </div>
     <div>
 <?=$b_info[5]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>');">추천하기</a>
+      <a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>','main');">추천하기</a>
 	  <a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');">상세보기</a>
       함께하는 <?=$b_info[5]['b_recommend']?>의 맘
     </div>
@@ -174,11 +174,17 @@ function comment_rolling(cnt, num)
 	});
 }
 
-function go_recom(num)
+function go_recom(num, detail)
 {
 	if (confirm('추천하시겠어요?'))
 	{
-		popup_desc('pop_event_input', num);
+		if (detail == "main")
+		{
+			popup_desc('pop_event_input', num);
+		}else{
+			$.magnificPopup.close();
+			setTimeout("popup_desc('pop_event_input', "+num+");",500);
+		}
 	}
 }
 

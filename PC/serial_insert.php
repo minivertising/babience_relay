@@ -1,8 +1,8 @@
 <?
 	include_once "../config.php";
 	
-	$gift = "cash";
-	for ($i=0; $i < 100000;$i++)
+	$gift = "hotel";
+	for ($i=0; $i < 1;$i++)
 	{
 		$serial = PHPRandom::getHexString("10");
 		$query 	= "INSERT INTO serial_info_(serial_code,gift) values('tm".$serial."','".$gift."')";

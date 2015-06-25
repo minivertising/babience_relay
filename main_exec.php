@@ -41,6 +41,7 @@ switch ($_REQUEST['exec'])
 		if ($dupli_cnt == 0)
 		{
 			// 네이버 api 이용하여 짧은 URL 만들기
+			/*
 			$key			= "b37ad805616f32a4da00557c89b21dd9"; // 사용자가 발급받은 단축 URL KEY를 입력 하세요
 			$longurl		= "http://www.babience-giveandtake.com/MOBILE/certificate.php?serial=".$serial;
 			$url = sprintf("%s?url=%s&key=%s", "http://openapi.naver.com/shorturl.xml", $longurl, $key);
@@ -52,8 +53,8 @@ switch ($_REQUEST['exec'])
 				$orgUrl = $xml->result->orgUrl;
 				$qr = $xml->result->url.".qr";
 			}
-			
-			//$transUrl	= "http://testurl.com";
+			*/
+			$transUrl	= "http://testurl.com";
 			
 			//include_once "./cre_image.php?serial=".$serial."&baby=".$mb_baby_name;
 			//get_image($serial, $mb_baby_name);
