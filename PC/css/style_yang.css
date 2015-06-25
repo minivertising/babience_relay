@@ -113,9 +113,10 @@ body{
 
 .sec_navi{
 	position:fixed;
-	top:0;left:0;z-index:70;
+	top:0;left:0;z-index:200;
 	width:100%;
-	background:#f9eddc;
+	background:#fff;
+	border-bottom:1px solid #ffa727;
 }
 .navi{
 	height:87px;
@@ -124,12 +125,12 @@ body{
 }
 .navi .left{
 	position:absolute;
-	left:2%;
+	left:1.5%;
 	padding-top:10px;
 }
 .navi .right{
 	position:absolute;
-	right:2%;
+	right:1.5%;
 	width:620px;
 	padding-top:20px;
 }
@@ -154,10 +155,9 @@ body{
 
 .sec_right_navi{
 	position:absolute;
-	right:0;
+	right:20px;
 	top:50%;
 	width:50px;
-	background:#eee;
 }
 .wrap_sec_top{
 	background:url(../images/bg_top.jpg) repeat-x;	
@@ -252,11 +252,86 @@ body{
 .sec_give{
 	text-align:center;
 	width:1000px;
-	margin:0 auto;	
+	margin:0 auto;
+	position:relative;
 }
+.sec_give .cnt{
+	position:absolute;
+	width:115px;
+	top:253px;
+	left:280px;
+	text-align:center;
+	z-index:121;
+	font-size:18px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
+	font-family: "Malgun Gothic";
+	font-weight:bold;
+	color:#fff;
+}
+.sec_give .cnt_man{
+	position:absolute;
+	width:405px;
+	top:455px;
+	left:80px;
+	text-align:center;
+	z-index:120;
+}
+
+
+.sec_give .runner{
+	position:absolute;
+	top:672px;
+	left:10px;
+	z-index:120;
+	display:none;
+}
+
+.sec_give .bg_gage{
+    position:absolute;
+	top:728px;
+	left:26px;
+	z-index:119;
+}
+.sec_give .gage_bar{
+    position:absolute;
+	top:728px;
+	left:43px;
+	z-index:118;
+	width:912px;
+	height:36px;	
+}
+.sec_give .gage_bar .inner{
+	position:relative;
+	width:912px;
+	height:36px;	
+}
+.sec_give .gage_bar .inner .bars{
+	width:20%;
+	height:36px;	
+	background:url(../images/bg_bars.jpg) repeat-x;
+}
+
 .sec_give .img_give_graphic{
-	padding-top:30px;
+	position:relative;
+	height:1383px;
+	background:url(../images/wrap_bg_give.jpg) no-repeat top center;
 }
+.sec_give .img_give_graphic .bg{
+	position:absolute;
+	background:url(../images/bg_give.png) no-repeat top center;
+	height:1383px;
+	width:997px;
+	z-index:100;
+}
+.sec_give .img_give_graphic .mull{
+	position:absolute;
+	bottom:120px;
+	right:90px;
+	z-index:99;
+	width:319px;
+}
+
 
 .wrap_sec_movie{
 	background:#f9eddc;
