@@ -16,7 +16,7 @@
     <meta property="og:description" content="베비언스 릴레이 이벤트.">
 
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
-    <title>Babience</title>
+    <title>베비언스</title>
     <link rel="stylesheet" type="text/css" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" type="text/css" href="./css/style.css"> 
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">

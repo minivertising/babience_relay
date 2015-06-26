@@ -350,6 +350,14 @@ function input_info()
 						$("#prize_txt").attr("src","images/popup/img_gift_water.png");
 					}else if (giftArr[0] == "WASH"){
 						$("#prize_txt").attr("src","images/popup/img_gift_wash.png");
+					}else if (giftArr[0] == "CAMERA"){
+						$("#prize_txt").attr("src","images/popup/img_gift_camera.png");
+					}else if (giftArr[0] == "HOTEL"){
+						$("#prize_txt").attr("src","images/popup/img_gift_hotel.png");
+					}else if (giftArr[0] == "WG"){
+						$("#prize_txt").attr("src","images/popup/img_gift_wg.png");
+					}else if (giftArr[0] == "MILK"){
+						$("#prize_txt").attr("src","images/popup/img_gift_milk.png");
 					}
 					$("#serial_number").html(giftArr[1]);
 				}

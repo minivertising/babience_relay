@@ -1,7 +1,6 @@
 <?
 	include_once   "./header.php";
 
-	//print_r($_REQUEST);
 	$gift		= $_REQUEST['gift'];
 	$serial	= $_REQUEST['serial'];
 ?>
@@ -16,7 +15,38 @@
         <div class="title title_input"><img src="images/popup/title_gift.png" /></div>
         <div class="img_gift">
           <div class="img">
+<?
+	if ($gift == "CASH")
+	{
+?>
             <img src="images/popup/gift_coupon.png" />
+<?
+	}else if ($gift == "WATER"){
+?>
+            <img src="images/popup/gift_water.png" />
+<?
+	}else if ($gift == "WASH"){
+?>
+            <img src="images/popup/gift_wash.png" />
+<?
+	}else if ($gift == "CAMERA"){
+?>
+            <img src="images/popup/gift_camera.png" />
+<?
+	}else if ($gift == "HOTEL"){
+?>
+            <img src="images/popup/gift_hotel.png" />
+<?
+	}else if ($gift == "WG"){
+?>
+            <img src="images/popup/gift_wg.png" />
+<?
+	}else if ($gift == "MILK"){
+?>
+            <img src="images/popup/gift_milk.png" />
+<?
+	}
+?>
           </div>
           <div class="gift_num clearfix">
             <div class="label"><img src="images/popup/label_gift_num.png" alt=""/></div>
