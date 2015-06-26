@@ -242,6 +242,14 @@ $(document).ready(function() {
 			open: function() {
 			},
 			close: function() {
+				$("#mb_name").val("");
+				$("#mb_baby_name").val("");
+				$("#mb_phone1").val("");
+				$("#mb_phone2").val("");
+				$("#mb_phone3").val("");
+				$("#mb_comment").val("");
+				$("#mb_nickname").val("");
+				$('input').iCheck('uncheck');
 			}
 		}
 	});

@@ -112,12 +112,12 @@ switch ($_REQUEST['exec'])
 					$cImage = getPrintToImage($szFilePath, $objFont, $serial, LEFT | MIDDLE);
 
 
-					$image_url	= "http://www.babience-giveandtake.com/certi_images/".date('d')."/".$serial.".png";
+					$image_url	= "http://www.babience-giveandtake.com/certi_images/".date('d')."/".$serial.".jpg";
 
 					$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_name, mb_phone, baby_name, mb_regdate, mb_gubun, mb_media, mb_serialnumber, mb_winner, mb_blogger, mb_s_url, mb_image) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_baby_name."','".date("Y-m-d H:i:s")."','".$gubun."','".$_SESSION['ss_media']."','".$serial."','".$giftcode."','".$blogger_num."', '".$transUrl."','".$image_url."')";
 					$result 	= mysqli_query($my_db, $query);
 					
-					//send_lms($mb_phone, $transUrl);
+					send_lms($mb_phone, $transUrl);
 				}else{
 					$query 	= "INSERT INTO ".$_gl['member_info_table']."(mb_ipaddr, mb_name, mb_phone, baby_name, mb_regdate, mb_gubun, mb_media, mb_serialnumber, mb_winner, mb_blogger) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_baby_name."','".date("Y-m-d H:i:s")."','".$gubun."','".$_SESSION['ss_media']."','".$serial."','".$giftcode."','".$blogger_num."')";
 					$result 	= mysqli_query($my_db, $query);
