@@ -365,11 +365,34 @@ body{
 	position:relative;
 	margin-top:-2%;
 }
-
-.sec_lms_gift .bg,
-.sec_lms_gift .bg img{
+.sec_lms_gift .title,
+.sec_lms_gift .title img{
 	width:100%;
 }
+
+.sec_lms_gift .list_block{
+	padding:10px 0;
+	background:url(../images/lms_gift_bg.jpg);
+}
+
+.sec_lms_gift_btn,
+.sec_lms_gift_btn img{
+	width:100%;
+}
+
+.sec_lms_gift_btn{
+	margin-top:-2%;
+}
+
+.sec_lms_footer{
+	margin-top:-2%;
+}
+.sec_lms_footer,
+.sec_lms_footer img{
+	width:100%;
+	background:#b6d3d9;
+}
+
 .sec_lms_gift .btn,
 .sec_lms_gift .list_block{
 	position:absolute;
