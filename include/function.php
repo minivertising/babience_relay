@@ -71,7 +71,7 @@
 		{
 			if ($total_num == $val)
 			{
-				$winner = "COFFEE";
+				$winner = "WASH";
 				break;
 			}
 			$winner = "CASH";

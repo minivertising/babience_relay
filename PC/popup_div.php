@@ -101,7 +101,7 @@
         <div class="title">
           <img src="images/popup/title_thanks.png" />
         </div>
-        <div class="img_gift" id="prize_txt">
+        <div class="img_gift">
           <img src="images/popup/img_gift_coupon.png" id="prize_txt" />
         </div>
         <div class="block_btn_copy clearfix">
@@ -112,9 +112,9 @@
           <a href="http://www.babience.co.kr/index.jsp" target="_blank"><img src="images/popup/btn_home.png" /></a>
         </div>
         <div class="btn_sns_block">
-          <a href="#"><img src="images/popup/btn_share_fb.png" alt=""/></a>
-          <a href="#"><img src="images/popup/btn_share_ks.png" alt=""/></a>
-          <a href="#"><img src="images/popup/btn_share_tw.png" alt=""/></a>
+          <a href="#" onclick="sns_share('fb');return false;"><img src="images/popup/btn_share_fb.png" alt=""/></a>
+          <a href="#" onclick="sns_share('ks');return false;"><img src="images/popup/btn_share_ks.png" alt=""/></a>
+          <a href="#" onclick="sns_share('tw');return false;"><img src="images/popup/btn_share_tw.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>

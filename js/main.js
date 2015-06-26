@@ -345,6 +345,10 @@ function input_info()
 					if (giftArr[0] == "CASH")
 					{
 						$("#prize_txt").attr("src","images/popup/img_gift_coupon.png");
+					}else if (giftArr[0] == "WATER"){
+						$("#prize_txt").attr("src","images/popup/img_gift_water.png");
+					}else if (giftArr[0] == "WASH"){
+						$("#prize_txt").attr("src","images/popup/img_gift_wash.png");
 					}
 					$("#serial_number").html(giftArr[1]);
 				}
