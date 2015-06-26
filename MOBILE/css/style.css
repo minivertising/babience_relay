@@ -329,6 +329,68 @@ body{
 }
 
 
+
+
+.sec_give_paper_block{
+	width:100%;
+	position:relative;
+}
+.sec_give_paper_block .name{
+	position:absolute;
+	top:42%;
+	left:51%;
+	font-size:18px;
+	font-weight:bold;
+	color:#000;
+	font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
+	font-family: "Malgun Gothic";	
+}
+.sec_give_paper_block .btn{
+	position:absolute;
+	bottom:5%;
+	width:100%;
+	text-align:center;
+}
+.sec_give_paper_block .btn a img{
+	width:15%;
+}
+
+.sec_give_paper_block .bg,
+.sec_give_paper_block .bg img{
+	width:100%;
+}
+
+.sec_lms_gift{
+	width:100%;
+	position:relative;
+	margin-top:-2%;
+}
+
+.sec_lms_gift .bg,
+.sec_lms_gift .bg img{
+	width:100%;
+}
+.sec_lms_gift .btn,
+.sec_lms_gift .list_block{
+	position:absolute;
+}
+.sec_lms_gift .btn{
+	bottom:0;
+}
+.sec_lms_gift .list_block{
+	width:80%;
+	margin:0 auto;
+	height:30%;
+	background:#ccc;
+	overflow:scroll;
+	top:10%;
+}
+
+.sec_lms_gift .list_block .list_one{
+	width:100%;
+	padding:30px 0;
+}
+
 /*popup common*/
 .popup_wrap {
 	position:relative;
