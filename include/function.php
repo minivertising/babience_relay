@@ -222,7 +222,7 @@ function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
         $nY = $arrImgInfo[1] - $nMax + $arrTTFBBox[1];
     }
 	$nX = 610;
-	$nY = 315;
+	$nY = 335;
     ImageTTFText($nImage, $objFont->size, $objFont->angle, $nX, $nY, $nFontColor, $objFont->font, $objFont->text);
 
 	$mydir = "certi_images/".date("d"); 
