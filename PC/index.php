@@ -125,6 +125,7 @@
 	$give_query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_s_url<>''";
 	$give_cnt 	= mysqli_num_rows(mysqli_query($my_db, $give_query));
 	$per_cnt	= $give_cnt / 10000;
+	$per_bottle	= ($per_cnt / 640) + 80;
 ?>
 
 <div class="wrap_sec_give">
@@ -281,6 +282,8 @@ $(document).ready(function() {
 			return false;
 	} );
 	$('#mommy_gage').css('width','<?=$per_cnt?>%');
+	$('.mull').css('bottom','<?=$per_bottle?>px');
+
 });
 
 function move_area(area)
