@@ -741,12 +741,12 @@ body.main{
 .popup_wrap .p_position.p_mid_input{
 	position:relative;
 	width:500px;
-	height:600px;
+	height:620px;
 	background:url(../images/popup/bg_input.png) no-repeat top left;
 }
 .popup_wrap .p_position.p_mid_input .block_content{
 	width:500px;
-	height:600px;
+	height:620px;
 }
 .popup_wrap .p_position.p_mid.gift_check{
 	position:relative;
