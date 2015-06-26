@@ -1,4 +1,3 @@
-Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
 
 function sns_share(media)
 {

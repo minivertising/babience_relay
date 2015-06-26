@@ -200,6 +200,7 @@
 <script type="text/javascript">
 var chk_ins = 0;
 $(document).ready(function() {
+	Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
 	setInterval("auto_count()",1000);
 
 	var width = $(".block_movie").width();
