@@ -4,7 +4,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>belif bomb</title>
+    <title>베비언스</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,10 +13,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.babience_giveandtake.com/PC/index.php" />
     <meta property="og:image" content="http://www.babience_giveandtake.com/MOBILE/images/img_sns_share_new2.jpg" />
-    <meta property="og:description" content="베비언스 릴레이 이벤트.">
+    <meta property="og:description" content="베비언스 릴레이 이벤트">
 
-    <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
-    <title>베비언스</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" type="text/css" href="./css/style.css"> 
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
