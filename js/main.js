@@ -2,7 +2,7 @@ function sns_share(media)
 {
 	if (media == "fb")
 	{
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.babience_giveandtake.com/?media=facebook'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.babience-giveandtake.com/?media=facebook'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
@@ -18,13 +18,13 @@ function sns_share(media)
 		  container: '#kakao-link-btn',
 		  label: "[기부 앤 테이크 릴레이] 우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!",
 		  image: {
-			src: 'http://www.babience_giveandtake.com/MOBILE/images/img_sns_share_kt.jpg',
+			src: 'http://www.babience-giveandtake.com/MOBILE/images/img_sns_share_kt.jpg',
 			width: '1200',
 			height: '630'
 		  },
 		  webButton: {
 			text: '베비언스',
-			url: 'http://www.babience_giveandtake.com/?media=kt' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+			url: 'http://www.babience-giveandtake.com/?media=kt' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
 		$.ajax({
@@ -37,7 +37,7 @@ function sns_share(media)
 			}
 		});
 	}else if (media == "tw"){
-		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("[베비언스] 우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!") + '&url='+ encodeURIComponent('http://bit.ly/1GMGwnA'),'sharer','toolbar=0,status=0,width=600,height=325');
+		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("[베비언스] 우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!") + '&url='+ encodeURIComponent('http://bit.ly/1LIDUII'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
@@ -56,7 +56,7 @@ function sns_share(media)
 				Kakao.API.request( {
 					url : '/v1/api/story/linkinfo',
 					data : {
-						url : 'http://www.babience_giveandtake.com/?media=ks'
+						url : 'http://www.babience-giveandtake.com/?media=ks'
 					}
 				}).then(function(res) {
 					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
