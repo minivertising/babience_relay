@@ -42,6 +42,9 @@
               <div class="gift_name">선물</div>
               <div class="gift_num">선물 번호</div>
             </div>
+            <div class="list_block not_yet">
+            
+            </div>         
           </div> 
         </div>  
         <div class="sec_lms_gift_btn">
