@@ -146,8 +146,24 @@ switch ($_REQUEST['exec'])
 		$innerHTML	= "";
 		while ($search_data = mysqli_fetch_array($result))
 		{
+			if ($search_data['mb_winner'] == "CASH")
+			{
+				$winner_gift	="베비언스 3천원 쿠폰";
+			}else if ($search_data['mb_winner'] == "CAMERA"){
+				$winner_gift	="DSLR 카메라";
+			}else if ($search_data['mb_winner'] == "HOTEL"){
+				$winner_gift	="하얏트 호텔 숙박권";
+			}else if ($search_data['mb_winner'] == "WG"){
+				$winner_gift	="베베프람 웨건";
+			}else if ($search_data['mb_winner'] == "MILK"){
+				$winner_gift	="베비언스 분유 1년치";
+			}else if ($search_data['mb_winner'] == "WATER"){
+				$winner_gift	="베이비워터 24병";
+			}else if ($search_data['mb_winner'] == "WASH"){
+				$winner_gift	="메소드 핸드워시";
+			}
 			$innerHTML		.="<div class='inner clearfix'>";
-			$innerHTML		.="<div class='txt'>".$search_data['mb_winner']."</div>";
+			$innerHTML		.="<div class='txt'>".$winner_gift."</div>";
 			$innerHTML		.="<div class='txt num'>".$search_data['mb_serialnumber']."</div>";
 			$innerHTML		.="<div class='btn'><a href='#' onclick=copy_url('".$search_data['mb_serialnumber']."')><img src='images/popup/btn_copy2.png' /></a></div>";
 			$innerHTML		.="</div>";

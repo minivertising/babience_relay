@@ -178,7 +178,7 @@
 </div>   
 
 <div class="sec_app">
-  <a href="#">앱다운로드</a>
+  <a href="http://www.babience.com/m/url/mobile.jsp" target="_blank">앱다운로드</a>
   <div class="bg"><img src="images/img_app.jpg" alt=""/></div>
 </div>
 
