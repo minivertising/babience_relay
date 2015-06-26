@@ -11,16 +11,16 @@
 <!doctype html>
 <html>
   <head>
-    <title>belif bomb</title>
+    <title>베비언스</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-    <meta property="og:title" content="Babience Relay">
+    <meta property="og:title" content="[베비언스] 우리 아기 첫 기부증서">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?=$long_url	?>" />
     <meta property="og:image" content="<?=$member_info['mb_image']?>" />
-    <meta property="og:description" content="베비언스 릴레이 이벤트.">
+    <meta property="og:description" content="우리 아기 몸과 마음 모두 성장하는 기부 앤 테이크 릴레이 캠페인에 꼭 참여해주세요!">
 
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
     <title>Babience</title>
@@ -54,7 +54,7 @@
 <div class="sec_give_paper_block">
   <div class="name"><?=$member_info['baby_name']?></div>
   <div class="btn">
-    <a href="#" onclick="c_sns_share('kt')"><img src="images/lms_sns_kt.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('kt')" id="kakao-link-btn"><img src="images/lms_sns_kt.png" alt=""/></a>
     <a href="#" onclick="c_sns_share('ks')"><img src="images/lms_sns_ks.png" alt=""/></a>
     <a href="#" onclick="c_sns_share('fb')"><img src="images/lms_sns_fb.png" alt=""/></a>
   </div>
@@ -145,14 +145,14 @@ function c_sns_share(media)
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
 		  container: '#kakao-link-btn',
-		  label: "VDL MEETS KAKAO FRIENDS!\r\nVDL FRIENDS KIT를 받아라!\r\n\r\n친구에게 메시지를 보내고 5천원 할인 쿠폰과 VDL FRIENDS KIT을 받으세요! 참여만 해도 5천원 할인 쿠폰을 드려요",
+		  label: "[우리 아기 첫 기부 증서]\r\n\r\n우리 아기 몸과 마음 모두 성장하는 기부 앤 테이크 릴레이 캠페인에 꼭 참여해주세요!",
 		  image: {
 			src: "<?=$member_info['mb_image']?>",
 			width: '1200',
 			height: '630'
 		  },
 		  webButton: {
-			text: 'VDL 써머 컬렉션',
+			text: '[베비언스]\r\n기부 앤 테이크 릴레이!',
 			url: '<?=$long_url	?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
@@ -182,7 +182,7 @@ function c_sns_share(media)
 						url : '/v1/api/story/post/link',
 						data : {
 						link_info : res,
-							content:"VDL MEETS KAKAO FRIENDS! 친구에게 메시지를 보내고 컬렉션 제품이 담긴 VDL FRIENDS KIT를 받으세요! 참여만 해도 5천원 할인 쿠폰을 드려요."
+							content:"우리 아기 첫 기부 증서\r\n\r\nhttp://www.babience-giveandtake.com"
 						}
 					});
 				}).then(function(res) {
