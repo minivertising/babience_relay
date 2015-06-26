@@ -5,11 +5,11 @@
 <html>
   <head>
     <title>Babience Relay</title>
-    <meta property="og:title" content="Babience Relay">
+    <meta property="og:title" content="베비언스">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.babience_giveandtake.com/PC/index.php" />
-    <meta property="og:image" content="http://www.babience_giveandtake.com/MOBILE/images/img_sns_share_new2.jpg" />
-    <meta property="og:description" content="베비언스 릴레이 이벤트.">
+    <meta property="og:image" content="http://www.babience_giveandtake.com/MOBILE/images/img_sns_share.jpg" />
+    <meta property="og:description" content="우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/pavicon.ico" /> -->
     <link rel="stylesheet" type="text/css" href="../lib/Magnific-Popup/magnific-popup.css"> 
@@ -48,4 +48,4 @@
 
 </script> -->
   </head>
-  <body>
+<body class="main">

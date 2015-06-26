@@ -20,9 +20,18 @@ switch ($_REQUEST['exec'])
 
 	case "total_member" :
 		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
-		$result 	= mysqli_num_rows(mysqli_query($my_db, $query));
+		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
-		echo $result;
+		$len_cnt	= strlen($total_cnt);
+		$innerHTML = "";
+		for ($i=0; $i<$len_cnt; $i++){
+			if ($len_cnt > 3 && $i==1)
+				$innerHTML	.= "<img src='images/num/num_dash.png' alt=''/>";
+				
+			$innerHTML .= "<img src='images/num/num_".substr($total_cnt,$i,1).".png' alt=''/>";
+		}
+		$innerHTML .= "<img src='images/num/label_num.png' alt=''/>";
+		echo $innerHTML;
 	break;
 
 	case "insert_info" :

@@ -17,6 +17,7 @@
 		exit;
 	}
 	*/
+	
 
 
 	$mobile_agent = array("iPhone","iPod","iPad","Android","Blackberry","SymbianOS|SCH-M\d+","Opera Mini", "Windows ce", "Nokia", "sony" );

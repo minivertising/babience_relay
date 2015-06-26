@@ -154,10 +154,11 @@ body{
 
 
 .sec_right_navi{
-	position:absolute;
+	position:fixed;
 	right:20px;
 	top:50%;
 	width:50px;
+	z-index:101;
 }
 
 body.main{
