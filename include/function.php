@@ -240,7 +240,7 @@ function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 			break;
 		case 2:
 			# JPG
-			ImageJPEG($nImage,'./certi_images/'.$serial.'.jpg',100);
+			ImageJPEG($nImage,'/home/babience/'.$mydir.'/'.$serial.'.jpg',100);
 			break;
 		case 3:
 			# PNG

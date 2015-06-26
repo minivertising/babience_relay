@@ -53,7 +53,7 @@
 <div class="wrap_page">
   <div class="navi">
     <div class="left"><a href="http://www.babience.co.kr/m/index.jsp"><img src="images/logo.png" width="95" alt=""/></a></div>
-    <div class="right"><a href="#"><img src="images/btn_navi.png" width="40" alt=""/></a></div>
+    <div class="right"><a href="#" onclick="show_menu()"><img src="images/btn_navi.png" width="40" alt=""/></a></div>
   </div>
   </div>
 
@@ -264,6 +264,32 @@ function m_auto_count()
 			$("#total_cnt").html(response);
 		}
 	});
+}
+
+function show_menu()
+{
+	if ($("#mobile_menu").css("display") == "block")
+	{
+		$('#mobile_menu').animate({right:-200},300,'linear',function(){
+			$("#mobile_menu").hide();
+			$(".mask").fadeOut(300);
+			$(window).off(".disableScroll");
+		});
+	}else{
+		$(".mask").width($(window).width());
+		$(".mask").height($(window).height());
+		$(".mask").fadeTo(1000, 0.6);
+
+		$('#mobile_menu').css('right','-200px');
+		// 이동위치값 지정
+		var position = 0;
+		$('#mobile_menu').show().animate({right:position},300,'linear');
+
+		$(window).on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll", function(e) {
+			e.preventDefault();
+			return;
+		});
+	}
 }
 
 </script>
