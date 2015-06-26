@@ -93,46 +93,63 @@
     </div>
     <div class="inner clearfix">
       <div class="one_list">
-        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');return false;"><img src="images/img_bloger_1.png" alt=""/></a></div>
-        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>','main');return false;"><?=$b_info[0]['b_recommend']?>명</a></div>
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');return false;" style="outline:none;"><img src="images/img_bloger_1.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[0]['b_recommend']?>명</a></div>
       </div>
       <div class="one_list">
-        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');return false;"><img src="images/img_bloger_2.png" alt=""/></a></div>
-        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>','main');return false;"><?=$b_info[1]['b_recommend']?>명</a></div>
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');return false;" style="outline:none;"><img src="images/img_bloger_2.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[1]['b_recommend']?>명</a></div>
       </div>
       <div class="one_list">
-        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');return false;"><img src="images/img_bloger_3.png" alt=""/></a></div>
-        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>','main');return false;"><?=$b_info[2]['b_recommend']?>명</a></div>
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');return false;" style="outline:none;"><img src="images/img_bloger_3.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[2]['b_recommend']?>명</a></div>
       </div>
     </div>
     <div class="inner clearfix">
       <div class="one_list">
-        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');return false;"><img src="images/img_bloger_4.png" alt=""/></a></div>
-        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>','main');return false;"><?=$b_info[3]['b_recommend']?>명</a></div>
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');return false;" style="outline:none;"><img src="images/img_bloger_4.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[3]['b_recommend']?>명</a></div>
       </div>
       <div class="one_list">
-        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');return false;"><img src="images/img_bloger_5.png" alt=""/></a></div>
-        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>','main');return false;"><?=$b_info[4]['b_recommend']?>명</a></div>
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');return false;" style="outline:none;"><img src="images/img_bloger_5.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[4]['b_recommend']?>명</a></div>
       </div>
       <div class="one_list">
-        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');return false;"><img src="images/img_bloger_6.png" alt=""/></a></div>
-        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>','main');return false;"><?=$b_info[5]['b_recommend']?>명</a></div>
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');return false;" style="outline:none;"><img src="images/img_bloger_6.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[5]['b_recommend']?>명</a></div>
       </div>
     </div>
   </div>
 </div>
+<?
+	$give_query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_s_url<>''";
+	$give_cnt 	= mysqli_num_rows(mysqli_query($my_db, $give_query));
+	$per_cnt	= $give_cnt / 10000;
+?>
 
 <div class="wrap_sec_give">
   <div class="sec_give">
-    <div class="cnt">2,345개</div>
+    <div class="cnt"><?=number_format($give_cnt);?>개</div>
     <div class="cnt_man">
-      <img src="images/num2/num_6.png" alt=""/>
+<?
+	$len_give_cnt		= strlen($give_cnt);
+	$innerHTML2 = "";
+	for ($j=0; $j<$len_give_cnt; $j++){
+		if ($len_give_cnt > 3 && $j==1)
+			$innerHTML2	.= "<img src='images/num2/num_dash.png' alt=''/>";
+
+		$innerHTML2 .= "<img src='images/num2/num_".substr($give_cnt,$j,1).".png' alt=''/>";
+	}
+	$innerHTML2 .= "<img src='images/num2/label_num.png' alt=''/>";
+	echo $innerHTML2;
+?>
+      <!-- <img src="images/num2/num_6.png" alt=""/>
       <img src="images/num2/num_7.png" alt=""/>
       <img src="images/num2/num_dash.png" alt=""/>
       <img src="images/num2/num_8.png" alt=""/>
       <img src="images/num2/num_9.png" alt=""/>
       <img src="images/num2/num_0.png" alt=""/>
-      <img src="images/num2/label_num.png" alt=""/>
+      <img src="images/num2/label_num.png" alt=""/> -->
     </div>
     <div class="runner"><img src="images/runner.png" alt=""/></div>
     <div class="bg_gage">
@@ -140,7 +157,7 @@
     </div>
     <div class="gage_bar">
       <div class="inner">
-        <div class="bars"></div>
+        <div class="bars" id="mommy_gage"></div>
       </div>
     </div>
 
@@ -251,7 +268,7 @@ $(document).ready(function() {
 		$( 'html, body' ).animate( { scrollTop : 0 }, 800 );
 			return false;
 	} );
-
+	$('#mommy_gage').css('width','<?=$per_cnt?>%');
 });
 
 function move_area(area)
