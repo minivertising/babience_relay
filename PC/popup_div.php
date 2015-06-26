@@ -24,7 +24,16 @@
             휴대폰 번호
             </div>
             <div class="input_phone clearfix">
-              <div class="phone_ip"><input type="tel" name="mb_phone1" id="mb_phone1"></div>
+              <div class="phone_ip">
+                <select name="mb_phone1" id="mb_phone1">
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                  <option value="016">016</option>
+                  <option value="017">017</option>
+                  <option value="018">018</option>
+                  <option value="019">019</option>
+                </select>
+              </div>
               <div class="phone_ip"><input type="tel" name="mb_phone2" id="mb_phone2"></div>
               <div class="phone_ip"><input type="tel" name="mb_phone3" id="mb_phone3"></div>
             </div>

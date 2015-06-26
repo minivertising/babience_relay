@@ -112,9 +112,9 @@
           <a href="http://www.babience.co.kr/index.jsp" target="_blank"><img src="images/popup/btn_home.png" /></a>
         </div>
         <div class="btn_sns_block">
-          <a href="#"><img src="images/popup/btn_share_fb.png" alt=""/></a>
-          <a href="#"><img src="images/popup/btn_share_ks.png" alt=""/></a>
-          <a href="#"><img src="images/popup/btn_share_tw.png" alt=""/></a>
+          <a href="#" onclick="sns_share('fb');return false;"><img src="images/popup/btn_share_fb.png" alt=""/></a>
+          <a href="#" onclick="alert('고객님의 브라우저에서는 지원되지 않는 기능입니다.');"><img src="images/popup/btn_share_ks.png" alt=""/></a>
+          <a href="#" onclick="sns_share('tw');return false;"><img src="images/popup/btn_share_tw.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
