@@ -2,7 +2,7 @@
 	include_once "../config.php";
 
 	if ($gubun == "MOBILE")
-		echo "<script>location.href='http://www.vdl-metalcushion.com/?media=ks';</script>";
+		echo "<script>location.href='http://www.babience-giveandtake.com/?media=ks';</script>";
 ?>
 <!doctype html>
 <html>
