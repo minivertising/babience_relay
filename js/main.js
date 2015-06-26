@@ -109,6 +109,7 @@ function auto_count()
 		}
 	});
 }
+
 var timerId = 0;
 function auto_comment(num)
 {

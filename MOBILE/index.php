@@ -1,17 +1,11 @@
 <?
 	include_once   "./header.php";
-<<<<<<< HEAD
-	
-	$comment_info = select_comment();
 
+	$comment_info = select_comment();
+	
 	$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
 	$member_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
-	echo $member_cnt;
-
-?>
-  <div id="blogger_area">
-<?
 	$query 		= "SELECT * FROM ".$_gl['blogger_info_table']." WHERE week_num=1";
 	$result 	= mysqli_query($my_db, $query);
 	
@@ -36,53 +30,199 @@
 		$i++;
 	}
 	shuffle($b_info);
+
+
 ?>
-    <div>
-<?=$b_info[0]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>','main');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');">상세보기</a>
-      함께하는 <?=$b_info[0]['b_recommend']?>의 맘
-    </div>
-    <div>
-<?=$b_info[1]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>','main');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');">상세보기</a>
-      함께하는 <?=$b_info[1]['b_recommend']?>의 맘
-    </div>
-    <div>
-<?=$b_info[2]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>','main');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');">상세보기</a>
-      함께하는 <?=$b_info[2]['b_recommend']?>의 맘
-    </div>
-    <div>
-<?=$b_info[3]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>','main');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');">상세보기</a>
-      함께하는 <?=$b_info[3]['b_recommend']?>의 맘
-    </div>
-    <div>
-<?=$b_info[4]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>','main');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');">상세보기</a>
-      함께하는 <?=$b_info[4]['b_recommend']?>의 맘
-    </div>
-    <div>
-<?=$b_info[5]['b_name']?>
-      <a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>','main');">추천하기</a>
-	  <a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');">상세보기</a>
-      함께하는 <?=$b_info[5]['b_recommend']?>의 맘
-    </div>
+<body>
+<div class="wrap_page">
+  <div class="navi">
+    <div class="left"><a href="http://www.babience.co.kr/m/index.jsp"><img src="images/logo.png" width="95" alt=""/></a></div>
+    <div class="right"><a href="#"><img src="images/btn_navi.png" width="40" alt=""/></a></div>
   </div>
-  <div>
-    <a href="#" onclick="go_gift()">나의 선물함</a>
   </div>
+
+<div class="sec_top">
+  <a href="#" onclick="move_area('gift')">선물보기</a>
+  <div class="cnt_man" id="total_cnt">
 <?
-	include_once   "./popup_div.php";
+	$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+	$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
+
+	$len_cnt	= strlen($total_cnt);
+	$innerHTML = "";
+	for ($i=0; $i<$len_cnt; $i++){
+		if ($len_cnt > 3 && $i==1)
+			$innerHTML	.= "<img src='images/num/num_dash.png' class='dash' alt=''/>";
+			
+		$innerHTML .= "<img src='images/num/num_".substr($total_cnt,$i,1).".png' alt=''/>";
+	}
+	$innerHTML .= "<img src='images/num/label_num.png' alt=''/>";
+	echo $innerHTML;
+
 ?>
-  </body>
+  </div>
+  <div class="bg">
+    <img src="images/img_top.jpg" alt=""/>
+  </div>
+</div>
+
+<div class="sec_list">
+  <div class="title"><img src="images/title_bloger.jpg" alt=""/></div>
+  <div class="wrap_list clearfix">
+    <div class="one_list">
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');"><img src="images/bloger_img_1.jpg" alt=""/></a></div>
+      <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
+      <div class="cnt"><?=number_format($b_info[0]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
+    </div>
+    <div class="one_list">
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');"><img src="images/bloger_img_2.jpg" alt=""/></a></div>
+      <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
+      <div class="cnt"><?=number_format($b_info[1]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
+    </div>
+    <div class="one_list">
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');"><img src="images/bloger_img_3.jpg" alt=""/></a></div>
+      <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
+      <div class="cnt"><?=number_format($b_info[2]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
+    </div>
+    <div class="one_list">
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');"><img src="images/bloger_img_4.jpg" alt=""/></a></div>
+      <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
+      <div class="cnt"><?=number_format($b_info[3]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
+    </div>
+    <div class="one_list">
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');"><img src="images/bloger_img_5.jpg" alt=""/></a></div>
+      <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
+      <div class="cnt"><?=number_format($b_info[4]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
+    </div>
+    <div class="one_list">
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');"><img src="images/bloger_img_6.jpg" alt=""/></a></div>
+      <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
+      <div class="cnt"><?=number_format($b_info[5]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
+    </div>
+  </div>
+</div>
+<?
+	$give_query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_s_url<>''";
+	$give_cnt 	= mysqli_num_rows(mysqli_query($my_db, $give_query));
+	$per_cnt	= $give_cnt / 10000;
+?>
+
+<div class="sec_give">
+  <div class="title">
+    <div class="cnt"><?=number_format($give_cnt)?>개</div>
+    <div class="cnt_man">
+<?
+	$len_give_cnt		= strlen($give_cnt);
+	$innerHTML2 = "";
+	for ($j=0; $j<$len_give_cnt; $j++){
+		if ($len_give_cnt > 3 && $j==1)
+			$innerHTML2	.= "<img src='images/num/num_dash.png' class='dash' alt=''/>";
+
+		$innerHTML2 .= "<img src='images/num/num_".substr($give_cnt,$j,1).".png' alt=''/>";
+	}
+	$innerHTML2 .= "<img src='images/num/label_num.png' alt=''/>";
+	echo $innerHTML2;
+?>
+    </div>
+    <div class="bg"><img src="images/title_give.jpg" alt=""/></div>
+  </div>
+
+  <div class="img_give_graphic">
+    <div class="runner"><img src="images/runner.png" alt=""/></div>
+    <div class="percent"><?=round($per_cnt,2)?>%</div>
+    <div class="bar">
+      <div class="inner">
+        <div class="ps" id="mommy_gage"></div>
+      </div>
+    </div>
+    <div class="tong"><img src="images/bg_give_tong.png" alt=""/></div>
+    <div class="mull"><img src="images/tong_mull.png" alt=""/></div>
+    <div class="bg"><img src="images/tong_mull_bg.jpg" alt=""/></div>
+  </div>
+</div>  
+
+<div class="sec_howto">
+  <a href="#" onclick="move_area('gift')">당첨 선물 보기</a>
+  <div class="bg"><img src="images/img_howto.jpg" alt=""/></div>
+</div>     
+
+<div class="sec_gift">
+  <div class="img_gift">
+    <img src="images/img_gift.jpg" alt=""/>
+  </div>
+</div>     
+
+<div class="sec_movie">
+  <div class="title">
+    <img src="images/title_movie.jpg" alt=""/>
+  </div>
+  <div class="movie">
+  <iframe allowfullscreen="1" src="<?=$_gl['youtube_url']?>" frameborder="0" id="ytplayer" class="ytplayer"></iframe>
+  </div>
+</div>   
+
+<div class="sec_app">
+  <a href="#">앱다운로드</a>
+  <div class="bg"><img src="images/img_app.jpg" alt=""/></div>
+</div>
+
+<div class="sec_footer">
+  <img src="images/img_footer.jpg" alt=""/>
+</div>
+</body>
 </html>
 <script type="text/javascript">
+$(document).ready(function() {
+	Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
+	var width = $(window).width() - 6;
+	var youtube_height = (width / 16) * 9;
+	$("#ytplayer").width(width);
+	$("#ytplayer").height(youtube_height);
+	setInterval("m_auto_count()",1000);
+
+	var width = $(".block_movie").width();
+	var youtube_height = (width / 16) * 9;
+	$(".block_movie").height(youtube_height);
+
+	$(".block_movie").height()
+	// 팝업 jQuery 스타일
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+		fixedContentPos: true,
+		fixedBgPos: true,
+		overflowY: 'hidden',
+		closeBtnInside: true,
+		//preloader: false,
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in',
+		showCloseBtn : false,
+		closeOnBgClick: true,
+		callbacks: {
+			open: function() {
+			},
+			close: function() {
+			}
+		}
+	});
+
+	$('#mommy_gage').css('width','<?=$per_cnt?>%');
+});
+
+function move_area(area)
+{
+	if (area == "story")
+	{
+		$( 'html, body' ).animate({ scrollTop: $(".wrap_sec_top").height() - 102},500);
+	}else if (area == "give"){
+		$( 'html, body' ).animate({ scrollTop: $(".wrap_sec_top").height() + $(".wrap_sec_list").height() - 102},500);
+	}else if (area == "message"){
+		$( 'html, body' ).animate({ scrollTop: $(".wrap_sec_top").height() + $(".wrap_sec_list").height() + $(".wrap_sec_give").height() + $(".wrap_sec_howto").height() + $(".wrap_sec_gift").height() - 102},500);
+	}else if (area == "gift"){
+		$( 'html, body' ).animate({ scrollTop: $(".sec_top").height() + $(".sec_list").height() + $(".sec_give").height() + $(".sec_howto").height()},500);
+	}
+}
+
 function go_recom(num, detail)
 {
 	if (confirm('추천하시겠어요?'))
@@ -95,376 +235,18 @@ function go_recom(num, detail)
 	}
 }
 
-</script>
-=======
-
-	if (!$_SESSION['ss_media'])
-	{
-		$media	= $_REQUEST['media'];
-
-		$_SESSION['ss_media'] = $media;
-		VM_InsertTrackingInfo($media, $gubun);
-	}
-
-?>
-<style>
-.s1 {
-    width: 100%;
-    height: ;
-}      
-.s2 {
-    width: 80%;
-    margin-top:7%;
-}      
-</style>
-<div class="pop_icon">
-	<div class="inner">
-    	<div class="close"><a href="#" onclick="$('.pop_icon').hide();return false;"><img src="images/btn_close_pop.png" width="23" alt=""/></a></div>
-        <div class="img"><a href="http://www.vdlxkakao.com/?media=vdl_metal" target="_blank"><img src="images/btn_go_kakao.png" width="110" alt=""/></a></div>
-    </div>
-</div>
-<div class="menu clearfix">
-  <a href="index.php" class="logo"><img src="images/logo.png" width="80" alt=""/></a>
-  <a href="#" class="menu_ham"  onclick="show_menu()"><img src="images/menu_ham.png" width="27" alt=""/></a>
-</div>
-<div id="mobile_menu" class="mobile_menu">
-  <ul>
-    <li><a href="#" onclick="screen_move('mv')"><img src="images/btn_gnb_mv.png"  alt=""/></a></li>
-    <li><a href="#" onclick="screen_move('life')"><img src="images/btn_gnb_mina.png"  alt=""/></a></li>
-    <li><a href="#" onclick="screen_move('event')"><img src="images/btn_gnb_event.png"  alt=""/></a></li>
-    <li><a href="#" onclick="screen_move('metal')"><img src="images/btn_gnb_pro.png"  alt=""/></a></li>
-    <li><a href="http://www.vdlcosmetics.com/m/index.jsp" target="_blank"><img src="images/btn_home.jpg"  alt=""/></a></li>
-    <li><a href="http://www.vdlxkakao.com/?media=vdl_metal" target="_blank"><img src="images/btn_kakao.png"  alt=""/></a></li>
-  </ul>
-  <div class="btn_sns">
-    <div class="inner_sns clearfix">
-      <a href="#" onclick="sns_share('twitter');"><img src="images/btn_tw.jpg"  alt=""/></a>
-      <a href="#" onclick="sns_share('facebook');"><img src="images/btn_fb.jpg"  alt=""/></a>
-      <a href="#" onclick="sns_share('kakao');" id="kakao-link-btn"><img src="images/btn_kt.jpg"  alt=""/></a>
-      <a href="#" onclick="sns_share('story');"><img src="images/btn_ks.jpg"  alt=""/></a>
-    </div>
-  </div>
-</div>
-<div class="block_top">
-  <div class="top_btn">
-  	<a href="#" onclick="screen_move('event')"><img src="images/popup/btn_top_event.png" alt=""/></a>
-    <a href="popup_movie.php"><img src="images/popup/btn_top_movie.png" alt=""/></a>
-  </div>
-  <div class="bg_top"><img src="images/img_top.jpg" alt=""/></div>
-</div>
-
-<div class="block_mina">
-  <div class="txt_roll">
-    <div class="inner_roll clearfix">
-      <div class="arrow_left"><a href="#" class="swiper-slide-prev"><img src="images/btn_arrow_left.png" alt=""/></a></div>
-      <div class="txt">
-	    <div class="swiper-container s1">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="#"><img src="images/txt_mina_say_1.png" alt=""/></a></div>
-            <div class="swiper-slide"><a href="#"><img src="images/txt_mina_say_2.png" alt=""/></a></div>
-            <div class="swiper-slide"><a href="#"><img src="images/txt_mina_say_3.png" alt=""/></a></div>
-          </div>
-        </div>
-      </div>
-      <div class="arrow_right"><a href="#" class="swiper-slide-next"><img src="images/btn_arrow_right.png" alt=""/></a></div>
-    </div>
-  </div>
-  <div class="bg_mina"><img src="images/bg_mina.jpg" alt=""/></div>
-</div>
-
-<div class="block_event">
-  <div class="btn_play"><a href="popup_viral.php"><img src="images/btn_play.png" alt=""/></a></div>
-  <div class="btn_event"><a href="popup_event1.php"><img src="images/btn_event_go.png" alt=""/></a></div>
-  <div class="bg_event"><img src="images/bg_event.jpg" alt=""/></div>
-</div>
-
-<div class="block_pro">
-  <div class="txt_roll">
-    <div class="inner_roll clearfix">
-      <div class="arrow_left"><a href="#" onclick="prev_slide();return false;"><img src="images/btn_arrow_left.png" alt=""/></a></div>
-      <div class="txt test111"  id="slide_txt_1"><a href="#"><img src="images/txt_pro_1.png" alt=""/></a></div>
-      <div class="txt test111" id="slide_txt_2" style="display:none;"><a href="#"><img src="images/txt_pro_2.png" alt=""/></a></div>
-      <div class="txt test111" id="slide_txt_3" style="display:none;"><a href="#"><img src="images/txt_pro_3.png" alt=""/></a></div>
-	    <!-- <div class="swiper-container s2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="#"><img src="images/txt_pro_1.png" alt=""/></a></div>
-            <div class="swiper-slide"><a href="#"><img src="images/txt_pro_2.png" alt=""/></a></div>
-            <div class="swiper-slide"><a href="#"><img src="images/txt_pro_3.png" alt=""/></a></div>
-          </div>
-        </div>
-      </div> -->
-      <div class="arrow_right"><a href="#" onclick="next_slide();return false;"><img src="images/btn_arrow_right.png" alt=""/></a></div>
-    </div>
-  </div>
-  <div class="btn_buy"><a href="http://www.vdlcosmetics.com/m/product/detail.jsp?pid=KR38001091" target="_blank"><img src="images/btn_buy.png" alt=""/></a></div>
-  <div class="bg_pro"><img src="images/bg_pro.jpg" alt=""/></div>
-</div>
-<div class="mask"></div>
-</body>
-</html>
-<script type="text/javascript">
-Kakao.init('050c56bc8b9f3d019a9daa270fc255b9');
-var txt_num = 0;
-function prev_slide()
+function m_auto_count()
 {
-	if (txt_num == 0)
-	{
-		$("#slide_txt_1").fadeOut("fast", function(){
-			$("#slide_txt_3").fadeIn("fast", function(){
-				txt_num = 2;
-			});
-		});
-	}else if (txt_num == 1){
-		$("#slide_txt_2").fadeOut("fast", function(){
-			$("#slide_txt_1").fadeIn("fast", function(){
-				txt_num = 0;
-			});
-		});
-	}else{
-		$("#slide_txt_3").fadeOut("fast", function(){
-			$("#slide_txt_2").fadeIn("fast", function(){
-				txt_num = 1;
-			});
-		});
-	}
-
-}
-
-function next_slide()
-{
-	if (txt_num == 0)
-	{
-		$("#slide_txt_1").fadeOut("fast", function(){
-			$("#slide_txt_2").fadeIn("fast", function(){
-				txt_num = 1;
-			});
-		});
-	}else if (txt_num == 1){
-		$("#slide_txt_2").fadeOut("fast", function(){
-			$("#slide_txt_3").fadeIn("fast", function(){
-				txt_num = 2;
-			});
-		});
-	}else{
-		$("#slide_txt_3").fadeOut("fast", function(){
-			$("#slide_txt_1").fadeIn("fast", function(){
-				txt_num = 0;
-			});
-		});
-	}
-}
-
-$(document).ready(function() {
-	var mySwiper = new Swiper ('.s1', {
-	// Optional parameters
-		direction: 'horizontal',
-		loop: true,
-		prevButton : '.swiper-slide-prev',
-		nextButton : '.swiper-slide-next'
-	});
-	var mySwiper2 = new Swiper ('.s2', {
-	// Optional parameters
-		direction: 'horizontal',
-		loop: true,
-		prevButton : '.swiper-slide-prev',
-		nextButton : '.swiper-slide-next'
-	});
-/*
-mySwiper2.on('oInit', function () {
-    alert('1111');
-});
-*/
-$(".mask").click(function(){
-		$('#mobile_menu').animate({right:-200},300,'linear',function(){
-			$("#mobile_menu").hide();
-			$(".mask").fadeOut(300);
-			$(window).off(".disableScroll");
-		});
-	});
-
-	$(".test111").bind('touchstart', function(e) {
-		if (txt_num == 0)
-		{
-			$("#slide_txt_1").fadeOut("fast", function(){
-				$("#slide_txt_3").fadeIn("fast", function(){
-					txt_num = 2;
-				});
-			});
-		}else if (txt_num == 1){
-			$("#slide_txt_2").fadeOut("fast", function(){
-				$("#slide_txt_1").fadeIn("fast", function(){
-					txt_num = 0;
-				});
-			});
-		}else{
-			$("#slide_txt_3").fadeOut("fast", function(){
-				$("#slide_txt_2").fadeIn("fast", function(){
-					txt_num = 1;
-				});
-			});
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"					: "m_total_member"
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			$("#total_cnt").html(response);
 		}
 	});
-});
-
-function show_menu()
-{
-	if ($("#mobile_menu").css("display") == "block")
-	{
-		$('#mobile_menu').animate({right:-200},300,'linear',function(){
-			$("#mobile_menu").hide();
-			$(".mask").fadeOut(300);
-			$(window).off(".disableScroll");
-		});
-	}else{
-		$(".mask").width($(window).width());
-		$(".mask").height($(window).height());
-		$(".mask").fadeTo(1000, 0.6);
-
-		$('#mobile_menu').css('right','-200px');
-		// 이동위치값 지정
-		var position = 0;
-		$('#mobile_menu').show().animate({right:position},300,'linear');
-
-		$(window).on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll", function(e) {
-			e.preventDefault();
-			return;
-		});
-	}
-}
-
-function screen_move(param)
-{
-	if (param == "mv")
-	{
-		$('#mobile_menu').animate({right:-200},300,'linear',function(){
-			$("#mobile_menu").hide();
-			$(".mask").fadeOut(100);
-			$( 'html, body' ).animate({ scrollTop: 0},500);
-			$(window).off(".disableScroll");
-		});
-	}else if (param == "life"){
-		$('#mobile_menu').animate({right:-200},300,'linear',function(){
-			$("#mobile_menu").hide();
-			$(".mask").fadeOut(100);
-			$( 'html, body' ).animate({ scrollTop: $(".block_top").height()},500);
-			$(window).off(".disableScroll");
-		});
-	}else if (param == "event"){
-		$('#mobile_menu').animate({right:-200},300,'linear',function(){
-			$("#mobile_menu").hide();
-			$(".mask").fadeOut(100);
-			$( 'html, body' ).animate({ scrollTop: $(".block_top").height() + $(".block_mina").height()},500);
-			$(window).off(".disableScroll");
-		});
-	}else{
-		$('#mobile_menu').animate({right:-200},300,'linear',function(){
-			$("#mobile_menu").hide();
-			$(".mask").fadeOut(100);
-			$( 'html, body' ).animate({ scrollTop: $(".block_top").height() + $(".block_mina").height() + $(".block_event").height()},500);
-			$(window).off(".disableScroll");
-		});
-	}
-}
-
-function sns_share(media)
-{
-	if (media == "facebook")
-	{
-		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.vdl-metalcushion.com/?media=fbshare'),'sharer','toolbar=0,status=0,width=600,height=325');
-		$.ajax({
-			type   : "POST",
-			async  : false,
-			url    : "../main_exec.php",
-			data:{
-				"exec" : "insert_share_info",
-				"media" : media
-			}
-		});
-	}else if (media == "twitter"){
-		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("VDL MEETS SHIN MINA 신민아 셀피의 비밀을 말하다. 신민아 셀피의 비밀 힌트 영상을 보고 퀴즈를 맞춰주세요! 맞추신 분에게는 VDL 뷰티 메탈쿠션 파운데이션과 LG전자 G4를 선물로 드려요!") + '&url='+ encodeURIComponent('http://www.vdl-metalcushion.com/?media=twshare'),'sharer','toolbar=0,status=0,width=600,height=325');
-		$.ajax({
-			type   : "POST",
-			async  : false,
-			url    : "../main_exec.php",
-			data:{
-				"exec" : "insert_share_info",
-				"media" : media
-			}
-		});
-	}else if (media == "kakao"){
-		media	= "ktmovie";
-
-		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-		Kakao.Link.createTalkLinkButton({
-		  container: '#kakao-link-btn',
-		  label: "VDL MEETS SHIN MINA\r\n신민아 셀피의 비밀 힌트 영상을 보고 퀴즈를 맞춰주세요! 맞추신 분에게는 VDL 뷰티 메탈 쿠션 파운데이션과 LG전자 G4를 선물로 드려요!",
-		  image: {
-			src: 'http://www.vdl-metalcushion.com/MOBILE/images/img_sns_share_new_kt.jpg',
-
-			width: '1200',
-			height: '630'
-		  },
-		  webButton: {
-			text: 'VDL MEETS SHIN MINA',
-			url: 'http://www.vdl-metalcushion.com/?media=kakao' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
-		  }
-		});
-		$.ajax({
-			type   : "POST",
-			async  : false,
-			url    : "../main_exec.php",
-			data:{
-				"exec" : "insert_share_info",
-				"media" : media
-			}
-		});
-	}else{
-		// 로그인 창을 띄웁니다.
-		Kakao.Auth.login({
-			success: function() {
-
-				// 로그인 성공시, API를 호출합니다.
-				Kakao.API.request( {
-					url : '/v1/api/story/linkinfo',
-					data : {
-						url : 'http://www.vdl-metalcushion.com/?media=ksshare'
-					}
-				}).then(function(res) {
-					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
-					return Kakao.API.request( {
-						url : '/v1/api/story/post/link',
-						data : {
-						link_info : res,
-							content:"VDL MEETS SHIN MINA\r\n신민아 셀피의 비밀 힌트 영상을 보고 퀴즈를 맞춰주세요! 맞추신 분에게는 VDL 뷰티 메탈 쿠션 파운데이션과 LG전자 G4를 선물로 드려요!"
-						}
-					});
-				}).then(function(res) {
-					return Kakao.API.request( {
-						url : '/v1/api/story/mystory',
-						data : { id : res.id }
-					});
-				}).then(function(res) {
-					$.ajax({
-						type   : "POST",
-						async  : false,
-						url    : "../main_exec.php",
-						data:{
-							"exec" : "insert_share_info",
-							"media" : "story"
-						}
-					});
-					alert("카카오스토리에 공유 되었습니다.");
-				}, function (err) {
-					alert(JSON.stringify(err));
-				});
-
-			},
-			fail: function(err) {
-				alert(JSON.stringify(err))
-			},
-		});
-	}
 }
 
 </script>
->>>>>>> 43877959e935822ca6b18f26342f0cff227f8e78

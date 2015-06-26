@@ -34,6 +34,23 @@ switch ($_REQUEST['exec'])
 		echo $innerHTML;
 	break;
 
+	case "m_total_member" :
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
+
+		$len_cnt	= strlen($total_cnt);
+		$innerHTML = "";
+		for ($i=0; $i<$len_cnt; $i++){
+			if ($len_cnt > 3 && $i==1)
+				$innerHTML	.= "<img src='images/num/num_dash.png' class='dash' alt=''/>";
+				
+			$innerHTML .= "<img src='images/num/num_".substr($total_cnt,$i,1).".png' alt=''/>";
+		}
+		$innerHTML .= "<img src='images/num/label_num.png' alt=''/>";
+		echo $innerHTML;
+
+	break;
+
 	case "insert_info" :
 		$mb_name			= $_REQUEST['mb_name'];
 		$mb_phone			= $_REQUEST['mb_phone'];
