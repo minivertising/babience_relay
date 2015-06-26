@@ -339,7 +339,7 @@ body{
 	position:absolute;
 	top:42%;
 	left:51%;
-	font-size:18px;
+	font-size:17px;
 	font-weight:bold;
 	color:#000;
 	font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
@@ -370,10 +370,6 @@ body{
 	width:100%;
 }
 
-.sec_lms_gift .list_block{
-	padding:10px 0;
-	background:url(../images/lms_gift_bg.jpg);
-}
 
 .sec_lms_gift_btn,
 .sec_lms_gift_btn img{
@@ -381,7 +377,7 @@ body{
 }
 
 .sec_lms_gift_btn{
-	margin-top:-2%;
+	margin-top:-1%;
 }
 
 .sec_lms_footer{
@@ -393,26 +389,127 @@ body{
 	background:#b6d3d9;
 }
 
-.sec_lms_gift .btn,
 .sec_lms_gift .list_block{
-	position:absolute;
-}
-.sec_lms_gift .btn{
-	bottom:0;
-}
-.sec_lms_gift .list_block{
-	width:80%;
-	margin:0 auto;
 	height:30%;
-	background:#ccc;
-	overflow:scroll;
-	top:10%;
+	padding:7px 0 5px;
+	margin-top:-2%;
+	background:url(../images/lms_gift_bg.jpg) top center;
+	background-size: contain;	
 }
 
 .sec_lms_gift .list_block .list_one{
-	width:100%;
-	padding:30px 0;
+	width:90%;
+	padding:5px 0;
+	margin-left:5%;
+	margin-right:5%;
+	font-size:12px;
+	color:#656b6c;
 }
+.sec_lms_gift .list_block .list_one.label{
+	font-size:13px;
+	font-weight:bold;
+	color:#656b6c;
+	border-bottom:1px solid #a4cdd6;
+}
+.sec_lms_gift .list_block .list_one div.gift_name,
+.sec_lms_gift .list_block .list_one div.gift_num,
+.sec_lms_gift .list_block .list_one div.btn{
+	float:left;
+	text-align:center;
+	width:40%;
+}
+.sec_lms_gift .list_block .list_one div.gift_name,
+.sec_lms_gift .list_block .list_one div.gift_num{
+	padding-top:3px;
+}
+.sec_lms_gift .list_block .list_one div.btn{
+	width:20%;
+	float: right;
+}
+.sec_lms_gift .list_block .list_one div.btn img{
+	width:100%;
+}
+
+.sec_lms_gift .list_block .btn_more{
+	padding-bottom:10px;
+
+}
+.sec_lms_gift .list_block .btn_more a{
+	display:block;
+	font-size:13px;
+	padding:5px 0;
+	text-decoration:none;
+	color:#fff;
+	text-align:center;
+	background:#b6d3d9;
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
+	border-radius: 5px;
+}
+
+
+
+
+.sec_gift_list .list_block{
+	height:30%;
+	padding:7px 0 5px;
+	margin-top:-2%;
+	background:url(../images/gift_bg.jpg) top center;
+	background-size: contain;	
+}
+
+.sec_gift_list .list_block .list_one{
+	width:90%;
+	padding:5px 0;
+	margin-left:5%;
+	margin-right:5%;
+	font-size:12px;
+	color:#6d6b69;
+}
+.sec_gift_list .list_block .list_one.label{
+	font-size:13px;
+	font-weight:bold;
+	color:#6d6b69;
+	border-bottom:1px solid #e4d8c6;
+}
+.sec_gift_list .list_block .list_one div.gift_name,
+.sec_gift_list .list_block .list_one div.gift_num,
+.sec_gift_list .list_block .list_one div.btn{
+	float:left;
+	text-align:center;
+	width:40%;
+}
+.sec_gift_list .list_block .list_one div.gift_name,
+.sec_gift_list .list_block .list_one div.gift_num{
+	padding-top:3px;
+}
+.sec_gift_list .list_block .list_one div.btn{
+	width:20%;
+	float: right;
+}
+.sec_gift_list .list_block .list_one div.btn img{
+	width:100%;
+}
+
+.sec_gift_list .list_block .btn_more{
+	padding-bottom:10px;
+
+}
+.sec_gift_list .list_block .btn_more a{
+	display:block;
+	font-size:13px;
+	padding:5px 0;
+	text-decoration:none;
+	color:#fff;
+	text-align:center;
+	background:#f4c3a6;
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
+	border-radius: 5px;
+}
+
 
 /*popup common*/
 .popup_wrap {
@@ -615,6 +712,16 @@ body{
 	color:#666;
 	margin-top:-10px;
 }
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input .label{
+	float:left;
+	width:20%;
+	padding-right:2%;
+	text-align:right;
+	padding-top:8px;
+}
+
+
+
 .popup_wrap .p_position .block_content .inner .block_input .label{
 	float:left;
 	width:27%;
@@ -622,6 +729,8 @@ body{
 	text-align:right;
 	padding-top:8px;
 }
+
+
 .popup_wrap .p_position .block_content .inner .block_input.comment .label{
 	width:23%;
 }
@@ -642,6 +751,11 @@ body{
 	float:left;
 	width:66%;
 }
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input .input_txt{
+	float:left;
+	width:75%;
+}
+
 .popup_wrap .p_position .block_content .inner .block_input .input_txt.notice{
 	float:left;
 	width:75%;
@@ -653,12 +767,15 @@ body{
 .popup_wrap .p_position .block_content .inner .block_input .input_txt img{
 	width:95%;
 }
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input .input_txt img{
+	width:70px;
+}
 .popup_wrap .p_position .block_content .inner .block_input .input_txt input,
 .popup_wrap .p_position .block_content .inner .block_input .input_txt select,
 .popup_wrap .p_position .block_content .inner .block_input .input_txt textarea{
-	width:90%;
-	padding:5px 4px;
-	font-size:14px;
+	width:88%;
+	padding:5px 2px;
+	font-size:13px;
 	line-height:18px;
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight:bold;
@@ -675,7 +792,7 @@ body{
 	height:60px;
 }
 .popup_wrap .p_position .block_content .inner .block_input .input_txt.name input{
-	width:91%;
+	width:70%;
 }
 .popup_wrap .p_position .block_content .inner .block_input .input_txt .inner_phone{
 	width:100%;
@@ -683,8 +800,20 @@ body{
 .popup_wrap .p_position .block_content .inner .block_input .input_txt .inner_phone div.in_phone,
 .popup_wrap .p_position .block_content .inner .block_input .input_txt .inner_phone div.in_dash{
 	float:left;
-	width:26%;
+	width:32%;
 	position:relative;
+}
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input .input_txt .inner_phone div.in_phone,
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input .input_txt .inner_phone div.in_dash,
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input .input_txt .inner_phone div.btn{
+	float:left;
+	width:23%;
+	position:relative;
+}
+
+.popup_wrap .p_position .block_content.block_gift_num .inner .block_input .input_txt .inner_phone div.btn{
+	width:28%;
+	padding-top:3px;
 }
 .popup_wrap .p_position .block_content .inner .block_input .input_txt .inner_phone div.in_dash{
 	width:7%;
@@ -866,7 +995,7 @@ body{
 .popup_wrap .p_position .block_content .inner .block_ckeck .inner_check .label_check,
 .popup_wrap .p_position .block_content .inner .block_ckeck .inner_check .btn_check{
 	float:left;
-	font-size:13px;
+	font-size:12px;
 	font-weight:bold;
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color:#807b77;
@@ -877,7 +1006,7 @@ body{
 	width:25px;
 }
 .popup_wrap .p_position .block_content .inner .block_ckeck .inner_check .label_check{
-	font-size:14px;
+	font-size:12px;
 	padding-top:2px;
 	letter-spacing:-1px;
 }
