@@ -216,6 +216,22 @@
 </body>
 </html>
 <script type="text/javascript">
+// quick menu
+var quickTop;
+$(window).scroll(function() {
+	quickTop = ($(window).height()-$('.sec_right_navi').height()) /2;
+	$('.sec_right_navi').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
+	
+	if ($(window).scrollTop() < 1640)
+	{
+		$("#summer_header_menu").attr('src','images/btn_menu_summer.png')
+		$("#kit_header_menu").attr('src','images/btn_menu_kit_off.png')
+	}else{
+		$("#summer_header_menu").attr('src','images/btn_menu_summer_off.png')
+		$("#kit_header_menu").attr('src','images/btn_menu_kit.png')
+	}
+});
+
 var chk_ins = 0;
 $(document).ready(function() {
 	Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');

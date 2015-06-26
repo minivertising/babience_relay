@@ -156,7 +156,7 @@ body{
 
 
 .sec_right_navi{
-	position:fixed;
+	position:absolute;
 	right:20px;
 	top:50%;
 	width:50px;
