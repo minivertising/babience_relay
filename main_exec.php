@@ -88,7 +88,7 @@ switch ($_REQUEST['exec'])
 					$objFont->size  = 15;
 					$objFont->color = 0x000000;
 					//$objFont->angle = 45;
-					$objFont->font  = "nanumBold.ttf";
+					$objFont->font  = "/home/babience/nanumBold.ttf";
 
 					$szFilePath     = "/home/babience/MOBILE/images/img_sns_give_paper_share.jpg";
 
