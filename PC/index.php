@@ -172,7 +172,7 @@
   <div class="sec_howto">
     <img src="images/img_howto.jpg" alt="" usemap="#Map"/>
     <map name="Map">
-      <area shape="rect" coords="698,406,866,468" href="#" onclick="move_area('gift')" style="outline:none;">
+      <area shape="rect" coords="698,406,866,468" href="#" onclick="go_gift();return false;" style="outline:none;">
     </map>
   </div>    
 </div><!--end:wrap_sec_howto--> 
@@ -244,9 +244,13 @@ $(document).ready(function() {
 			close: function() {
 				$("#mb_name").val("");
 				$("#mb_baby_name").val("");
-				$("#mb_phone1").val("");
+				$("#mb_phone1").val("010");
 				$("#mb_phone2").val("");
 				$("#mb_phone3").val("");
+				$("#s_name").val("");
+				$("#s_phone1").val("010");
+				$("#s_phone2").val("");
+				$("#s_phone3").val("");
 				$("#mb_comment").val("");
 				$("#mb_nickname").val("");
 				$('input').iCheck('uncheck');

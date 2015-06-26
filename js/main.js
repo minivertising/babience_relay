@@ -244,9 +244,13 @@ function popup_desc(param, num)
 				//$("#mb_message").val("");
 				$("#mb_name").val("");
 				$("#mb_baby_name").val("");
-				$("#mb_phone1").val("");
+				$("#mb_phone1").val("010");
 				$("#mb_phone2").val("");
 				$("#mb_phone3").val("");
+				$("#s_name").val("");
+				$("#s_phone1").val("010");
+				$("#s_phone2").val("");
+				$("#s_phone3").val("");
 				$("#mb_comment").val("");
 				$("#mb_nickname").val("");
 				$('input').iCheck('uncheck');

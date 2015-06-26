@@ -192,7 +192,16 @@
         <div class="check_num">
           <!--전번 체크-->
           <div class="inner clearfix">
-            <div class="in"><input type="tel" name="s_phone1" id="s_phone1"></div>
+            <div class="in">
+              <select name="s_phone1" id="s_phone1">
+                <option value="010">010</option>
+                <option value="011">011</option>
+                <option value="016">016</option>
+                <option value="017">017</option>
+                <option value="018">018</option>
+                <option value="019">019</option>
+              </select>
+            </div>
             <div class="in"><input type="tel" name="s_phone2" id="s_phone2"></div>
             <div class="in"><input type="tel" name="s_phone3" id="s_phone3"></div>
             <div class="btn"><a href="#" onclick="search_gift();"><img src="images/popup/btn_gift_check_ok.png" /></a></div>
