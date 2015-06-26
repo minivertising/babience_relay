@@ -146,15 +146,41 @@
           <a href="#" onclick="$.magnificPopup.close();"><img src="images/popup/btn_ok.png" /></a>
         </div>
         <div class="btn_sns_block">
-          <a href="#"><img src="images/popup/btn_share_fb.png" alt=""/></a>
-          <a href="#"><img src="images/popup/btn_share_ks.png" alt=""/></a>
-          <a href="#"><img src="images/popup/btn_share_tw.png" alt=""/></a>
+          <a href="#" onclick="sns_share('fb');return false;"><img src="images/popup/btn_share_fb.png" alt=""/></a>
+          <a href="#" onclick="sns_share('ks');return false;"><img src="images/popup/btn_share_ks.png" alt=""/></a>
+          <a href="#" onclick="sns_share('tw');return false;"><img src="images/popup/btn_share_tw.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
   </div>
 </div>
 <!--------------------- 이벤트 중복참여 --------------------->
+
+<!--------------------- 금일 참여횟수 완료 --------------------->
+<div id="pop_complete_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
+  <div class="p_mid small p_position">
+    <div class="block_close clearfix">
+      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+    </div>
+    <div class="block_content">
+      <div class="inner">
+        <div class="title">
+          <img src="images/popup/title_already_all.png" />
+        </div>
+        <div class="block_btn">
+          <a href="#" onclick="$.magnificPopup.close();"><img src="images/popup/btn_ok.png" /></a>
+        </div>
+        <div class="btn_sns_block">
+          <a href="#" onclick="sns_share('fb');return false;"><img src="images/popup/btn_share_fb.png" alt=""/></a>
+          <a href="#" onclick="sns_share('ks');return false;"><img src="images/popup/btn_share_ks.png" alt=""/></a>
+          <a href="#" onclick="sns_share('tw');return false;"><img src="images/popup/btn_share_tw.png" alt=""/></a>
+        </div>
+      </div><!--inner-->
+    </div>
+  </div>
+</div>
+<!--------------------- 금일 참여횟수 완료 --------------------->
+
 
 <!--------------------- 파워블로거 상세보기 팝업 --------------------->
 <div id="pop_detail_blogger_div" class="zoom-anim-dialog mfp-hide" style="background:white;width:600px;height:700px;margin-left:-300px;margin-top:-350px;position:absolute;top:50%;left:50%">

@@ -350,8 +350,7 @@ function input_info()
 				}else if (response == "D"){
 					popup_desc("pop_dupli_div", 0);
 				}else if (response == "E"){
-					//popup_desc("pop_dupli_div", 0);
-					alert("오늘 참여 횟수 다 썼다!");
+					popup_desc("pop_complete_div", 0);
 				}else{
 					popup_desc("pop_thanks_div", 0);
 					var giftArr	= response.split("||");
