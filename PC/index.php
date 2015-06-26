@@ -39,7 +39,7 @@
       <a href="#" onclick="move_area('story');"><img src="images/gnb_story.png" alt=""/></a>
       <a href="#" onclick="move_area('give');"><img src="images/gnb_give.png" alt=""/></a>
       <a href="#" onclick="move_area('message');"><img src="images/gnb_su.png" alt=""/></a>
-      <a href="#" onclick="move_area('gift');"><img src="images/gnb_gift.png" alt=""/></a>
+      <a href="#" onclick="go_gift();return false;"><img src="images/gnb_gift.png" alt=""/></a>
     </div>
   </div>
 </div>
