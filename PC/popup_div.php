@@ -255,7 +255,7 @@
           </div>
           <div class="block_go_home">
             <div class="btn_block">
-              <a href="http://www.babience.co.kr/index.jsp"><img src="images/popup/btn_go_home.png" alt=""/></a>
+              <a href="http://www.babience.co.kr/index.jsp" target="_blank"><img src="images/popup/btn_go_home.png" alt=""/></a>
             </div>
             <div class="notice">
               <img src="images/popup/notice_gift_num.png" alt=""/>
