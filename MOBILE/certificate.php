@@ -54,9 +54,9 @@
 <div class="sec_give_paper_block">
   <div class="name"><?=$member_info['baby_name']?></div>
   <div class="btn">
-    <a href="#"><img src="images/lms_sns_kt.png" alt=""/></a>
-    <a href="#"><img src="images/lms_sns_ks.png" alt=""/></a>
-    <a href="#"><img src="images/lms_sns_fb.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('kt')"><img src="images/lms_sns_kt.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('ks')"><img src="images/lms_sns_ks.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('fb')"><img src="images/lms_sns_fb.png" alt=""/></a>
   </div>
   <div class="bg"><img src="images/lms_bg.jpg" alt=""/></div>
 </div>
@@ -156,17 +156,6 @@ function c_sns_share(media)
 			url: '<?=$long_url	?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
-		$.ajax({
-			type   : "POST",
-			async  : false,
-			url    : "../main_exec.php",
-			data:{
-				"exec" : "insert_share_info",
-				"media" : media
-			}
-		});
-	}else if (media == "tw"){
-		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("VDL MEETS KAKAO FRIENDS! 친구에게 메시지를 보내고 컬렉션 제품이 담긴 VDL FRIENDS KIT를 받으세요! 참여만 해도 5천원 할인 쿠폰을 드려요.") + '&url='+ encodeURIComponent('http://bit.ly/1EiTYuF'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
