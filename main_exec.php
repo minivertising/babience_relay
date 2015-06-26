@@ -85,7 +85,7 @@ switch ($_REQUEST['exec'])
 					$objFont = new Font;
 
 					$objFont->text  = $mb_baby_name;
-					$objFont->size  = 15;
+					$objFont->size  = 20;
 					$objFont->color = 0x000000;
 					//$objFont->angle = 45;
 					$objFont->font  = "/home/babience/nanumBold.ttf";
