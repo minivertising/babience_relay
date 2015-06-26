@@ -121,6 +121,7 @@
 	$give_query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_s_url<>''";
 	$give_cnt 	= mysqli_num_rows(mysqli_query($my_db, $give_query));
 	$per_cnt	= $give_cnt / 10000;
+	$per_bottle	= ($per_cnt * 60) + 40;
 ?>
 
 <div class="sec_give">
@@ -158,7 +159,7 @@
 </div>  
 
 <div class="sec_howto">
-  <a href="#" onclick="move_area('gift')">당첨 선물 보기</a>
+  <a href="popup_gift_check.php">당첨 선물 보기</a>
   <div class="bg"><img src="images/img_howto.jpg" alt=""/></div>
 </div>     
 
@@ -224,6 +225,8 @@ $(document).ready(function() {
 	});
 
 	$('#mommy_gage').css('width','<?=$per_cnt?>%');
+	$('.mull').css('bottom','<?=$per_bottle?>%');
+
 });
 
 function move_area(area)
