@@ -467,7 +467,7 @@ body.main{
 }
 .popup_wrap .p_position.p_mid.posting .block_content .btn_block {
 	width:600px;
-	padding-top:92px;
+	padding-top:68px;
 	padding-left:350px;
 }
 .popup_wrap .p_position.p_mid.posting .block_content .btn_block .bt{
@@ -495,7 +495,7 @@ body.main{
 }
 .popup_wrap .p_position.p_mid.posting .block_content .txt_posting{
 	text-align:center;
-	padding-top:10px;
+	padding-top:6px;
 }
 
 
@@ -511,8 +511,10 @@ body.main{
 	padding-left:220px;
 	padding-top:30px;
 	font-size:13px;
-	font-weight:bold;
 	width:573px;
+	font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
+	font-family: "Malgun Gothic";
+	color:#666;
 }
 .popup_wrap .p_position.p_mid.posting .block_content .block_comment .bt{
 	padding-top:16px;
@@ -520,7 +522,9 @@ body.main{
 
 .popup_wrap .p_position.p_mid.posting .block_content .block_comment .txt span.t{
 	display:inline-block;
-	padding-left:10px;
+	padding-left:8px;
+	color:#444;
+	font-weight:bold;
 }
 
 

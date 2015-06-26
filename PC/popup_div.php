@@ -329,7 +329,7 @@
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
+            <span>베비언스**</span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
           <div class="bt">
