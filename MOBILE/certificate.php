@@ -125,7 +125,9 @@
 </body>
 </html>
 <script type="text/javascript">
-Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
+$(document).ready(function() {
+	Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
+});
 
 function c_sns_share(media)
 {
@@ -152,7 +154,7 @@ function c_sns_share(media)
 			height: '630'
 		  },
 		  webButton: {
-			text: '[베비언스]\r\n기부 앤 테이크 릴레이!',
+			text: '[베비언스]',
 			url: '<?=$long_url	?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
