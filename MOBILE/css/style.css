@@ -1252,11 +1252,38 @@ html[xmlns] .clearfix {
 	position:absolute;
 	width:55%;
 	height:100%;
-	background:#fff;
+	background:#fff8ed;
 	top:0;right:0;
 	display:none;
 	z-index:9;
-	margin-top:50px;
+	padding-top:65px;
+}
+.mobile_menu ul li{
+	list-style:none;
+	border-bottom:1px solid #ede5d8;
+	padding:15px 0 10px;
+	padding-left:10%;
+	width:90%;
+}
+.mobile_menu ul li img{
+	width:90%;
+}
+.mobile_menu .btn_sns{
+	width:82%;
+	margin:0 auto;
+	padding:17px 0;
+}
+.mobile_menu .btn_sns .inner_sns{
+	width:100%;
+}
+.mobile_menu .btn_sns .inner_sns a{
+	display:block;
+	float:left;
+	width:25%;
+	text-align:center;
+}
+.mobile_menu .btn_sns .inner_sns a img{
+	width:84%;
 }
 
 

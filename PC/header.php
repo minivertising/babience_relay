@@ -7,7 +7,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Babience Relay</title>
+    <title>Babience</title>
     <meta property="og:title" content="베비언스">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.babience-giveandtake.com/PC/index.php" />
@@ -15,6 +15,7 @@
     <meta property="og:description" content="우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/pavicon.ico" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" type="text/css" href="./css/style.css"> 
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">

@@ -36,20 +36,22 @@
 <body>
     <div id="mobile_menu" class="mobile_menu">
       <ul>
-        <li><a href="#" onclick="screen_move('summer')"><img src="images/btn_summer.jpg"  alt=""/></a></li>
-        <!-- <li><a href="#" onclick="screen_move('kit')"><img src="images/btn_vdl_kit.jpg"  alt=""/></a></li> -->
-        <li><a href="#" onclick="alert('이벤트가 종료되었습니다.')"><img src="images/btn_vdl_kit.jpg"  alt=""/></a></li>
-        <li><a href="http://www.vdlcosmetics.com/m/index.jsp" target="_blank"><img src="images/btn_home.jpg"  alt=""/></a></li>
+        <li><a href="#"><img src="images/btn_story.png"  alt=""/></a></li>
+        <li><a href="#"><img src="images/btn_give.png"  alt=""/></a></li>
+        <li><a href="#"><img src="images/btn_suu.png"  alt=""/></a></li>
+        <li><a href="#"><img src="images/btn_view_gift.png"  alt=""/></a></li>
       </ul>
       <div class="btn_sns">
         <div class="inner_sns clearfix">
-          <a href="#" onclick="m_sns_share('twitter');"><img src="images/btn_tw.jpg"  alt=""/></a>
-          <a href="#" onclick="m_sns_share('facebook');"><img src="images/btn_fb.jpg"  alt=""/></a>
           <a href="javascript:m_sns_share('kakao');" id="kakao-link-btn"><img src="images/btn_kt.jpg"  alt=""/></a>
           <a href="#" onclick="m_sns_share('story');"><img src="images/btn_ks.jpg"  alt=""/></a>
+          <a href="#" onclick="m_sns_share('facebook');"><img src="images/btn_fb.jpg"  alt=""/></a>
+          <a href="#" onclick="m_sns_share('twitter');"><img src="images/btn_tw.jpg"  alt=""/></a>
         </div>
       </div>
     </div>
+    
+    
 <div class="wrap_page">
   <div class="navi">
     <div class="left"><a href="http://www.babience.co.kr/m/index.jsp"><img src="images/logo.png" width="95" alt=""/></a></div>
