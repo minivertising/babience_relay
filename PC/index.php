@@ -251,23 +251,11 @@
 <div class="mask"></div>
 </body>
 </html>
-<script type="text/javascript">
-// quick menu
-var quickTop;
-$(window).scroll(function() {
-	quickTop = ($(window).height()-$('.sec_right_navi').height()) /2;
-	$('.sec_right_navi').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
-	
-	if ($(window).scrollTop() < 1640)
+<?
+	if ($IE7 == "N")
 	{
-		$("#summer_header_menu").attr('src','images/btn_menu_summer.png')
-		$("#kit_header_menu").attr('src','images/btn_menu_kit_off.png')
-	}else{
-		$("#summer_header_menu").attr('src','images/btn_menu_summer_off.png')
-		$("#kit_header_menu").attr('src','images/btn_menu_kit.png')
-	}
-});
-
+?>
+<script type="text/javascript">
 var chk_ins = 0;
 $(document).ready(function() {
 	Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
@@ -277,7 +265,7 @@ $(document).ready(function() {
 	var youtube_height = (width / 16) * 9;
 	$(".block_movie").height(youtube_height);
 
-	$(".block_movie").height()
+	$(".block_movie").height();
 	// 팝업 jQuery 스타일
 	$('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
@@ -337,6 +325,102 @@ $(document).ready(function() {
 	$('#mommy_gage').css('width','<?=$per_cnt?>%');
 	$('.mull').css('bottom','<?=$per_bottle?>px');
 
+});
+
+</script>
+<?
+	}else{
+?>
+<script type="text/javascript">
+var chk_ins = 0;
+$(document).ready(function() {
+	setInterval("auto_count()",1000);
+
+	var width = $(".block_movie").width();
+	var youtube_height = (width / 16) * 9;
+	$(".block_movie").height(youtube_height);
+
+	$(".block_movie").height();
+	// 팝업 jQuery 스타일
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+		fixedContentPos: true,
+		fixedBgPos: true,
+		overflowY: 'hidden',
+		closeBtnInside: true,
+		//preloader: false,
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in',
+		showCloseBtn : false,
+		closeOnBgClick: true,
+		callbacks: {
+			open: function() {
+			},
+			close: function() {
+				$("#mb_name").val("");
+				$("#mb_baby_name").val("");
+				$("#mb_phone1").val("010");
+				$("#mb_phone2").val("");
+				$("#mb_phone3").val("");
+				$("#s_name").val("");
+				$("#s_phone1").val("010");
+				$("#s_phone2").val("");
+				$("#s_phone3").val("");
+				$("#mb_comment").val("");
+				$("#mb_nickname").val("");
+				$('input').iCheck('uncheck');
+				$(".block_gift_num").html("");
+			}
+		}
+	});
+
+	// 체크박스 스타일 설정
+	$('.zoom-anim-dialog input').on('ifChecked ifUnchecked', function(event){
+		//alert(this.id);
+	}).iCheck({
+		checkboxClass: 'icheckbox_flat-red',
+		radioClass: 'iradio_square-red',
+		increaseArea: '0%'
+	});
+
+	$('.all_chk_cl').on('ifChecked', function(event){
+		$('.zoom-anim-dialog input').iCheck('check');
+	});
+
+	$(".mask").click(function(){
+		$(".mask").fadeOut(300);
+		$(".popup_wrap").fadeOut(300);
+	});
+
+	$( '#move_top' ).click( function() {
+		$( 'html, body' ).animate( { scrollTop : 0 }, 800 );
+			return false;
+	} );
+	$('#mommy_gage').css('width','<?=$per_cnt?>%');
+	$('.mull').css('bottom','<?=$per_bottle?>px');
+
+});
+
+</script>
+<?
+	}
+?>
+<script type="text/javascript">
+// quick menu
+var quickTop;
+$(window).scroll(function() {
+	quickTop = ($(window).height()-$('.sec_right_navi').height()) /2;
+	$('.sec_right_navi').stop().animate({top:$(window).scrollTop()+quickTop},400,'easeOutExpo');
+	
+	if ($(window).scrollTop() < 1640)
+	{
+		$("#summer_header_menu").attr('src','images/btn_menu_summer.png')
+		$("#kit_header_menu").attr('src','images/btn_menu_kit_off.png')
+	}else{
+		$("#summer_header_menu").attr('src','images/btn_menu_summer_off.png')
+		$("#kit_header_menu").attr('src','images/btn_menu_kit.png')
+	}
 });
 
 function move_area(area)
