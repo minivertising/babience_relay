@@ -31,8 +31,8 @@
                     <option value="019">019</option>
                   </select>
                 </div>
-                <div class="in_phone"><input type="text" id="mb_phone2" name="mb_phone2" onkeyup="only_num(this);chk_len(this.value)"></div>
-                <div class="in_phone"><input type="text" id="mb_phone3" name="mb_phone3" onkeyup="only_num(this);chk_len2(this.value)"></div>
+                <div class="in_phone"><input type="tel" id="mb_phone2" name="mb_phone2" onkeyup="only_num(this);chk_len(this.value)"></div>
+                <div class="in_phone"><input type="tel" id="mb_phone3" name="mb_phone3" onkeyup="only_num(this);chk_len2(this.value)"></div>
               </div>
             </div>
           </div>
@@ -206,6 +206,8 @@ function m_input_info()
 					alert("사용자가 많아 접속이 지연되고 있습니다. 다시 추천해 주세요.");
 				}else if (response == "D"){
 					popup_desc("pop_already", 0);
+				}else if (response == "E"){
+					popup_desc("pop_end", 0);
 				}else{
 					var giftArr	= response.split("||");
 					location.href = "popup_gift.php?gift=" + giftArr[0] + "&serial=" + giftArr[1];
