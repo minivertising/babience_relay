@@ -55,7 +55,7 @@
           </div>
         </div>
         <div class="txt_notice">
-          <a href="http://www.babience.co.kr/index.jsp" target="_blank"><img src="images/popup/btn_home.png" /></a>
+          <a href="http://www.babience.co.kr/m/index.jsp" target="_blank"><img src="images/popup/btn_home.png" /></a>
         </div>
         <div class="txt_notice">
           <img src="images/popup/txt_give.png" />
