@@ -88,32 +88,32 @@
   <div class="title"><img src="images/title_bloger.jpg" alt=""/></div>
   <div class="wrap_list clearfix">
     <div class="one_list">
-      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');"><img src="images/bloger_img_1.jpg" alt=""/></a></div>
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');"><img src="images/bloger_img_<?=$b_info[0]['b_idx']?>.jpg" alt=""/></a></div>
       <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
       <div class="cnt"><?=number_format($b_info[0]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
     </div>
     <div class="one_list">
-      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');"><img src="images/bloger_img_2.jpg" alt=""/></a></div>
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');"><img src="images/bloger_img_<?=$b_info[1]['b_idx']?>.jpg" alt=""/></a></div>
       <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
       <div class="cnt"><?=number_format($b_info[1]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
     </div>
     <div class="one_list">
-      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');"><img src="images/bloger_img_3.jpg" alt=""/></a></div>
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');"><img src="images/bloger_img_<?=$b_info[2]['b_idx']?>.jpg" alt=""/></a></div>
       <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
       <div class="cnt"><?=number_format($b_info[2]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
     </div>
     <div class="one_list">
-      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');"><img src="images/bloger_img_4.jpg" alt=""/></a></div>
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');"><img src="images/bloger_img_<?=$b_info[3]['b_idx']?>.jpg" alt=""/></a></div>
       <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
       <div class="cnt"><?=number_format($b_info[3]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
     </div>
     <div class="one_list">
-      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');"><img src="images/bloger_img_5.jpg" alt=""/></a></div>
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');"><img src="images/bloger_img_<?=$b_info[4]['b_idx']?>.jpg" alt=""/></a></div>
       <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
       <div class="cnt"><?=number_format($b_info[4]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
     </div>
     <div class="one_list">
-      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');"><img src="images/bloger_img_6.jpg" alt=""/></a></div>
+      <div class="img"><a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');"><img src="images/bloger_img_<?=$b_info[5]['b_idx']?>.jpg" alt=""/></a></div>
       <div class="btn"><a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>','main');"><img src="images/btn_suggest.jpg" alt=""/></a></div>
       <div class="cnt"><?=number_format($b_info[5]['b_recommend'])?>명의 맘<img src="images/icon_h.jpg" width="13" alt=""/></div>
     </div>

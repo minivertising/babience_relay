@@ -21,21 +21,27 @@
             <div class="label"><img src="images/popup/label_phone.png" /></div>
             <div class="input_txt">
               <div class="inner_phone clearfix">
-                <div class="in_phone"><input type="text" name="mb_phone1" id="mb_phone1"></div>
-                <div class="in_dash">-</div>
-                <div class="in_phone"><input type="text" name="mb_phone2" id="mb_phone2"></div>
-                <div class="in_dash">-</div>
-                <div class="in_phone"><input type="text" name="mb_phone3" id="mb_phone3"></div>
+                <div class="in_phone">
+                  <select name="mb_phone1" id="mb_phone1">
+                    <option value="010">010</option>
+                    <option value="011">011</option>
+                    <option value="016">016</option>
+                    <option value="017">017</option>
+                    <option value="018">018</option>
+                    <option value="019">019</option>
+                  </select>
+                </div>
+                <div class="in_phone"><input type="text"></div>
+                <div class="in_phone"><input type="text"></div>
               </div>
             </div>
           </div>
           <div class="block_input clearfix">
             <div class="label"><img src="images/popup/label_name_baby.png" /></div>
-            <div class="input_txt name"><input type="text" name="mb_baby_name" id="mb_baby_name"></div>
+            <div class="input_txt name"><input type="text"></div>
           </div>
           <div class="block_input clearfix">
-            <div class="label"></div>
-            <div class="input_txt"><img src="images/popup/txt_input_notice.png" /></div>
+            <div class="input_txt notice"><img src="images/popup/txt_input_notice.png" /></div>
           </div>
         </div>    
         <div class="block_ckeck">
