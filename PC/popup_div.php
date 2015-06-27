@@ -34,8 +34,8 @@
                   <option value="019">019</option>
                 </select>
               </div>
-              <div class="phone_ip"><input type="tel" name="mb_phone2" id="mb_phone2"></div>
-              <div class="phone_ip"><input type="tel" name="mb_phone3" id="mb_phone3"></div>
+              <div class="phone_ip"><input type="tel" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this);"></div>
+              <div class="phone_ip"><input type="tel" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this);"></div>
             </div>
           </div>
           <div class="input_one clearfix">
@@ -228,55 +228,19 @@
                 <option value="019">019</option>
               </select>
             </div>
-            <div class="in"><input type="tel" name="s_phone2" id="s_phone2"></div>
-            <div class="in"><input type="tel" name="s_phone3" id="s_phone3"></div>
+            <div class="in"><input type="tel" name="s_phone2" id="s_phone2" onkeyup="only_num(this);"></div>
+            <div class="in"><input type="tel" name="s_phone3" id="s_phone3" onkeyup="only_num(this);"></div>
             <div class="btn"><a href="#" onclick="search_gift();"><img src="images/popup/btn_gift_check_ok.png" /></a></div>
           </div>
         </div>
         <!--선물리스트-->
-        <div class="yes_gift" style="display:none;">
+        <div class="yes_gift">
           <div class="inner_yes_gift">
             <div class="block_label clearfix">
               <div class="name"><img src="images/popup/label_gift.png" /></div>
               <div class="num"><img src="images/popup/label_gift_num.png" /></div>
             </div>
             <div class="block_gift_num">
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>   
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div> 
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>                              
             </div>
           </div>
           <div class="block_go_home">
@@ -290,7 +254,7 @@
         </div>
         <!--end:선물리스트-->
         <!--한번도 참여 안함 유저일 경우-->
-        <div class="no_gift" >
+        <div class="no_gift" style="display:none;" >
           <div class="btn_block">
             <a href="#" onclick="$.magnificPopup.close();"><img src="images/popup/img_no_gift.png" alt=""/></a>
           </div>

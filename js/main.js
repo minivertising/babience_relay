@@ -254,6 +254,7 @@ function popup_desc(param, num)
 				$("#mb_comment").val("");
 				$("#mb_nickname").val("");
 				$('input').iCheck('uncheck');
+				$(".block_gift_num").html("");
 			}
 		}
 	}, 0);
@@ -418,10 +419,16 @@ function search_gift()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			$(".no_gift").hide();
-			$(".yes_gift").show();
+			if (response == "")
+			{
+			$(".no_gift").show();
+			$(".yes_gift").hide();
+			}else{
+				$(".no_gift").hide();
+				$(".yes_gift").show();
+				$(".block_gift_num").html(response);
+			}
 
-			$(".block_gift_num").html(response);
 		}
 	});
 }
