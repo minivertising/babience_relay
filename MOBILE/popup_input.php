@@ -82,6 +82,7 @@
 var chk_ins = 0;
 
 $(document).ready(function() {
+	Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
 	// 팝업 jQuery 스타일
 	$('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
