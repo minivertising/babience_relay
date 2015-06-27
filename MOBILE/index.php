@@ -335,6 +335,8 @@ function move_area(param)
 			$( 'html, body' ).animate({ scrollTop: $(".sec_top").height() + $(".sec_list").height() + $(".sec_give").height() + $(".sec_howto").height() + $(".sec_gift").height() - 10},500);
 			$(window).off(".disableScroll");
 		});
+	}else if (param == "gift"){
+		$( 'html, body' ).animate({ scrollTop: $(".sec_top").height() + $(".sec_list").height() + $(".sec_give").height() + $(".sec_howto").height() + 10},500);
 	}
 }
 
