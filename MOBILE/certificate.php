@@ -108,7 +108,7 @@
 <?
 		$i++;
 	}
-	if ($i < 5)
+	if ($i > 5)
 	{
 ?>
     <div class="btn_more">
