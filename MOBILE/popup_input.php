@@ -31,8 +31,8 @@
                     <option value="019">019</option>
                   </select>
                 </div>
-                <div class="in_phone"><input type="text"></div>
-                <div class="in_phone"><input type="text"></div>
+                <div class="in_phone"><input type="text" id="mb_phone2" name="mb_phone2" onkeyup="only_num(this);chk_len(this.value)"></div>
+                <div class="in_phone"><input type="text" id="mb_phone3" name="mb_phone3" onkeyup="only_num(this);chk_len2(this.value)"></div>
               </div>
             </div>
           </div>
@@ -238,6 +238,51 @@ function popup_desc(param, num)
 			}
 		}
 	}, 0);
+}
+
+function chk_len(val)
+{
+	if (val.length == 4)
+	{
+		$("#mb_phone3").focus();
+	}
+}
+
+function chk_len2(val)
+{
+	if (val.length == 4)
+	{
+		$("#mb_phone3").blur();
+	}
+}
+
+function only_num(obj)
+{
+	var inText = obj.value;
+	var outText = "";
+	var flag = true;
+	var ret;
+	for(var i = 0; i < inText.length; i++)
+	{
+		ret = inText.charCodeAt(i);
+		if((ret < 48) || (ret > 57))
+		{
+			flag = false;
+		}
+		else
+		{
+			outText += inText.charAt(i);
+		}
+	}
+ 
+	if(flag == false)
+	{
+		alert("전화번호는 숫자입력만 가능합니다.");
+		obj.value = outText;
+		obj.focus();
+		return false;
+	} 
+	return true;
 }
 
 </script>
