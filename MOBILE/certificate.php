@@ -108,10 +108,15 @@
 <?
 		$i++;
 	}
+	if ($i < 5)
+	{
 ?>
     <div class="btn_more">
       <a href="#" onclick="more_show();return false;">더보기</a>
     </div>
+<?
+	}
+?>
   </div>         
 </div>  
 
