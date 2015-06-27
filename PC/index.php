@@ -39,7 +39,18 @@
       <a href="#" onclick="move_area('story');"><img src="images/gnb_story.png" alt=""/></a>
       <a href="#" onclick="move_area('give');"><img src="images/gnb_give.png" alt=""/></a>
       <a href="#" onclick="move_area('message');"><img src="images/gnb_su.png" alt=""/></a>
+<?
+	if ($IE7 == "N")
+	{
+?>
       <a href="#" onclick="go_gift();return false;"><img src="images/gnb_gift.png" alt=""/></a>
+<?
+	}else{
+?>
+      <a href="#" onclick="go_gift();"><img src="images/gnb_gift.png" alt=""/></a>
+<?
+	}
+?>
     </div>
   </div>
 </div>
@@ -49,7 +60,18 @@
     <a href="#" onclick="sns_share('fb');"><img src="images/btn_sns_fb.png" alt=""/></a>
   </div>
   <div>
+<?
+	if ($IE7 == "N")
+	{
+?>
     <a href="#" onclick="sns_share('ks');"><img src="images/btn_sns_ks.png" alt=""/></a>
+<?
+	}else{
+?>
+    <a href="#" onclick="alert('해당 브라우저 버전에서는 지원하지 않는 기능입니다.');"><img src="images/btn_sns_ks.png" alt=""/></a>
+<?
+	}
+?>
   </div>
   <div>
     <a href="#" onclick="sns_share('tw');"><img src="images/btn_sns_tw.png" alt=""/></a>
