@@ -92,6 +92,10 @@
       <img src="images/title_bloger.png" alt=""/>
     </div>
     <div class="inner clearfix">
+<?
+	if ($IE7 == "N")
+	{
+?>
       <div class="one_list">
         <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');return false;" style="outline:none;"><img src="images/img_bloger_<?=$b_info[0]['b_idx']?>.png" alt=""/></a></div>
         <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[0]['b_recommend']?>명</a></div>
@@ -118,6 +122,38 @@
         <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');return false;" style="outline:none;"><img src="images/img_bloger_<?=$b_info[5]['b_idx']?>.png" alt=""/></a></div>
         <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[5]['b_recommend']?>명</a></div>
       </div>
+<?
+	}else{
+?>
+      <div class="one_list">
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[0]['b_idx']?>');" style="outline:none;"><img src="images/img_bloger_<?=$b_info[0]['b_idx']?>.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[0]['idx']?>','main');" style="outline:none;"><?=$b_info[0]['b_recommend']?>명</a></div>
+      </div>
+      <div class="one_list">
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[1]['b_idx']?>');" style="outline:none;"><img src="images/img_bloger_<?=$b_info[1]['b_idx']?>.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[1]['idx']?>','main');" style="outline:none;"><?=$b_info[1]['b_recommend']?>명</a></div>
+      </div>
+      <div class="one_list">
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[2]['b_idx']?>');" style="outline:none;"><img src="images/img_bloger_<?=$b_info[2]['b_idx']?>.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[2]['idx']?>','main');" style="outline:none;"><?=$b_info[2]['b_recommend']?>명</a></div>
+      </div>
+    </div>
+    <div class="inner clearfix">
+      <div class="one_list">
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[3]['b_idx']?>');" style="outline:none;"><img src="images/img_bloger_<?=$b_info[3]['b_idx']?>.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[3]['idx']?>','main');return false;" style="outline:none;"><?=$b_info[3]['b_recommend']?>명</a></div>
+      </div>
+      <div class="one_list">
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[4]['b_idx']?>');" style="outline:none;"><img src="images/img_bloger_<?=$b_info[4]['b_idx']?>.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[4]['idx']?>','main');" style="outline:none;"><?=$b_info[4]['b_recommend']?>명</a></div>
+      </div>
+      <div class="one_list">
+        <div class="img_bloger"><a href="#" onclick="go_detail('<?=$b_info[5]['b_idx']?>');" style="outline:none;"><img src="images/img_bloger_<?=$b_info[5]['b_idx']?>.png" alt=""/></a></div>
+        <div class="btn_suggest"><a href="#" onclick="go_recom('<?=$b_info[5]['idx']?>','main');" style="outline:none;"><?=$b_info[5]['b_recommend']?>명</a></div>
+      </div>
+<?
+	}
+?>
     </div>
   </div>
 </div>

@@ -100,7 +100,7 @@
 			$winner_gift	="메소드 핸드워시";
 		}
 ?>
-    <div class="list_one clearfix" <?=$style_css?>>
+    <div class="list_one clearfix view_info" <?=$style_css?>>
       <div class="gift_name"><?=$winner_gift?></div>
       <div class="gift_num"><?=$data['mb_serialnumber']?></div>
       <div class="btn"><a href="#" onclick="copy_url('<?=$data['mb_serialnumber']?>')"><img src="images/btn_copy.png" alt=""/></a></div>
@@ -239,6 +239,6 @@ function copy_url(ss_url)
 
 function more_show()
 {
-	$(".list_one").css("display","block");
+	$(".view_info").css("display","block");
 }
 </script>
