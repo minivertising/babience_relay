@@ -37,7 +37,7 @@
           </div>
         </div> 
         <div class="sec_gift_list">
-          <div class="list_block">
+          <div class="list_block" id="gift_list">
             <div class="list_one label clearfix">
               <div class="gift_name">선물</div>
               <div class="gift_num">선물 번호</div>
@@ -101,7 +101,7 @@ function search_gift()
 			//$(".no_gift").hide();
 			//$(".yes_gift").show();
 
-			$(".list_block").html(response);
+			$("#gift_list").html(response);
 		}
 	});
 }

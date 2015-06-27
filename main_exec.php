@@ -182,9 +182,9 @@ switch ($_REQUEST['exec'])
 		$style_css = "";
 
 		$innerHTML	= "<div class='list_one label clearfix'>";
-		$innerHTML	= "<div class='gift_name'>선물</div>";
-		$innerHTML	= "<div class='gift_num'>선물 번호</div>";
-		$innerHTML	= "</div>";
+		$innerHTML	.= "<div class='gift_name'>선물</div>";
+		$innerHTML	.= "<div class='gift_num'>선물 번호</div>";
+		$innerHTML	.= "</div>";
 
 		while ($search_data = mysqli_fetch_array($result))
 		{
@@ -214,10 +214,20 @@ switch ($_REQUEST['exec'])
 			$innerHTML		.="</div>";
 			$i++;
 		}
-		$innerHTML		.="<div class='btn_more'>";
-		$innerHTML		.="<a href='#' onclick='more_info()'>더보기</a>";
-		$innerHTML		.="</div>";
+		if ($i > 6)
+		{
+			$innerHTML		.="<div class='btn_more'>";
+			$innerHTML		.="<a href='#' onclick='more_info()'>더보기</a>";
+			$innerHTML		.="</div>";
+		}
 
+		if ($i == 0)
+		{
+			$innerHTML	 = "<div class='gift_num_list'>";
+			$innerHTML	 .= "<div class='no_gift' style='padding-bottom:0px'>";
+			$innerHTML	 .= "<a href='index.php'><img src='images/popup/img_no_gift.png' /></a>";
+			$innerHTML	 .= "</div></div>";
+		}
 		echo $innerHTML;
 	break;
 	case "insert_comment" :

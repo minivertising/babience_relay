@@ -36,17 +36,17 @@
 <body>
     <div id="mobile_menu" class="mobile_menu">
       <ul>
-        <li><a href="#"><img src="images/btn_story.png"  alt=""/></a></li>
-        <li><a href="#"><img src="images/btn_give.png"  alt=""/></a></li>
-        <li><a href="#"><img src="images/btn_suu.png"  alt=""/></a></li>
-        <li><a href="#"><img src="images/btn_view_gift.png"  alt=""/></a></li>
+        <li><a href="#" onclick="move_area('story')"><img src="images/btn_story.png"  alt=""/></a></li>
+        <li><a href="#" onclick="move_area('give')"><img src="images/btn_give.png"  alt=""/></a></li>
+        <li><a href="#" onclick="move_area('message')"><img src="images/btn_suu.png"  alt=""/></a></li>
+        <li><a href="popup_gift_check.php"><img src="images/btn_view_gift.png"  alt=""/></a></li>
       </ul>
       <div class="btn_sns">
         <div class="inner_sns clearfix">
-          <a href="javascript:m_sns_share('kakao');" id="kakao-link-btn"><img src="images/btn_kt.jpg"  alt=""/></a>
-          <a href="#" onclick="m_sns_share('story');"><img src="images/btn_ks.jpg"  alt=""/></a>
-          <a href="#" onclick="m_sns_share('facebook');"><img src="images/btn_fb.jpg"  alt=""/></a>
-          <a href="#" onclick="m_sns_share('twitter');"><img src="images/btn_tw.jpg"  alt=""/></a>
+          <a href="m_sns_share('kt');" id="kakao-link-btn"><img src="images/btn_kt.jpg"  alt=""/></a>
+          <a href="#" onclick="m_sns_share('ks');"><img src="images/btn_ks.jpg"  alt=""/></a>
+          <a href="#" onclick="m_sns_share('fb');"><img src="images/btn_fb.jpg"  alt=""/></a>
+          <a href="#" onclick="m_sns_share('tw');"><img src="images/btn_tw.jpg"  alt=""/></a>
         </div>
       </div>
     </div>
@@ -226,6 +226,15 @@ $(document).ready(function() {
 		}
 	});
 
+	$(".mask").click(function(){
+		$('#mobile_menu').animate({right:-200},300,'linear',function(){
+			$("#mobile_menu").hide();
+			$(".mask").fadeOut(300);
+			$(window).off(".disableScroll");
+		});
+	});
+
+
 	$('#mommy_gage').css('width','<?=$per_cnt?>%');
 	$('.mull').css('bottom','<?=$per_bottle?>%');
 
@@ -302,4 +311,128 @@ function show_menu()
 	}
 }
 
+function move_area(param)
+{
+	if (param == "story")
+	{
+		$('#mobile_menu').animate({right:-200},300,'linear',function(){
+			$("#mobile_menu").hide();
+			$(".mask").fadeOut(100);
+			$( 'html, body' ).animate({ scrollTop: $(".sec_top").height() - 50},500);
+			$(window).off(".disableScroll");
+		});
+	}else if (param == "give"){
+		$('#mobile_menu').animate({right:-200},300,'linear',function(){
+			$("#mobile_menu").hide();
+			$(".mask").fadeOut(100);
+			$( 'html, body' ).animate({ scrollTop: $(".sec_top").height() + $(".sec_list").height() - 10},500);
+			$(window).off(".disableScroll");
+		});
+	}else if (param == "message"){
+		$('#mobile_menu').animate({right:-200},300,'linear',function(){
+			$("#mobile_menu").hide();
+			$(".mask").fadeOut(100);
+			$( 'html, body' ).animate({ scrollTop: $(".sec_top").height() + $(".sec_list").height() + $(".sec_give").height() + $(".sec_howto").height() + $(".sec_gift").height() - 10},500);
+			$(window).off(".disableScroll");
+		});
+	}
+}
+
+function m_sns_share(media)
+{
+	if (media == "fb")
+	{
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.babience-giveandtake.com/?media=facebook'),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : media
+			}
+		});
+	}else if (media == "kt"){
+		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+		Kakao.Link.createTalkLinkButton({
+		  container: '#kakao-link-btn',
+		  label: "[기부 앤 테이크 릴레이] 우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!",
+		  image: {
+			src: 'http://www.babience-giveandtake.com/MOBILE/images/img_sns_share_kt.jpg',
+			width: '1200',
+			height: '630'
+		  },
+		  webButton: {
+			text: '베비언스',
+			url: 'http://www.babience-giveandtake.com/?media=kt' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+		  }
+		});
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : media
+			}
+		});
+	}else if (media == "tw"){
+		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("[베비언스] 우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!") + '&url='+ encodeURIComponent('http://bit.ly/1LIDUII'),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : media
+			}
+		});
+	}else{
+		// 로그인 창을 띄웁니다.
+		Kakao.Auth.login({
+			success: function() {
+
+				// 로그인 성공시, API를 호출합니다.
+				Kakao.API.request( {
+					url : '/v1/api/story/linkinfo',
+					data : {
+						url : 'http://www.babience-giveandtake.com/?media=ks'
+					}
+				}).then(function(res) {
+					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
+					return Kakao.API.request( {
+						url : '/v1/api/story/post/link',
+						data : {
+						link_info : res,
+							content:"[베비언스]\r\n우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!"
+						}
+					});
+				}).then(function(res) {
+					return Kakao.API.request( {
+						url : '/v1/api/story/mystory',
+						data : { id : res.id }
+					});
+				}).then(function(res) {
+					$.ajax({
+						type   : "POST",
+						async  : false,
+						url    : "../main_exec.php",
+						data:{
+							"exec" : "insert_share_info",
+							"media" : "story"
+						}
+					});
+					alert("카카오스토리에 공유 되었습니다.");
+				}, function (err) {
+					alert(JSON.stringify(err));
+				});
+
+			},
+			fail: function(err) {
+				alert(JSON.stringify(err))
+			},
+		});
+	}
+
+}
 </script>
