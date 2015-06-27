@@ -63,7 +63,7 @@
         <div class="block_btn_sns clearfix">
           <div class="txt"><img src="images/popup/txt_sns.png" /></div>
           <div class="btn">
-            <a href="#" onclick="m_sns_share('kt');return false;"><img src="images/popup/btn_share_kt.png" /></a>
+            <a href="#" onclick="m_sns_share('kt');return false;" id="kakao-link-btn"><img src="images/popup/btn_share_kt.png" /></a>
             <a href="#" onclick="m_sns_share('ks');return false;"><img src="images/popup/btn_share_ks.png" /></a>
             <a href="#" onclick="m_sns_share('fb');return false;"><img src="images/popup/btn_share_fb.png" /></a>
             <a href="#" onclick="m_sns_share('tw');return false;"><img src="images/popup/btn_share_tw.png" /></a>
