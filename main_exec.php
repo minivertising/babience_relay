@@ -258,6 +258,28 @@ switch ($_REQUEST['exec'])
 		}
 		echo $innerHTML."||".sizeof($comment_info[$num]);
 	break;
+
+	case "m_view_comment" :
+		$num		= $_REQUEST['num'];
+		$comment_info = select_comment();
+		
+		$innerHTML	= "";
+		$i = 1;
+		$gubun = "";
+		if ($comment_info[$num])
+		{
+			foreach($comment_info[$num] as $key => $val)
+			{
+				if ($i > 1)
+					$gubun	= "style='display:none'";
+				$innerHTML	.= "<div id='cn_".$i."' ".$gubun." class='id'>".$key."</div>";
+				$innerHTML	.= "<div id='da_".$i."' class='dash' ".$gubun.">|</div>";
+				$innerHTML	.= "<div id='ct_".$i."' class='txt' ".$gubun.">".$val."</div>";
+				$i++;
+			}
+		}
+		echo $innerHTML."||".sizeof($comment_info[$num]);
+	break;
 	//case "insert_recom" :
 
 	//$query 		= "INSERT INTO ".$_gl['member_info_table']."(sns_media, sns_ipaddr, sns_gubun, sns_regdate) values('".$media."','".$_SERVER['REMOTE_ADDR']."','".$gubun."','".date("Y-m-d H:i:s")."')";

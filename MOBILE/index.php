@@ -245,6 +245,11 @@ function move_area(area)
 	}
 }
 
+function go_detail(num)
+{
+	location.href = "./popup_posting.php?num=" + num;
+}
+
 function go_recom(num, detail)
 {
 	if (confirm('추천하시겠어요?'))

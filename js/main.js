@@ -457,7 +457,6 @@ function input_comment()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				if (blogger_idx == 1)
