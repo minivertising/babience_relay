@@ -120,7 +120,7 @@
 </div>  
 
 <div class="sec_lms_gift_btn">
-  <a href="#" target="_blank"><img src="images/lms_gift_btn.jpg" /></a>
+  <a href="http://www.babience.co.kr/m/index.jsp" target="_blank"><img src="images/lms_gift_btn.jpg" /></a>
 </div>
 
 <div class="sec_lms_footer">
