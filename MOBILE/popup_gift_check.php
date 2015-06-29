@@ -116,6 +116,7 @@ function copy_url(ss_url)
 		// IE처리
 		// 클립보드에 문자열 복사
 		window.clipboardData.setData('text', text);
+		alert("클립보드에 복사되었습니다.");
 	} else {
 		// 비IE 처리    
 		window.prompt ("선물번호를 복사해주세요!", text);  
