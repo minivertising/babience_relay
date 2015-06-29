@@ -769,17 +769,19 @@ body.main{
 .popup_wrap .p_position.p_mid.gift_check .block_content .check_name{
 	padding-left:117px;
 	padding-top:10px;
-	padding-bottom:14px;
+	padding-bottom:13px;
 }
 .popup_wrap .p_position.p_mid.gift_check .block_content .check_name input{
-	width:200px;
+	width:198px;
 	padding:3px;
 	color:#000;
 	font-weight:bold;
 	font-size:14px;
 	line-height:20px;
 	border:none;
-	background:none;
+	background:#fff;
+	border-left:2px solid #ddd;
+	border-top:2px solid #ddd;
 }
 .popup_wrap .p_position.p_mid.gift_check .block_content .check_num{
 	padding-left:117px;
@@ -798,6 +800,9 @@ body.main{
 	line-height:20px;
 	border:none;
 	background:none;
+	background:#fff;
+	border-left:2px solid #ddd;
+	border-top:2px solid #ddd;	
 }
 
 .popup_wrap .p_position.p_mid.gift_check .block_content .check_num div.in select {
