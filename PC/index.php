@@ -180,24 +180,21 @@
   </div>
 </div>
 <?
-	$give_query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_s_url<>''";
-	$give_cnt 	= mysqli_num_rows(mysqli_query($my_db, $give_query));
-	$per_cnt	= $give_cnt / 10000;
-	$per_bottle	= ($per_cnt / 640) + 80;
+	$per_cnt	= $total_cnt / 10000;
+	$per_bottle	= (($total_cnt / 100) * 6) + 80;
 ?>
-
 <div class="wrap_sec_give">
   <div class="sec_give">
-    <div class="cnt"><?=number_format($give_cnt);?>개</div>
+    <div class="cnt"><?=number_format($total_cnt);?>개</div>
     <div class="cnt_man">
 <?
-	$len_give_cnt		= strlen($give_cnt);
+	$len_give_cnt		= strlen($total_cnt);
 	$innerHTML2 = "";
 	for ($j=0; $j<$len_give_cnt; $j++){
 		if ($len_give_cnt > 3 && $j==1)
 			$innerHTML2	.= "<img src='images/num2/num_dash.png' alt=''/>";
 
-		$innerHTML2 .= "<img src='images/num2/num_".substr($give_cnt,$j,1).".png' alt=''/>";
+		$innerHTML2 .= "<img src='images/num2/num_".substr($total_cnt,$j,1).".png' alt=''/>";
 	}
 	$innerHTML2 .= "<img src='images/num2/label_num.png' alt=''/>";
 	echo $innerHTML2;
@@ -344,7 +341,8 @@ $(document).ready(function() {
 		$( 'html, body' ).animate( { scrollTop : 0 }, 800 );
 			return false;
 	} );
-	$('#mommy_gage').css('width','<?=$per_cnt?>%');
+	$('#mommy_gage').css('width','<?=$per_cnt*100?>%');
+	$('.runner').css('left','<?=$per_cnt*1000?>px');
 	$('.mull').css('bottom','<?=$per_bottle?>px');
 
 });
