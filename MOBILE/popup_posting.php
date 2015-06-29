@@ -49,7 +49,7 @@
 
           <img src="images/popup/txt_update.png" width="111" />
         </div>
-        <div class="tab_menu">
+        <div class="tab_menu clearfix">
           <a href="#"><img src="images/popup/btn_posting_tab_1_on.png" width="70" /></a>
           <a href="#" onclick="alert('곧 오픈됩니다!');return false;"><img src="images/popup/btn_posting_tab_2_off.png" width="70" /></a>
           <a href="#" onclick="alert('곧 오픈됩니다!');return false;"><img src="images/popup/btn_posting_tab_3_off.png" width="70" /></a>

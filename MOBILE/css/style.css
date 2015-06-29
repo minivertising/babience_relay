@@ -574,12 +574,20 @@ body{
 	padding-top:10px;
 }
 .popup_wrap .p_mid.p_position.big .block_content.posting .tab_menu{
-	text-align:center;
+	padding-left:13%;
 }
+.popup_wrap .p_mid.p_position.big .block_content.posting .tab_menu a{
+	display:block;
+	float:left;
+}
+
 .popup_wrap .p_mid.p_position.big .block_content.posting .content_posting,
 .popup_wrap .p_mid.p_position.big .block_content.posting .txt_notice{
 	width:100%;
 	margin-top:-1%;
+}
+.popup_wrap .p_mid.p_position.big .block_content.posting .content_posting{
+	margin-top:-3%;
 }
 .popup_wrap .p_mid.p_position.big .block_content.posting .content_posting img,
 .popup_wrap .p_mid.p_position.big .block_content.posting .txt_notice img{
@@ -598,13 +606,14 @@ body{
 	font-weight:bold;
 	width:190px;
 	padding-right:30px;
-	padding-top:7px;
+	padding-top:9px;
 	height:30px;
 	background:url(../images/popup/btn_suggest_bg.png) center top no-repeat;
 	background-size:contain;
 	font-size:12px;
     font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
 	font-family: "Malgun Gothic";
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-align:right;
 	text-decoration:none;
 }
@@ -871,6 +880,9 @@ body{
 	border-left:2px solid #efe4da;
 	border-top:2px solid #efe4da;
 }
+.popup_wrap .p_position .block_content .inner .block_input .input_txt select{
+	width:92%;
+}
 
 .popup_wrap .p_position .block_content .inner .block_input .input_txt textarea{
 	height:40px;
@@ -1036,7 +1048,6 @@ body{
 	padding:4% 6.5%;
 	margin-top:20px;
 	position:relative;
-	border-radius:15px;
 }
 .block_btn_sns .txt{
 	float:left;
