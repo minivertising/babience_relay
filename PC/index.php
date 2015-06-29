@@ -228,7 +228,18 @@
   <div class="sec_howto">
     <img src="images/img_howto.jpg" alt="" usemap="#Map"/>
     <map name="Map">
+<?
+	if ($IE8 == "Y")
+	{
+?>
+      <area shape="rect" coords="698,406,866,468" href="#" onclick="go_gift();" style="outline:none;">
+<?
+	}else{
+?>
       <area shape="rect" coords="698,406,866,468" href="#" onclick="go_gift();return false;" style="outline:none;">
+<?
+	}
+?>
     </map>
   </div>    
 </div><!--end:wrap_sec_howto--> 
