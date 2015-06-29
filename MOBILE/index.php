@@ -240,6 +240,7 @@ $(document).ready(function() {
 	$('.runner').css('left','<?=$per_cnt*100-4?>%');
 
 	$(".wrap_page").css("visibility","visible");
+	$("#kakao-link-btn").click();
 
 });
 
