@@ -52,7 +52,7 @@
     </div>
     
     
-<div class="wrap_page">
+<div class="wrap_page" style="visibility:hidden">
   <div class="navi">
     <div class="left"><a href="http://www.babience.co.kr/m/index.jsp"><img src="images/logo.png" width="95" alt=""/></a></div>
     <div class="right"><a href="#" onclick="show_menu()"><img src="images/btn_navi.png" width="40" alt=""/></a></div>
@@ -238,6 +238,8 @@ $(document).ready(function() {
 	$('#mommy_gage').css('width','<?=$per_cnt*100?>%');
 	$('.mull').css('top','<?=$per_bottle?>%');
 	$('.runner').css('left','<?=$per_cnt*100-4?>%');
+
+	$(".wrap_page").css("visibility","visible");
 
 });
 
