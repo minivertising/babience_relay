@@ -26,7 +26,7 @@
 <?
 	}else if ($b_idx == "2"){
 ?>
-          <a href="#" target="_blank"><img src="images/popup/bloger_name_2.png" width="170"/></a>
+          <a href="#" target="_blank"><img src="images/popup/bloger_name_2.png" width="110"/></a>
 <?
 	}else if ($b_idx == "3"){
 ?>
