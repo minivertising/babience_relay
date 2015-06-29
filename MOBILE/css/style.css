@@ -880,6 +880,9 @@ body{
 	border-left:2px solid #efe4da;
 	border-top:2px solid #efe4da;
 }
+.popup_wrap .p_position .block_content .inner .block_input .input_txt select{
+	width:92%;
+}
 
 .popup_wrap .p_position .block_content .inner .block_input .input_txt textarea{
 	height:40px;
