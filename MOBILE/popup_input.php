@@ -38,7 +38,7 @@
           </div>
           <div class="block_input clearfix">
             <div class="label"><img src="images/popup/label_name_baby.png" /></div>
-            <div class="input_txt name"><input type="text"></div>
+            <div class="input_txt name"><input type="text" name="mb_baby_name" id="mb_baby_name"></div>
           </div>
           <div class="block_input clearfix">
             <div class="input_txt notice"><img src="images/popup/txt_input_notice.png" /></div>
