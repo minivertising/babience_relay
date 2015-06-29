@@ -38,7 +38,8 @@ a {
 	padding: 0;
 	font-size: 100%;
 	vertical-align: baseline;
-	background: transparent
+	background: transparent;
+	outline: none !important;
 }
 ins {
 	background-color: #ff9;
@@ -889,7 +890,6 @@ body.main{
 }
 
 .popup_wrap .p_position.p_mid_input .block_input .input_one input{
-	border:none;
 	padding:5px 3px;
 	width:160px;
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -897,7 +897,10 @@ body.main{
 	font-size:14px;
 	line-height:18px;
 	color:#000;
-	background:none;
+	background: #f9ede3; 
+	border: none; 
+	border-left: 2px solid #efe4da; 
+	border-top: 2px solid #efe4da;	
 }
 
 .popup_wrap .p_position.p_mid_input .block_input .input_one select{
@@ -911,7 +914,10 @@ body.main{
 	color:#000;
 	height:37px;
 	border-radius:none;
-	background:none;
+    background: #f9ede3; 
+	border: none; 
+	border-left: 2px solid #efe4da; 
+	border-top: 2px solid #efe4da;	
 }
 
 .popup_wrap .p_position.p_mid_input .block_input .input_one .input_phone .phone_ip input{
