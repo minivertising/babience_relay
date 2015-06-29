@@ -8,7 +8,7 @@
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body{
-	background:#fff;
+	background:#f9eddc;
 }
 
 .wrap_page{
@@ -323,7 +323,10 @@ body{
 	text-indent:-99999px;
 }
 
-
+.sec_footer{
+	background:#fff;
+	margin-top:-2%;
+}
 .sec_footer,
 .sec_footer img{
 	width:100%;
@@ -870,7 +873,7 @@ body{
 }
 
 .popup_wrap .p_position .block_content .inner .block_input .input_txt textarea{
-	height:60px;
+	height:40px;
 }
 .popup_wrap .p_position .block_content .inner .block_input .input_txt.name input{
 	width:70%;

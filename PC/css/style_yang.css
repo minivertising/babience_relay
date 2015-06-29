@@ -598,8 +598,8 @@ body.main{
 .popup_wrap .p_position.p_mid_comment{
 	background:url(../images/popup/bg_comment.png) no-repeat top left;
 	position:relative;
-	width:500px;
-	height:450px;
+	width:550px;
+	height:410px;
 }
 .popup_wrap .p_position.p_mid_comment .title{
 	padding-top:64px;
@@ -611,12 +611,12 @@ body.main{
 	width:100%;
 }
 .popup_wrap .p_position.p_mid_comment .block_input .input_one.textarea {
-	padding-top:7px;
+	padding-top:8px;
 	padding-bottom:90px;
 }
 .popup_wrap .p_position.p_mid_comment .block_input .input_one.textarea textarea{
-	width:300px;
-	height:80px;
+	width:358px;
+	height:23px;
 	font-size:14px;
 	line-height:18px;
 	font-weight:bold;

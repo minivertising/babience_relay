@@ -11,19 +11,26 @@
 <!doctype html>
 <html>
   <head>
+<<<<<<< HEAD
+    <title>Babience</title>
+=======
     <title>베비언스</title>
+>>>>>>> 6d128261476c4c93ef4550404ab8eb498811d34c
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+<<<<<<< HEAD
+    <meta property="og:title" content="베비언스">
+=======
     <meta property="og:title" content="[베비언스] 우리 아기 첫 기부증서">
+>>>>>>> 6d128261476c4c93ef4550404ab8eb498811d34c
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?=$long_url	?>" />
     <meta property="og:image" content="<?=$member_info['mb_image']?>" />
     <meta property="og:description" content="우리 아기 몸과 마음 모두 성장하는 기부 앤 테이크 릴레이 캠페인에 꼭 참여해주세요!">
 
-    <link rel="shortcut icon" type="image/x-icon" href="./images/icon/favicon.ico" />
-    <title>Babience</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" type="text/css" href="./css/style.css"> 
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
