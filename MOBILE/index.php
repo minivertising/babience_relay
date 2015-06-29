@@ -128,7 +128,7 @@
 
 <div class="sec_give">
   <div class="title">
-    <div class="cnt"><?=number_format($give_cnt)?>개</div>
+    <div class="cnt"><?=number_format($total_cnt)?>개</div>
     <div class="cnt_man">
 <?
 	$len_give_cnt		= strlen($total_cnt);
