@@ -54,7 +54,7 @@
     
 <div class="wrap_page" style="visibility:hidden">
   <div class="navi">
-    <div class="left"><a href="http://www.babience.co.kr/m/index.jsp"><img src="images/logo.png" width="95" alt=""/></a></div>
+    <div class="left"><a href="http://www.babience.co.kr/m/index.jsp" target="_blank"><img src="images/logo.png" width="95" alt=""/></a></div>
     <div class="right"><a href="#" onclick="show_menu()"><img src="images/btn_navi.png" width="40" alt=""/></a></div>
   </div>
   </div>
