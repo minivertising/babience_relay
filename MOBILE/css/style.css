@@ -637,6 +637,7 @@ body{
 .popup_wrap .p_mid.p_position.big .block_content.posting .sec_comment .comment div.id{
 	width:18%;
 	color:#7f7669;
+	text-align:center;
 }
 
 .popup_wrap .p_mid.p_position.big .block_content.posting .sec_comment .comment div.dash{
