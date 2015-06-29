@@ -123,7 +123,7 @@
 	//$give_query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_s_url<>''";
 	//$give_cnt 	= mysqli_num_rows(mysqli_query($my_db, $give_query));
 	$per_cnt	= $total_cnt / 10000;
-	$per_bottle	= 100 - (($total_cnt / 100) * 4);
+	$per_bottle	= 40 - (($total_cnt / 1000) * 4);
 ?>
 
 <div class="sec_give">
