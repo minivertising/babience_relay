@@ -30,7 +30,6 @@
 		$i++;
 	}
 	shuffle($b_info);
-
 ?>
 <div class="sec_navi">
   <div class="navi">
