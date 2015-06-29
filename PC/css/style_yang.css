@@ -122,20 +122,20 @@ body{
 	border-bottom:1px solid #ffa727;
 }
 .navi{
-	height:87px;
+	height:50px;
 	position:relative;
-	padding-top:15px;
+	padding-top:10px;
 }
 .navi .left{
 	position:absolute;
 	left:1.5%;
-	padding-top:10px;
+	padding-top:0;
 }
 .navi .right{
 	position:absolute;
 	right:1.5%;
 	width:620px;
-	padding-top:20px;
+	padding-top:3px;
 }
 .navi .right .right_wrap{
 	
