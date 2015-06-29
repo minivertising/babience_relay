@@ -190,7 +190,7 @@ body.main{
 	font-weight:bold;
 	position:absolute;
 	bottom:60px;
-	width:943px;
+	/*width:943px;*/
 }
 .sec_top .btn_gift{
 	position:absolute;
@@ -327,7 +327,7 @@ body.main{
 	background:url(../images/wrap_bg_give.jpg) no-repeat top center;
 }
 .sec_give .img_give_graphic .bg{
-	position:absolute;
+	position:relative;
 	background:url(../images/bg_give.png) no-repeat top center;
 	height:1383px;
 	width:997px;
@@ -598,8 +598,8 @@ body.main{
 .popup_wrap .p_position.p_mid_comment{
 	background:url(../images/popup/bg_comment.png) no-repeat top left;
 	position:relative;
-	width:550px;
-	height:410px;
+	width:500px;
+	height:450px;
 }
 .popup_wrap .p_position.p_mid_comment .title{
 	padding-top:64px;
@@ -611,12 +611,12 @@ body.main{
 	width:100%;
 }
 .popup_wrap .p_position.p_mid_comment .block_input .input_one.textarea {
-	padding-top:8px;
+	padding-top:7px;
 	padding-bottom:90px;
 }
 .popup_wrap .p_position.p_mid_comment .block_input .input_one.textarea textarea{
-	width:358px;
-	height:23px;
+	width:300px;
+	height:80px;
 	font-size:14px;
 	line-height:18px;
 	font-weight:bold;

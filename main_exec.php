@@ -146,8 +146,24 @@ switch ($_REQUEST['exec'])
 		$innerHTML	= "";
 		while ($search_data = mysqli_fetch_array($result))
 		{
+			if ($search_data['mb_winner'] == "CASH")
+			{
+				$winner_gift	="베비언스 3천원 쿠폰";
+			}else if ($search_data['mb_winner'] == "CAMERA"){
+				$winner_gift	="DSLR 카메라";
+			}else if ($search_data['mb_winner'] == "HOTEL"){
+				$winner_gift	="하얏트 호텔 숙박권";
+			}else if ($search_data['mb_winner'] == "WG"){
+				$winner_gift	="베베프람 웨건";
+			}else if ($search_data['mb_winner'] == "MILK"){
+				$winner_gift	="베비언스 분유 1년치";
+			}else if ($search_data['mb_winner'] == "WATER"){
+				$winner_gift	="베이비워터 24병";
+			}else if ($search_data['mb_winner'] == "WASH"){
+				$winner_gift	="메소드 핸드워시";
+			}
 			$innerHTML		.="<div class='inner clearfix'>";
-			$innerHTML		.="<div class='txt'>".$search_data['mb_winner']."</div>";
+			$innerHTML		.="<div class='txt'>".$winner_gift."</div>";
 			$innerHTML		.="<div class='txt num'>".$search_data['mb_serialnumber']."</div>";
 			$innerHTML		.="<div class='btn'><a href='#' onclick=copy_url('".$search_data['mb_serialnumber']."')><img src='images/popup/btn_copy2.png' /></a></div>";
 			$innerHTML		.="</div>";
@@ -155,6 +171,65 @@ switch ($_REQUEST['exec'])
 		echo $innerHTML;
 	break;
 
+	case "m_search_info" :
+		$s_name		= $_REQUEST['s_name'];
+		$s_phone	= $_REQUEST['s_phone'];
+
+		$query 	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_name='".$s_name."' AND mb_phone='".$s_phone."'";
+		$result 	= mysqli_query($my_db, $query);
+
+		$i = 0;
+		$style_css = "";
+
+		$innerHTML	= "<div class='list_one label clearfix'>";
+		$innerHTML	.= "<div class='gift_name'>선물</div>";
+		$innerHTML	.= "<div class='gift_num'>선물 번호</div>";
+		$innerHTML	.= "</div>";
+
+		while ($search_data = mysqli_fetch_array($result))
+		{
+			if ($i > 5)
+				$style_css	= "style='display:none;'";
+
+			if ($search_data['mb_winner'] == "CASH")
+			{
+				$winner_gift	="베비언스 3천원 쿠폰";
+			}else if ($search_data['mb_winner'] == "CAMERA"){
+				$winner_gift	="DSLR 카메라";
+			}else if ($search_data['mb_winner'] == "HOTEL"){
+				$winner_gift	="하얏트 호텔 숙박권";
+			}else if ($search_data['mb_winner'] == "WG"){
+				$winner_gift	="베베프람 웨건";
+			}else if ($search_data['mb_winner'] == "MILK"){
+				$winner_gift	="베비언스 분유 1년치";
+			}else if ($search_data['mb_winner'] == "WATER"){
+				$winner_gift	="베이비워터 24병";
+			}else if ($search_data['mb_winner'] == "WASH"){
+				$winner_gift	="메소드 핸드워시";
+			}
+			$innerHTML		.="<div class='list_one clearfix' ".$style_css.">";
+			$innerHTML		.="<div class='gift_name'>".$winner_gift."</div>";
+			$innerHTML		.="<div class='gift_num'>".$search_data['mb_serialnumber']."</div>";
+			$innerHTML		.="<div class='btn'><a href='#' onclick=copy_url('".$search_data['mb_serialnumber']."')><img src='images/btn_copy.png' /></a></div>";
+			$innerHTML		.="</div>";
+			$i++;
+		}
+		if ($i > 6)
+		{
+			$innerHTML		.="<div class='btn_more'>";
+			$innerHTML		.="<a href='#' onclick='more_info()'>더보기</a>";
+			$innerHTML		.="</div>";
+		}
+
+		if ($i == 0)
+		{
+			$innerHTML	 = "<div class='gift_num_list'>";
+			$innerHTML	 .= "<div class='no_gift' style='padding-bottom:0px'>";
+			$innerHTML	 .= "<a href='index.php'><img src='images/popup/img_no_gift.png' /></a>";
+			$innerHTML	 .= "</div></div>";
+		}
+		echo $innerHTML;
+	break;
 	case "insert_comment" :
 		$mb_nickname		= $_REQUEST['mb_nickname'];
 		$mb_comment		= $_REQUEST['mb_comment'];
@@ -188,6 +263,28 @@ switch ($_REQUEST['exec'])
 					$gubun	= "style='display:none'";
 				$innerHTML	.="<span id='cn_".$i."' ".$gubun.">".$key." </span>";
 				$innerHTML	.="<span id='ct_".$i."' class='t'' ".$gubun.">".$val."</span>";
+				$i++;
+			}
+		}
+		echo $innerHTML."||".sizeof($comment_info[$num]);
+	break;
+
+	case "m_view_comment" :
+		$num		= $_REQUEST['num'];
+		$comment_info = select_comment();
+		
+		$innerHTML	= "";
+		$i = 1;
+		$gubun = "";
+		if ($comment_info[$num])
+		{
+			foreach($comment_info[$num] as $key => $val)
+			{
+				if ($i > 1)
+					$gubun	= "style='display:none'";
+				$innerHTML	.= "<div id='cn_".$i."' ".$gubun." class='id'>".$key."</div>";
+				$innerHTML	.= "<div id='da_".$i."' class='dash' ".$gubun.">|</div>";
+				$innerHTML	.= "<div id='ct_".$i."' class='txt' ".$gubun.">".$val."</div>";
 				$i++;
 			}
 		}

@@ -24,9 +24,18 @@
             휴대폰 번호
             </div>
             <div class="input_phone clearfix">
-              <div class="phone_ip"><input type="tel" name="mb_phone1" id="mb_phone1"></div>
-              <div class="phone_ip"><input type="tel" name="mb_phone2" id="mb_phone2"></div>
-              <div class="phone_ip"><input type="tel" name="mb_phone3" id="mb_phone3"></div>
+              <div class="phone_ip">
+                <select name="mb_phone1" id="mb_phone1">
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                  <option value="016">016</option>
+                  <option value="017">017</option>
+                  <option value="018">018</option>
+                  <option value="019">019</option>
+                </select>
+              </div>
+              <div class="phone_ip"><input type="tel" name="mb_phone2" id="mb_phone2" onkeyup="only_num(this);"></div>
+              <div class="phone_ip"><input type="tel" name="mb_phone3" id="mb_phone3" onkeyup="only_num(this);"></div>
             </div>
           </div>
           <div class="input_one clearfix">
@@ -167,61 +176,25 @@
         <div class="check_num">
           <!--전번 체크-->
           <div class="inner clearfix">
-            <div class="in"><input type="tel" name="s_phone1" id="s_phone1"></div>
-            <div class="in"><input type="tel" name="s_phone2" id="s_phone2"></div>
-            <div class="in"><input type="tel" name="s_phone3" id="s_phone3"></div>
+            <div class="in"><input type="tel" name="s_phone1" id="s_phone1" onkeyup="only_num(this);"></div>
+            <div class="in"><input type="tel" name="s_phone2" id="s_phone2" onkeyup="only_num(this);"></div>
+            <div class="in"><input type="tel" name="s_phone3" id="s_phone3" onkeyup="only_num(this);"></div>
             <div class="btn"><a href="#" onclick="search_gift();"><img src="images/popup/btn_gift_check_ok.png" /></a></div>
           </div>
         </div>
         <!--선물리스트-->
-        <div class="yes_gift" style="display:none;">
+        <div class="yes_gift">
           <div class="inner_yes_gift">
             <div class="block_label clearfix">
               <div class="name"><img src="images/popup/label_gift.png" /></div>
               <div class="num"><img src="images/popup/label_gift_num.png" /></div>
             </div>
             <div class="block_gift_num">
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>   
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div> 
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>
-              <!-- one gift -->
-              <div class="inner clearfix">
-                <div class="txt">베비언스 쿠폰 3000원</div>
-                <div class="txt num">asdfwers123</div>
-                <div class="btn"><a href="#"><img src="images/popup/btn_copy2.png" /></a></div>
-              </div>                              
             </div>
           </div>
           <div class="block_go_home">
             <div class="btn_block">
-              <a href="http://www.babience.co.kr/index.jsp"><img src="images/popup/btn_go_home.png" alt=""/></a>
+              <a href="http://www.babience.co.kr/index.jsp" target="_blank"><img src="images/popup/btn_go_home.png" alt=""/></a>
             </div>
             <div class="notice">
               <img src="images/popup/notice_gift_num.png" alt=""/>
@@ -230,9 +203,9 @@
         </div>
         <!--end:선물리스트-->
         <!--한번도 참여 안함 유저일 경우-->
-        <div class="no_gift" >
+        <div class="no_gift" style="display:none;" >
           <div class="btn_block">
-            <a href="#" onclick="close_pop('pop_search_gift');"><img src="images/popup/img_no_gift.png" alt=""/></a>
+            <a href="#" onclick="$.magnificPopup.close();"><img src="images/popup/img_no_gift.png" alt=""/></a>
           </div>
         </div>
         <!--end:한번도 참여 안함 유저일 경우-->
@@ -262,7 +235,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#"><img src="images/popup/bloger_img_1.png" alt=""/></a>
+          <a href="#" target="_blank"><img src="images/popup/bloger_img_1.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>','detail');"><span><?=number_format($d_info[1]['b_recommend'])?>의 맘</span></a></div>
@@ -341,7 +314,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#"><img src="images/popup/bloger_img_2.png" alt=""/></a>
+          <a href="#" target="_blank"><img src="images/popup/bloger_img_2.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>','detail');"><span><?=number_format($d_info[2]['b_recommend'])?>의 맘</span></a></div>
@@ -420,7 +393,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#"><img src="images/popup/bloger_img_3.png" alt=""/></a>
+          <a href="#" target="_blank"><img src="images/popup/bloger_img_3.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>','detail');"><span><?=number_format($d_info[3]['b_recommend'])?>의 맘</span></a></div>
@@ -499,7 +472,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#"><img src="images/popup/bloger_img_4.png" alt=""/></a>
+          <a href="#" target="_blank"><img src="images/popup/bloger_img_4.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>','detail');"><span><?=number_format($d_info[4]['b_recommend'])?>의 맘</span></a></div>
@@ -578,7 +551,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#"><img src="images/popup/bloger_img_5.png" alt=""/></a>
+          <a href="#" target="_blank"><img src="images/popup/bloger_img_5.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>','detail');"><span><?=number_format($d_info[5]['b_recommend'])?>의 맘</span></a></div>
@@ -657,7 +630,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#"><img src="images/popup/bloger_img_6.png" alt=""/></a>
+          <a href="#" target="_blank"><img src="images/popup/bloger_img_6.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>','detail');"><span><?=number_format($d_info[6]['b_recommend'])?>의 맘</span></a></div>

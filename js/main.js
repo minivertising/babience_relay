@@ -244,12 +244,17 @@ function popup_desc(param, num)
 				//$("#mb_message").val("");
 				$("#mb_name").val("");
 				$("#mb_baby_name").val("");
-				$("#mb_phone1").val("");
+				$("#mb_phone1").val("010");
 				$("#mb_phone2").val("");
 				$("#mb_phone3").val("");
+				$("#s_name").val("");
+				$("#s_phone1").val("010");
+				$("#s_phone2").val("");
+				$("#s_phone3").val("");
 				$("#mb_comment").val("");
 				$("#mb_nickname").val("");
 				$('input').iCheck('uncheck');
+				$(".block_gift_num").html("");
 			}
 		}
 	}, 0);
@@ -346,8 +351,7 @@ function input_info()
 				}else if (response == "D"){
 					popup_desc("pop_dupli_div", 0);
 				}else if (response == "E"){
-					//popup_desc("pop_dupli_div", 0);
-					alert("오늘 참여 횟수 다 썼다!");
+					popup_desc("pop_complete_div", 0);
 				}else{
 					popup_desc("pop_thanks_div", 0);
 					var giftArr	= response.split("||");
@@ -415,10 +419,16 @@ function search_gift()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			$(".no_gift").hide();
-			$(".yes_gift").show();
+			if (response == "")
+			{
+			$(".no_gift").show();
+			$(".yes_gift").hide();
+			}else{
+				$(".no_gift").hide();
+				$(".yes_gift").show();
+				$(".block_gift_num").html(response);
+			}
 
-			$(".block_gift_num").html(response);
 		}
 	});
 }
@@ -454,7 +464,6 @@ function input_comment()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				if (blogger_idx == 1)

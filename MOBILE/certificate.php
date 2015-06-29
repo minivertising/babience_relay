@@ -7,19 +7,24 @@
 	$query	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serialnumber='".$serial."'";
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
-
-	//print_r($member_info);
-	echo phpinfo();
 ?>
 <!doctype html>
 <html>
   <head>
+<<<<<<< HEAD
     <title>Babience</title>
+=======
+    <title>베비언스</title>
+>>>>>>> 6d128261476c4c93ef4550404ab8eb498811d34c
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+<<<<<<< HEAD
     <meta property="og:title" content="베비언스">
+=======
+    <meta property="og:title" content="[베비언스] 우리 아기 첫 기부증서">
+>>>>>>> 6d128261476c4c93ef4550404ab8eb498811d34c
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?=$long_url	?>" />
     <meta property="og:image" content="<?=$member_info['mb_image']?>" />
@@ -53,25 +58,91 @@
 
   </head>
 
-  <body>
-    <div>
-	  <img src="<?=$member_info['mb_image']?>">
-	</div>
-	<div>
-	  <a href="#" onclick="sns_share('fb');">페이스북</a>
-	  <a href="#" onclick="sns_share('ks');">카스</a>
-	  <a href="#" onclick="sns_share('kt');">카톡</a>
-	  <a href="#" onclick="sns_share('tw');">트위터</a>
-	</div>
-	<div>
-	  <a href="#">선물번호 확인하기</a>
-	</div>
-  </body>
+<div class="sec_give_paper_block">
+  <div class="name"><?=$member_info['baby_name']?></div>
+  <div class="btn">
+    <a href="#" onclick="c_sns_share('kt')" id="kakao-link-btn"><img src="images/lms_sns_kt.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('ks')"><img src="images/lms_sns_ks.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('fb')"><img src="images/lms_sns_fb.png" alt=""/></a>
+  </div>
+  <div class="bg"><img src="images/lms_bg.jpg" alt=""/></div>
+</div>
+
+<div class="sec_lms_gift">
+  <div class="title">
+    <img src="images/lms_gift_title.jpg" />
+  </div>
+  <div class="list_block">
+    <div class="list_one label clearfix">
+      <div class="gift_name">선물</div>
+      <div class="gift_num">선물 번호</div>
+    </div>
+  </div> 
+  <div class="list_block">
+<?
+	$query 	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_phone='".$member_info['mb_phone']."'";
+	$result 	= mysqli_query($my_db, $query);
+
+	$i = 0;
+	$style_css	= "";
+	while ($data = mysqli_fetch_array($result))
+	{
+		if ($i > 5)
+			$style_css	= "style='display:none;'";
+
+		if ($data['mb_winner'] == "CASH")
+		{
+			$winner_gift	="베비언스 3천원 쿠폰";
+		}else if ($data['mb_winner'] == "CAMERA"){
+			$winner_gift	="DSLR 카메라";
+		}else if ($data['mb_winner'] == "HOTEL"){
+			$winner_gift	="하얏트 호텔 숙박권";
+		}else if ($data['mb_winner'] == "WG"){
+			$winner_gift	="베베프람 웨건";
+		}else if ($data['mb_winner'] == "MILK"){
+			$winner_gift	="베비언스 분유 1년치";
+		}else if ($data['mb_winner'] == "WATER"){
+			$winner_gift	="베이비워터 24병";
+		}else if ($data['mb_winner'] == "WASH"){
+			$winner_gift	="메소드 핸드워시";
+		}
+?>
+    <div class="list_one clearfix view_info" <?=$style_css?>>
+      <div class="gift_name"><?=$winner_gift?></div>
+      <div class="gift_num"><?=$data['mb_serialnumber']?></div>
+      <div class="btn"><a href="#" onclick="copy_url('<?=$data['mb_serialnumber']?>')"><img src="images/btn_copy.png" alt=""/></a></div>
+    </div>
+<?
+		$i++;
+	}
+	if ($i > 5)
+	{
+?>
+    <div class="btn_more">
+      <a href="#" onclick="more_show();return false;">더보기</a>
+    </div>
+<?
+	}
+?>
+  </div>         
+</div>  
+
+<div class="sec_lms_gift_btn">
+  <a href="#" target="_blank"><img src="images/lms_gift_btn.jpg" /></a>
+</div>
+
+<div class="sec_lms_footer">
+  <img src="images/lms_footer.jpg" />
+</div>
+</body>
 </html>
 <script type="text/javascript">
-Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
+$(document).ready(function() {
+	Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
+	$("#kakao-link-btn").click();
+});
 
-function sns_share(media)
+function c_sns_share(media)
 {
 	if (media == "fb")
 	{
@@ -89,28 +160,17 @@ function sns_share(media)
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
 		  container: '#kakao-link-btn',
-		  label: "VDL MEETS KAKAO FRIENDS!\r\nVDL FRIENDS KIT를 받아라!\r\n\r\n친구에게 메시지를 보내고 5천원 할인 쿠폰과 VDL FRIENDS KIT을 받으세요! 참여만 해도 5천원 할인 쿠폰을 드려요",
+		  label: "[우리 아기 첫 기부 증서]\r\n\r\n우리 아기 몸과 마음 모두 성장하는 기부 앤 테이크 릴레이 캠페인에 꼭 참여해주세요!",
 		  image: {
 			src: "<?=$member_info['mb_image']?>",
 			width: '1200',
 			height: '630'
 		  },
 		  webButton: {
-			text: 'VDL 써머 컬렉션',
+			text: '베비언스',
 			url: '<?=$long_url	?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
-		$.ajax({
-			type   : "POST",
-			async  : false,
-			url    : "../main_exec.php",
-			data:{
-				"exec" : "insert_share_info",
-				"media" : media
-			}
-		});
-	}else if (media == "tw"){
-		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("VDL MEETS KAKAO FRIENDS! 친구에게 메시지를 보내고 컬렉션 제품이 담긴 VDL FRIENDS KIT를 받으세요! 참여만 해도 5천원 할인 쿠폰을 드려요.") + '&url='+ encodeURIComponent('http://bit.ly/1EiTYuF'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
 			type   : "POST",
 			async  : false,
@@ -137,7 +197,7 @@ function sns_share(media)
 						url : '/v1/api/story/post/link',
 						data : {
 						link_info : res,
-							content:"VDL MEETS KAKAO FRIENDS! 친구에게 메시지를 보내고 컬렉션 제품이 담긴 VDL FRIENDS KIT를 받으세요! 참여만 해도 5천원 할인 쿠폰을 드려요."
+							content:"우리 아기 첫 기부 증서\r\n\r\nhttp://www.babience-giveandtake.com"
 						}
 					});
 				}).then(function(res) {
@@ -168,4 +228,24 @@ function sns_share(media)
 	}
 }
 
+function copy_url(ss_url)
+{
+	//window.clipboardData.setData('text',"11<?=$_SESSION['ss_url']?>");
+    //alert("클립보드에 복사되었습니다.");
+	//var text = $("#serial_number").val();
+	var text = ss_url;
+	if(window.clipboardData){
+		// IE처리
+		// 클립보드에 문자열 복사
+		window.clipboardData.setData('text', text);
+	} else {
+		// 비IE 처리    
+		window.prompt ("선물번호를 복사해주세요!", text);  
+	}
+}
+
+function more_show()
+{
+	$(".view_info").css("display","block");
+}
 </script>

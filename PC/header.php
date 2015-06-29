@@ -1,5 +1,8 @@
 <?
 	include_once "../config.php";
+
+	if ($gubun == "MOBILE")
+		echo "<script>location.href='http://www.babience-giveandtake.com/?media=ks';</script>";
 ?>
 <!doctype html>
 <html>
@@ -16,7 +19,19 @@
     <link rel="stylesheet" type="text/css" href="../lib/Magnific-Popup/magnific-popup.css"> 
     <link rel="stylesheet" type="text/css" href="./css/style.css"> 
     <link rel="stylesheet" href="../lib/iCheck/skins/all.css">
+<?
+	if ($IE7 == "N")
+	{
+?>
     <link rel="stylesheet" type="text/css" href="./css/style_yang.css"> 
+<?
+	}else{
+?>
+    <link rel="stylesheet" type="text/css" href="./css/style_yang_ie7.css"> 
+<?
+	}
+?>
+
     <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
     <script type="text/javascript" src="../lib/Magnific-Popup/jquery.magnific-popup.js"></script>

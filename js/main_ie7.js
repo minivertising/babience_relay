@@ -1,3 +1,32 @@
+
+function sns_share(media)
+{
+	if (media == "fb")
+	{
+		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.babience-giveandtake.com/?media=facebook'),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : media
+			}
+		});
+	}else if (media == "tw"){
+		var newWindow = window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent("[베비언스] 우리 아기 이름으로 첫 기부도 하고, 매일매일 100% 당첨 선물도 테이크하세요!") + '&url='+ encodeURIComponent('http://bit.ly/1LIDUII'),'sharer','toolbar=0,status=0,width=600,height=325');
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "../main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"media" : media
+			}
+		});
+	}
+}
+
 function auto_count()
 {
 	$.ajax({
@@ -163,11 +192,15 @@ function popup_desc(param, num)
 				//$("#mb_receive").val("");
 				//$("#mb_send").val("");
 				//$("#mb_message").val("");
-				$("#mb_name").val("");
 				$("#mb_baby_name").val("");
-				$("#mb_phone1").val("");
+				$("#mb_name").val("");
+				$("#mb_phone1").val("010");
 				$("#mb_phone2").val("");
 				$("#mb_phone3").val("");
+				$("#s_name").val("");
+				$("#s_phone1").val("010");
+				$("#s_phone2").val("");
+				$("#s_phone3").val("");
 				$("#mb_comment").val("");
 				$("#mb_nickname").val("");
 				$('input').iCheck('uncheck');
