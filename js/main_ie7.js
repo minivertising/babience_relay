@@ -43,7 +43,6 @@ function auto_count()
 var timerId = 0;
 function auto_comment(num)
 {
-	alert('11');
 	$.ajax({
 		type:"POST",
 		data:{
