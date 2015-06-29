@@ -811,7 +811,9 @@ body.main{
 	font-size:14px;
 	line-height:20px;
 	border:none;
-	background:none;
+	background:#fff;
+	border-left:2px solid #ddd;
+	border-top:2px solid #ddd;
 }
 
 
