@@ -13,18 +13,12 @@
   <head>
 <<<<<<< HEAD
     <title>Babience</title>
-=======
-    <title>베비언스</title>
->>>>>>> 6d128261476c4c93ef4550404ab8eb498811d34c
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-<<<<<<< HEAD
+
     <meta property="og:title" content="베비언스">
-=======
-    <meta property="og:title" content="[베비언스] 우리 아기 첫 기부증서">
->>>>>>> 6d128261476c4c93ef4550404ab8eb498811d34c
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?=$long_url	?>" />
     <meta property="og:image" content="<?=$member_info['mb_image']?>" />
