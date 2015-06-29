@@ -5,7 +5,7 @@
 *{
 	padding:0;
 	margin:0;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:'나눔고딕',nanumgothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
 }
 body{
 	background:#f9eddc;
@@ -276,7 +276,7 @@ body{
 	text-align:right;
 	z-index:102;
 	color:#000;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:'나눔고딕',nanumgothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
 	font-weight:bold;
 	font-size:15px;
 }
@@ -346,8 +346,7 @@ body{
 	font-size:17px;
 	font-weight:bold;
 	color:#000;
-	font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
-	font-family: "Malgun Gothic";	
+	font-family:'나눔고딕',nanumgothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;	
 }
 .sec_give_paper_block .btn{
 	position:absolute;
@@ -611,9 +610,6 @@ body{
 	background:url(../images/popup/btn_suggest_bg.png) center top no-repeat;
 	background-size:contain;
 	font-size:12px;
-    font-family: '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif;
-	font-family: "Malgun Gothic";
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-align:right;
 	text-decoration:none;
 }
@@ -741,7 +737,7 @@ body{
 	line-height:18px;
 	color:#666;
 	overflow:scroll;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:'나눔고딕',nanumgothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
 }
 .popup_wrap .p_position .block_content .agree_inner .bold{
 	font-weight:bold;
@@ -870,7 +866,7 @@ body{
 	padding:5px 2px;
 	font-size:13px;
 	line-height:18px;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:'나눔고딕',nanumgothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
 	font-weight:bold;
 	-webkit-appearance: none;
     -webkit-border-radius:0; 
@@ -1092,7 +1088,7 @@ body{
 	float:left;
 	font-size:12px;
 	font-weight:bold;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:'나눔고딕',nanumgothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
 	color:#807b77;
 	font-weight:normal;
 
@@ -1118,7 +1114,7 @@ body{
 	color:#65615e;
 	font-weight:bold;
 	text-decoration:underline;
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:'나눔고딕',nanumgothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
 }
 .popup_wrap .p_position .block_content .inner .block_ckeck .inner_check .btn_check a{
 	color:#65615e;
