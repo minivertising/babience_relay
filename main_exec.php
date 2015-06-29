@@ -227,6 +227,8 @@ switch ($_REQUEST['exec'])
 			$innerHTML	 .= "<div class='no_gift' style='padding-bottom:0px'>";
 			$innerHTML	 .= "<a href='index.php'><img src='images/popup/img_no_gift.png' /></a>";
 			$innerHTML	 .= "</div></div>";
+
+			echo "<script>$('.sec_lms_gift_btn').hide()</script>";
 		}
 		echo $innerHTML;
 	break;
