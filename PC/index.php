@@ -89,7 +89,6 @@
 	$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
 	$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
-	$total_cnt	= 3000;
 	$len_cnt	= strlen($total_cnt);
 	$innerHTML = "";
 	for ($i=0; $i<$len_cnt; $i++){
