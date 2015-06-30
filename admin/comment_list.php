@@ -31,7 +31,7 @@
 	
 	if (!$pg)
 		$pg = "1";
-	//if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
+	if(isset($pg) == false) $pg = 1;	// $pg가 없으면 1로 생성
 	$page_size = 10;	// 한 페이지에 나타날 개수
 	$block_size = 10;	// 한 화면에 나타낼 페이지 번호 개수
 
@@ -52,10 +52,10 @@
         <div class="table-responsive">
           <ol class="breadcrumb">
             <form name="frm_execute" method="POST" onsubmit="return checkfrm()">
-              <input type="hidden" name="pg" value="<?=$pg?>">
+              <input type="hidden" name="pg" value="1">
               <select name="search_type">
-                <option value="blogger_name" <?php if($search_type == "shop_name"){?>selected<?php }?>>블로거명</option>
-                <option value="viewYN" <?php if($search_type == "shop_addr"){?>selected<?php }?>>노출여부</option>
+                <option value="b_name" <?php if($search_type == "b_name"){?>selected<?php }?>>블로거명</option>
+                <option value="v_YN" <?php if($search_type == "v_YN"){?>selected<?php }?>>노출여부</option>
               </select>
               <input type="text" name="search_txt" value="<?php echo $search_txt?>">
               <input type="submit" value="검색">
@@ -78,9 +78,14 @@
 <?php 
 	$where = "";
 	if ($search_txt != "")
-		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
+	{
+		if ($search_type == "b_name")
+			$where	.= " AND B.blogger_name like '%".$search_txt."%'";
+		else
+			$where	.= " AND A.viewYN like '%".$search_txt."%'";
+	}
 
-	$buyer_count_query = "SELECT count(*) FROM ".$_gl['comment_info_table']." WHERE 1 ".$where."";
+	$buyer_count_query = "SELECT count(*) FROM ".$_gl['comment_info_table']." A, ".$_gl['blogger_info_table']." B WHERE A.blogger_idx=B.blogger_idx ".$where."";
 //1을 넣는다.
 	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
 	$PAGE_CLASS = new Page($pg,$buyer_count,$page_size,$block_size);
@@ -88,7 +93,7 @@
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 
-	$buyer_list_query = "SELECT * FROM ".$_gl['comment_info_table']." WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT A.idx, A.ip_addr, A.blogger_idx, A.week_num, A.mb_nickname, A.mb_message, A.viewYN, A.media, A.regdate, B.blogger_name FROM ".$_gl['comment_info_table']." A, ".$_gl['blogger_info_table']." B WHERE A.blogger_idx=B.blogger_idx ".$where." Order by A.idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $buyer_list_query);
 
 	while ($buyer_data = @mysqli_fetch_array($res))
@@ -98,13 +103,13 @@
 
 	foreach($buyer_info as $key => $val)
 	{
-		$blogger_query = "SELECT blogger_name FROM ".$_gl['blogger_info_table']." WHERE idx='".$buyer_info[$key]['blogger_idx']."'";
-		$res = mysqli_query($my_db, $blogger_query);
-		$blogger_name	= @mysqli_fetch_array($res);
+		//$blogger_query = "SELECT blogger_name FROM ".$_gl['blogger_info_table']." WHERE idx='".$buyer_info[$key]['blogger_idx']."'";
+		//$res = mysqli_query($my_db, $blogger_query);
+		//$blogger_name	= @mysqli_fetch_array($res);
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $blogger_name['blogger_name']?></td>
+                <td><?php echo $buyer_info[$key]['blogger_name']?></td>
                 <td><?php echo $buyer_info[$key]['week_num']?></td>
                 <td><?php echo $buyer_info[$key]['mb_nickname']?></td>
                 <td><?php echo $buyer_info[$key]['mb_message']?></td>

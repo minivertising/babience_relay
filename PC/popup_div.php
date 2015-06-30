@@ -289,7 +289,7 @@
           <a href="#" target="_blank"><img src="images/popup/bloger_img_1.png" alt=""/></a>
         </div>
         <div class="btn_block">
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>','detail');"><span><?=number_format($d_info[1]['b_recommend'])?>의 맘</span></a></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>','detail');"><span><?=number_format($d_info[1]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
@@ -368,7 +368,7 @@
           <a href="#" target="_blank"><img src="images/popup/bloger_img_2.png" alt=""/></a>
         </div>
         <div class="btn_block">
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>','detail');"><span><?=number_format($d_info[2]['b_recommend'])?>의 맘</span></a></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>','detail');"><span><?=number_format($d_info[2]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
@@ -447,7 +447,7 @@
           <a href="#" target="_blank"><img src="images/popup/bloger_img_3.png" alt=""/></a>
         </div>
         <div class="btn_block">
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>','detail');"><span><?=number_format($d_info[3]['b_recommend'])?>의 맘</span></a></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>','detail');"><span><?=number_format($d_info[3]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
@@ -526,7 +526,7 @@
           <a href="#" target="_blank"><img src="images/popup/bloger_img_4.png" alt=""/></a>
         </div>
         <div class="btn_block">
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>','detail');"><span><?=number_format($d_info[4]['b_recommend'])?>의 맘</span></a></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>','detail');"><span><?=number_format($d_info[4]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
@@ -605,7 +605,7 @@
           <a href="#" target="_blank"><img src="images/popup/bloger_img_5.png" alt=""/></a>
         </div>
         <div class="btn_block">
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>','detail');"><span><?=number_format($d_info[5]['b_recommend'])?>의 맘</span></a></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>','detail');"><span><?=number_format($d_info[5]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
@@ -684,7 +684,7 @@
           <a href="#" target="_blank"><img src="images/popup/bloger_img_6.png" alt=""/></a>
         </div>
         <div class="btn_block">
-          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>','detail');"><span><?=number_format($d_info[6]['b_recommend'])?>의 맘</span></a></div>
+          <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>','detail');"><span><?=number_format($d_info[6]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
