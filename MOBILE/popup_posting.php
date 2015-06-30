@@ -126,7 +126,7 @@ function auto_comment(num)
 		success: function(response){
 			var comment_txt	= response.split("||");
 			$("#comment_view").html(comment_txt[0]);
-			timerId = setInterval("comment_rolling("+comment_txt[1]+","+num+")",1500);
+			timerId = setInterval("comment_rolling("+comment_txt[1]+","+num+")",2500);
 		}
 	});
 
