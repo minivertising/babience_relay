@@ -56,7 +56,34 @@
           <a href="#" onclick="alert('곧 오픈됩니다!');return false;"><img src="images/popup/btn_posting_tab_4_off.png" width="70" /></a>
         </div>
         <div class="content_posting">
-          <a href="#" target="#"><img src="images/popup/posting_1.png" /></a>
+<?
+	if ($b_idx == "1")
+	{
+?>
+          <a href="#" target="_blank"><img src="images/popup/posting_1.png" /></a>
+<?
+	}else if ($b_idx == "2"){
+?>
+          <a href="#" target="_blank"><img src="images/popup/posting_2.png" /></a>
+<?
+	}else if ($b_idx == "3"){
+?>
+          <a href="#" target="_blank"><img src="images/popup/posting_3.png" /></a>
+<?
+	}else if ($b_idx == "4"){
+?>
+          <a href="#" target="_blank"><img src="images/popup/posting_4.png" /></a>
+<?
+	}else if ($b_idx == "5"){
+?>
+          <a href="#" target="_blank"><img src="images/popup/posting_5.png" /></a>
+<?
+	}else if ($b_idx == "6"){
+?>
+          <a href="#" target="_blank"><img src="images/popup/posting_6.png" /></a>
+<?
+	}
+?>
         </div>
         <div class="txt_notice">
           <img src="images/popup/txt_bloger_notice.png" />

@@ -7,7 +7,7 @@
 	$_gl['serial_info_table']			= "serial_info_";				//블로거정보 테이블
 	$_gl['comment_info_table']		= "comment_info";		//덧글 정보 테이블
 
-	$_gl['youtube_url']				= "https://www.youtube.com/embed/IJfE56n6tHU?controls=0&loop=1&playlist=IJfE56n6tHU&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
+	$_gl['youtube_url']				= "https://www.youtube.com/embed/Y4TeqnFhjUI?controls=0&loop=1&playlist=Y4TeqnFhjUI&modestbranding=1&showinfo=0&wmode=opaque&enablejsapi=1&rel=0&autoplay=1"; // 유튜브 URL
 
 	// 경품별 고유코드 ( 난수번호 용 )
 	$_gl['pcode']['camera']			= "kz";	// DSLR 카메라
