@@ -20,12 +20,33 @@
 
 	// 경품별 고유코드 ( DB 용 )
 	$_gl['prize']['camera']				= "CAMERA";	// DSLR 카메라
-	$_gl['prize']['hotel']					= "HOTEL";		// 호텔 숙박 패키지
-	$_gl['prize']['bottle']				= "BOTTLE";		// 젖병 소독기
+	$_gl['prize']['hotel']					= "HOTEL";		// 하얏트 호텔 숙박권
+	$_gl['prize']['wg']					= "WG";			// 베베프람 웨건
 	$_gl['prize']['milk']					= "MILK";		// 베비언스 분유 1년치
-	$_gl['prize']['water']				= "WATER";		// 베이비워터
-	$_gl['prize']['coffee']				= "COFFEE";		// 스타벅스 기프티콘
-	$_gl['prize']['cash']					= "CASH";		// 베이언스 3,000원 쿠폰
+	$_gl['prize']['water']				= "WATER";		// 베이비워터 24병
+	$_gl['prize']['coffee']				= "WASH";		// 메소드 핸드워시
+	$_gl['prize']['cash']					= "CASH";		// 베이언스 3천원 쿠폰
+
+
+			if ($search_data['mb_winner'] == "CASH")
+			{
+				$winner_gift	="베비언스 3천원 쿠폰";
+			}else if ($search_data['mb_winner'] == "CAMERA"){
+				$winner_gift	="DSLR 카메라";
+			}else if ($search_data['mb_winner'] == "HOTEL"){
+				$winner_gift	="하얏트 호텔 숙박권";
+			}else if ($search_data['mb_winner'] == "WG"){
+				$winner_gift	="베베프람 웨건";
+			}else if ($search_data['mb_winner'] == "MILK"){
+				$winner_gift	="베비언스 분유 1년치";
+			}else if ($search_data['mb_winner'] == "WATER"){
+				$winner_gift	="베이비워터 24병";
+			}else if ($search_data['mb_winner'] == "WASH"){
+				$winner_gift	="메소드 핸드워시";
+			}
+
+
+
 
 	$_gl['week']['1']					= "1";		// 1주차
 	$_gl['week']['2']					= "2";		// 2주차
