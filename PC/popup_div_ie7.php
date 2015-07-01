@@ -3,7 +3,7 @@
   <input type="hidden" name="blogger_num" id="blogger_num">
   <div class="p_mid_input p_position">
     <div class="block_close clearfix">
-      <a href="#" onclick="close_pop('pop_event_input');" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+      <a href="#" onclick="close_pop('pop_event_input');location.reload();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
     </div>
     <div class="block_content">
       <div class="inner">
@@ -58,7 +58,7 @@
           </div>  
           <div class="check_one clearfix">
             <div class="in_check">
-              <input type="checkbox" name="use_agree" id="use_agree">
+              <input type="checkbox" name="agree" id="use_agree">
             </div>
             <div class="txt_check">
               <img src="images/popup/agree_info.png" alt=""/>
@@ -69,7 +69,7 @@
           </div>
           <div class="check_one clearfix">
             <div class="in_check">
-              <input type="checkbox" name="privacy_agree" id="privacy_agree">
+              <input type="checkbox" name="agree" id="privacy_agree">
             </div>
             <div class="txt_check">
               <img src="images/popup/agree_info_agency.png" alt=""/>
@@ -80,7 +80,7 @@
           </div>
           <div class="check_one clearfix">
             <div class="in_check">
-              <input type="checkbox" name="adver_agree" id="adver_agree">
+              <input type="checkbox" name="agree" id="adver_agree">
             </div>
             <div class="txt_check">
               <img src="images/popup/agree_info_ad.png" alt=""/>

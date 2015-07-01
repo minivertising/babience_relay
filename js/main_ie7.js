@@ -1,3 +1,8 @@
+$("#all_agree").click(function() {
+		
+		$("input[name=agree]:checkbox").attr("checked", true);
+});
+
 
 function sns_share(media)
 {
@@ -484,5 +489,6 @@ function close_pop(param)
 {
 	$("#" + param).hide();
 	$(".mask").hide();
+	location.reload();
 }
 
