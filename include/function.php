@@ -340,7 +340,7 @@ function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 
 		$params = array(
 			'send_time' => '', 
-			'send_phone' => '07048883580', 
+			'send_phone' => '07048881164', 
 			'dest_phone' => $phone, 
 			//'dest_phone' => '01030033965', 
 			'send_name' => '', 
@@ -358,7 +358,7 @@ function getPrintToImage($szFilePath, &$objFont, $serial, $nFontAlign = 0x12)
 추천할 때마다 받는 선물을 계속 확인할 수 있어요!
 
 -기부증서는 기부금 소득공제가 되지 않습니다.
--이벤트 문의 : 070-4888-3580
+-이벤트 문의 : 070-4888-1164
  (평일 10시~15시)
 "
 		);
