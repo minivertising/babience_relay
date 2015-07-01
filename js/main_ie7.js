@@ -1,8 +1,8 @@
-$("#all_agree").click(function() {
-		
-		$("input[name=agree]:checkbox").attr("checked", true);
-});
 
+function all_check()
+{
+	$("input[name=agree]:checkbox").attr("checked", true);
+}
 
 function sns_share(media)
 {
