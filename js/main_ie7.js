@@ -1,7 +1,11 @@
 
 function all_check()
 {
-	$("input[name=agree]:checkbox").attr("checked", true);
+	if ($("#all_agree").attr("checked", true))
+		$("input[name=agree]:checkbox").attr("checked", true);
+	else
+		$("input[name=agree]:checkbox").attr("checked", false);
+	
 }
 
 function sns_share(media)
