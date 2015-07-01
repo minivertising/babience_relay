@@ -42,7 +42,6 @@
               <div class="gift_name">선물</div>
               <div class="gift_num">선물 번호</div>
             </div>
-            <div class="copy_notice">아래 선물 번호를 선택하여 복사해주세요!</div>
             <div class="list_block not_yet">
             
             </div>         
