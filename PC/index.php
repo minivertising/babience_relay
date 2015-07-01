@@ -83,7 +83,7 @@
 <div class="wrap_sec_top"> 
   <div class="sec_top">
     <div class="block_title">
-      <div class="block_p_num" style="width:943px">
+      <div class="block_p_num" style="width:943px;left:0px;">
 <?
 	$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
 	$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
