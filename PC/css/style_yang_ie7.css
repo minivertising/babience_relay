@@ -190,7 +190,8 @@ body.main{
 	font-weight:bold;
 	position:absolute;
 	bottom:60px;
-	/*width:943px;*/
+	width:943px;
+	left:0px;
 }
 .sec_top .btn_gift{
 	position:absolute;
