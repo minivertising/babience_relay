@@ -82,9 +82,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
                     <li>
                     <a href="daily_event_count.php">일자별 이벤트 참여자 수</a>
                   </li>
-                    <!-- <li>
-                    <a href="daily_winner_count.php">일자별 이벤트 당첨자 수</a>
-                  </li> -->
+                   <li>
+                    <a href="daily_recom_count.php">일자별 추천 수</a>
+                  </li>
                 </ul>
               </li>
               <li>

@@ -262,7 +262,7 @@ switch ($_REQUEST['exec'])
 			$innerHTML		.="<div class='list_one clearfix' ".$style_css.">";
 			$innerHTML		.="<div class='gift_name'>".$winner_gift."</div>";
 			$innerHTML		.="<div class='gift_num'>".$search_data['mb_serialnumber']."</div>";
-			$innerHTML		.="<div class='btn'><a href='#' onclick=copy_url('".$search_data['mb_serialnumber']."')><img src='images/btn_copy.png' /></a></div>";
+			//$innerHTML		.="<div class='btn'><a href='#' onclick=copy_url('".$search_data['mb_serialnumber']."')><img src='images/btn_copy.png' /></a></div>";
 			$innerHTML		.="</div>";
 			$i++;
 		}
