@@ -129,7 +129,7 @@ window._fbq.push(['track', '6028282329497', {'value':'0.00','currency':'USD'}]);
     <div class="list_one clearfix view_info" <?=$style_css?>>
       <div class="gift_name"><?=$winner_gift?></div>
       <div class="gift_num"><?=$data['mb_serialnumber']?></div>
-      <div class="btn"><a href="#" onclick="copy_url('<?=$data['mb_serialnumber']?>')"><img src="images/btn_copy.png" alt=""/></a></div>
+      <!-- <div class="btn"><a href="#" onclick="copy_url('<?=$data['mb_serialnumber']?>')"><img src="images/btn_copy.png" alt=""/></a></div> -->
     </div>
 <?
 		$i++;

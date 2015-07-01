@@ -128,4 +128,5 @@ function more_info()
 	$(".list_one").css("display","block");
 	$(".btn_more").css("display","none");
 }
+
 </script>
