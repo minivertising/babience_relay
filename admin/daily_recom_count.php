@@ -34,7 +34,7 @@
             </thead>
             <tbody>
 <?php 
-	$date_query = "SELECT substr(mb_regdate,1,10) mb_date FROM ".$_gl['member_info_table']." WHERE 1 Group by substr(mb_regdate,1,10) order by mb_regdate desc";
+	$date_query = "SELECT substr(mb_regdate,1,10) mb_date FROM ".$_gl['member_info_table']." WHERE mb_regdate <> '0000-00-00 00:00:00' Group by substr(mb_regdate,1,10) order by mb_regdate desc";
 	$res = mysqli_query($my_db, $date_query);
 	
 	while ($date_data = @mysqli_fetch_array($res))
