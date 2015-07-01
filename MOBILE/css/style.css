@@ -404,7 +404,7 @@ body{
 
 .sec_lms_gift .list_block .list_one{
 	width:90%;
-	padding:5px 0;
+	padding:13px 0;
 	margin-left:5%;
 	margin-right:5%;
 	font-size:12px;
@@ -421,7 +421,7 @@ body{
 .sec_lms_gift .list_block .list_one div.btn{
 	float:left;
 	text-align:center;
-	width:40%;
+	width:50%;
 }
 .sec_lms_gift .list_block .list_one div.gift_name,
 .sec_lms_gift .list_block .list_one div.gift_num{
@@ -437,6 +437,7 @@ body{
 
 .sec_lms_gift .list_block .btn_more{
 	padding-bottom:10px;
+	padding-top:10px;
 
 }
 .sec_lms_gift .list_block .btn_more a{
@@ -469,7 +470,7 @@ body{
 
 .sec_gift_list .list_block .list_one{
 	width:90%;
-	padding:5px 0;
+	padding:13px 0;
 	margin-left:5%;
 	margin-right:5%;
 	font-size:12px;
@@ -486,7 +487,7 @@ body{
 .sec_gift_list .list_block .list_one div.btn{
 	float:left;
 	text-align:center;
-	width:40%;
+	width:50%;
 }
 .sec_gift_list .list_block .list_one div.gift_name,
 .sec_gift_list .list_block .list_one div.gift_num{
@@ -502,6 +503,7 @@ body{
 
 .sec_gift_list .list_block .btn_more{
 	padding-bottom:10px;
+	padding-top:10px;
 
 }
 .sec_gift_list .list_block .btn_more a{
