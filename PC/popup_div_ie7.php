@@ -225,7 +225,7 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://vazzanga.blog.me/220406355379" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
@@ -235,7 +235,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#" target="_blank"><img src="images/popup/bloger_img_1.png" alt=""/></a>
+          <a href="http://vazzanga.blog.me/220406355379" target="_blank"><img src="images/popup/bloger_img_1.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>','detail');"><span><?=number_format($d_info[1]['b_recommend'])?>명의 맘</span></a></div>
@@ -304,7 +304,7 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_2.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://blog.naver.com/goeun061133/220406179689" target="_blank"><img src="images/popup/bloger_name_2.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
@@ -314,7 +314,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#" target="_blank"><img src="images/popup/bloger_img_2.png" alt=""/></a>
+          <a href="http://blog.naver.com/goeun061133/220406179689" target="_blank"><img src="images/popup/bloger_img_2.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>','detail');"><span><?=number_format($d_info[2]['b_recommend'])?>명의 맘</span></a></div>
@@ -383,7 +383,7 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_3.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://blog.naver.com/luckyj407/220406414442" target="_blank"><img src="images/popup/bloger_name_3.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
@@ -393,7 +393,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#" target="_blank"><img src="images/popup/bloger_img_3.png" alt=""/></a>
+          <a href="http://blog.naver.com/luckyj407/220406414442" target="_blank"><img src="images/popup/bloger_img_3.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>','detail');"><span><?=number_format($d_info[3]['b_recommend'])?>명의 맘</span></a></div>
@@ -462,7 +462,7 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_4.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://jinjuseo.blog.me/220406575011" target="_blank"><img src="images/popup/bloger_name_4.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
@@ -472,7 +472,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#" target="_blank"><img src="images/popup/bloger_img_4.png" alt=""/></a>
+          <a href="http://jinjuseo.blog.me/220406575011" target="_blank"><img src="images/popup/bloger_img_4.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>','detail');"><span><?=number_format($d_info[4]['b_recommend'])?>명의 맘</span></a></div>
@@ -541,7 +541,7 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_5.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://lovewjs012.blog.me/220406442563" target="_blank"><img src="images/popup/bloger_name_5.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
@@ -551,7 +551,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#" target="_blank"><img src="images/popup/bloger_img_5.png" alt=""/></a>
+          <a href="http://lovewjs012.blog.me/220406442563" target="_blank"><img src="images/popup/bloger_img_5.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>','detail');"><span><?=number_format($d_info[5]['b_recommend'])?>명의 맘</span></a></div>
@@ -620,7 +620,7 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="#" target="_blank"><img src="images/popup/bloger_name_6.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://clever_fox.blog.me/220406173165" target="_blank"><img src="images/popup/bloger_name_6.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
             <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
@@ -630,7 +630,7 @@
           </div>
         </div>
         <div class="txt_posting">
-          <a href="#" target="_blank"><img src="images/popup/bloger_img_6.png" alt=""/></a>
+          <a href="http://clever_fox.blog.me/220406173165" target="_blank"><img src="images/popup/bloger_img_6.png" alt=""/></a>
         </div>
         <div class="btn_block" style="padding-left:200px">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>','detail');"><span><?=number_format($d_info[6]['b_recommend'])?>명의 맘</span></a></div>
