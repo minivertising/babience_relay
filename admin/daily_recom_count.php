@@ -39,14 +39,25 @@
 	
 	while ($date_data = @mysqli_fetch_array($res))
 	{		
-		$b_query		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_regdate LIKE  '%".$date_data['mb_date']."%' AND mb_gubun='PC' AND mb_serialnumber<>''";
-		$b_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-
+		$b_query		= "SELECT mb_blogger, count(mb_blogger) cnt FROM ".$_gl['member_info_table']." WHERE mb_regdate LIKE  '%".$date_data['mb_date']."%' GROUP BY mb_blogger";
+		$result		= mysqli_query($my_db, $b_query);
+		$i = 1;
+		$total_count = 0;
+		while ($b_data = mysqli_fetch_array($result))
+		{
+			$blogger_info[$i]	= $b_data['cnt'];
+			$total_count			= $total_count + $b_data['cnt'];
+			$i++;
+		}
 ?>
               <tr>
                 <td><?php echo $date_data['mb_date']?></td>
-                <td><?php echo $pc_count?></td>
-                <td><?php echo $mobile_count?></td>
+                <td><?php echo $blogger_info[1]?></td>
+                <td><?php echo $blogger_info[2]?></td>
+                <td><?php echo $blogger_info[3]?></td>
+                <td><?php echo $blogger_info[4]?></td>
+                <td><?php echo $blogger_info[5]?></td>
+                <td><?php echo $blogger_info[6]?></td>
                 <td><?php echo $total_count?></td>
               </tr>
 <?php 
