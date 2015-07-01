@@ -51,7 +51,7 @@
           <div class="gift_num clearfix">
             <div class="label"><img src="images/popup/label_gift_num.png" alt=""/></div>
             <div class="num" name="serial_number" id="serial_number"><?=$serial?></div>
-            <div class="btn"><a href="#" onclick="copy_url('<?=$serial?>');"><img src="images/popup/btn_copy.png" alt=""/></a></div>
+            <!-- <div class="btn"><a href="#" onclick="copy_url('<?=$serial?>');"><img src="images/popup/btn_copy.png" alt=""/></a></div> -->
           </div>
         </div>
         <div class="txt_notice">
