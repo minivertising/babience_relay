@@ -242,8 +242,8 @@
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
+            <span>KD </span>
+            <span class="t">화이팅입니다^^</span>
           </div>
           <div class="bt">
             <a href="#" onclick="open_pop('pop_comment_input1','pop_detail_view1');"><img src="images/popup/bt_cm.png" alt=""/></a>
@@ -321,8 +321,8 @@
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
+            <span>수니 </span>
+            <span class="t">고은파파 화이링~^^</span>
           </div>
           <div class="bt">
             <a href="#" onclick="open_pop('pop_comment_input2','pop_detail_view2');"><img src="images/popup/bt_cm.png" alt=""/></a>
@@ -400,8 +400,8 @@
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
+            <span>리미 </span>
+            <span class="t">베비언스 신세계!</span>
           </div>
           <div class="bt">
             <a href="#" onclick="open_pop('pop_comment_input3','pop_detail_view3');"><img src="images/popup/bt_cm.png" alt=""/></a>
@@ -479,8 +479,8 @@
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
+            <span>우주 </span>
+            <span class="t">화이팅 베비언스</span>
           </div>
           <div class="bt">
             <a href="#" onclick="open_pop('pop_comment_input4','pop_detail_view4');"><img src="images/popup/bt_cm.png" alt=""/></a>
@@ -558,8 +558,8 @@
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
+            <span>베비언스짱 </span>
+            <span class="t">대단하세요!</span>
           </div>
           <div class="bt">
             <a href="#" onclick="open_pop('pop_comment_input5','pop_detail_view5');"><img src="images/popup/bt_cm.png" alt=""/></a>
@@ -637,8 +637,8 @@
         </div>
         <div class="block_comment clearfix">
           <div class="txt" id="comment_view">
-            <span>베비언스** </span>
-            <span class="t">좋아요! 너무 좋아요</span>
+            <span>지민이 </span>
+            <span class="t">육아 도우미 베비언스!</span>
           </div>
           <div class="bt">
             <a href="#" onclick="open_pop('pop_comment_input6','pop_detail_view6');"><img src="images/popup/bt_cm.png" alt=""/></a>
