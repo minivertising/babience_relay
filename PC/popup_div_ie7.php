@@ -237,7 +237,7 @@
         <div class="txt_posting">
           <a href="http://vazzanga.blog.me/220406355379" target="_blank"><img src="images/popup/bloger_img_1.png" alt=""/></a>
         </div>
-        <div class="btn_block" style="padding-left:200px">
+        <div class="btn_block">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>','detail');"><span><?=number_format($d_info[1]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
