@@ -3,7 +3,9 @@
 	include_once "../config.php";
 
 	$serial	= $_REQUEST['serial'];
-	$long_url		= "http://www.babience-giveandtake.com/MOBILE/certificate.php?serial=".$serial."&media=fb";
+	$long_url		= "http://www.babience-giveandtake.com/MOBILE/certificate.php?serial=".$serial."&media=baby_fb";
+	$long_url_kt		= "http://www.babience-giveandtake.com/MOBILE/certificate.php?serial=".$serial."&media=baby_kt";
+	$long_url_ks		= "http://www.babience-giveandtake.com/MOBILE/certificate.php?serial=".$serial."&media=baby_ks";
 	$query	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serialnumber='".$serial."'";
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
@@ -62,9 +64,9 @@
 <div class="sec_give_paper_block">
   <div class="name"><?=$member_info['baby_name']?></div>
   <div class="btn">
-    <a href="#" onclick="c_sns_share('kt')" id="kakao-link-btn"><img src="images/lms_sns_kt.png" alt=""/></a>
-    <a href="#" onclick="c_sns_share('ks')"><img src="images/lms_sns_ks.png" alt=""/></a>
-    <a href="#" onclick="c_sns_share('fb')"><img src="images/lms_sns_fb.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('baby_kt')" id="kakao-link-btn"><img src="images/lms_sns_kt.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('baby_ks')"><img src="images/lms_sns_ks.png" alt=""/></a>
+    <a href="#" onclick="c_sns_share('baby_fb')"><img src="images/lms_sns_fb.png" alt=""/></a>
   </div>
   <div class="bg"><img src="images/lms_bg.jpg" alt=""/></div>
 </div>
@@ -145,7 +147,7 @@ $(document).ready(function() {
 
 function c_sns_share(media)
 {
-	if (media == "fb")
+	if (media == "baby_fb")
 	{
 		var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('<?=$long_url?>'),'sharer','toolbar=0,status=0,width=600,height=325');
 		$.ajax({
@@ -157,7 +159,7 @@ function c_sns_share(media)
 				"media" : media
 			}
 		});
-	}else if (media == "kt"){
+	}else if (media == "baby_kt"){
 		// 카카오톡 링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
 		Kakao.Link.createTalkLinkButton({
 		  container: '#kakao-link-btn',
@@ -169,7 +171,7 @@ function c_sns_share(media)
 		  },
 		  webButton: {
 			text: '베비언스',
-			url: '<?=$long_url	?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+			url: '<?=$long_url_kt	?>' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 		  }
 		});
 		$.ajax({
@@ -190,7 +192,7 @@ function c_sns_share(media)
 				Kakao.API.request( {
 					url : '/v1/api/story/linkinfo',
 					data : {
-						url : '<?=$long_url	?>'
+						url : '<?=$long_url_ks	?>'
 					}
 				}).then(function(res) {
 					// 이전 API 호출이 성공한 경우 다음 API를 호출합니다.
@@ -213,7 +215,7 @@ function c_sns_share(media)
 						url    : "../main_exec.php",
 						data:{
 							"exec" : "insert_share_info",
-							"media" : "story"
+							"media" : "baby_ks"
 						}
 					});
 					alert("카카오스토리에 공유 되었습니다.");
@@ -226,6 +228,7 @@ function c_sns_share(media)
 				alert(JSON.stringify(err))
 			},
 		});
+
 	}
 }
 
