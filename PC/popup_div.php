@@ -103,7 +103,7 @@
 <div id="pop_thanks_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
   <div class="p_mid ending p_position">
     <div class="block_close clearfix">
-      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+      <a href="#" onclick="$.magnificPopup.close();location.reload();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
     </div>
     <div class="block_content">
       <div class="inner">
@@ -135,7 +135,7 @@
 <div id="pop_dupli_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
   <div class="p_mid small p_position">
     <div class="block_close clearfix">
-      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+      <a href="#" onclick="$.magnificPopup.close();location.reload();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
     </div>
     <div class="block_content">
       <div class="inner">
@@ -160,7 +160,7 @@
 <div id="pop_complete_div" class="popup_wrap zoom-anim-dialog mfp-hide" style="width:500px;left:50%;margin-left:-250px">
   <div class="p_mid small p_position">
     <div class="block_close clearfix">
-      <a href="#" onclick="$.magnificPopup.close();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
+      <a href="#" onclick="$.magnificPopup.close();location.reload();" class="btn_close"><img src="images/popup/btn_close.png" /></a>
     </div>
     <div class="block_content">
       <div class="inner">
@@ -168,7 +168,7 @@
           <img src="images/popup/title_already_all.png" />
         </div>
         <div class="block_btn">
-          <a href="#" onclick="$.magnificPopup.close();"><img src="images/popup/btn_ok.png" /></a>
+          <a href="#" onclick="$.magnificPopup.close();location.reload();"><img src="images/popup/btn_ok.png" /></a>
         </div>
         <div class="btn_sns_block">
           <a href="#" onclick="sns_share('fb');return false;"><img src="images/popup/btn_share_fb.png" alt=""/></a>
