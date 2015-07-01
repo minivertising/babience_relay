@@ -110,6 +110,34 @@ function auto_count()
 	});
 }
 
+function auto_give_count()
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"					: "total_give_member"
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			$("#give_view_num1").html(response);
+		}
+	});
+}
+
+function auto_give_count2()
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"					: "total_give_member2"
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			$("#give_view_num2").html(response);
+		}
+	});
+}
+
 var timerId = 0;
 function auto_comment(num)
 {

@@ -128,8 +128,8 @@
 
 <div class="sec_give">
   <div class="title">
-    <div class="cnt"><?=number_format($total_cnt)?>개</div>
-    <div class="cnt_man">
+    <div class="cnt" id="give_view_num1"><?=number_format($total_cnt)?>개</div>
+    <div class="cnt_man" id="give_view_num2">
 <?
 	$len_give_cnt		= strlen($total_cnt);
 	$innerHTML2 = "";
@@ -199,6 +199,8 @@ $(document).ready(function() {
 	$("#ytplayer").width(width);
 	$("#ytplayer").height(youtube_height);
 	setInterval("m_auto_count()",1000);
+	setInterval("m_auto_give_count()",1000);
+	setInterval("m_auto_give_count2()",1000);
 
 	var width = $(".block_movie").width();
 	var youtube_height = (width / 16) * 9;
@@ -285,6 +287,34 @@ function m_auto_count()
 		url: "../main_exec.php",
 		success: function(response){
 			$("#total_cnt").html(response);
+		}
+	});
+}
+
+function m_auto_give_count()
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"					: "m_total_give_member"
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			$("#give_view_num1").html(response);
+		}
+	});
+}
+
+function m_auto_give_count2()
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"					: "m_total_give_member2"
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			$("#give_view_num2").html(response);
 		}
 	});
 }

@@ -51,6 +51,58 @@ switch ($_REQUEST['exec'])
 
 	break;
 
+	case "total_give_member" :
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
+		
+		$innerHTML = number_format($total_cnt)."개";
+		echo $innerHTML;
+
+	break;
+
+	case "m_total_give_member" :
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
+		
+		$innerHTML = number_format($total_cnt)."개";
+		echo $innerHTML;
+
+	break;
+
+	case "total_give_member2" :
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
+		
+		$len_cnt	= strlen($total_cnt);
+		$innerHTML = "";
+		for ($i=0; $i<$len_cnt; $i++){
+			if ($len_cnt > 3 && $i==1)
+				$innerHTML	.= "<img src='images/num2/num_dash.png' alt=''/>";
+
+			$innerHTML .= "<img src='images/num2/num_".substr($total_cnt,$i,1).".png' alt=''/>";
+		}
+		$innerHTML .= "<img src='images/num2/label_num.png' alt=''/>";
+		echo $innerHTML;
+
+	break;
+
+	case "m_total_give_member2" :
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
+		
+		$len_give_cnt		= strlen($total_cnt);
+		$innerHTML2 = "";
+		for ($j=0; $j<$len_give_cnt; $j++){
+			if ($len_give_cnt > 3 && $j==1)
+				$innerHTML2	.= "<img src='images/num/num_dash.png' class='dash' alt=''/>";
+
+			$innerHTML2 .= "<img src='images/num/num_".substr($total_cnt,$j,1).".png' alt=''/>";
+		}
+		$innerHTML2 .= "<img src='images/num/label_num.png' alt=''/>";
+		echo $innerHTML2;
+
+	break;
+
 	case "insert_info" :
 		$mb_name			= $_REQUEST['mb_name'];
 		$mb_phone			= $_REQUEST['mb_phone'];
