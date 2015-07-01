@@ -48,7 +48,7 @@
           </div> 
         </div>  
         <div class="sec_lms_gift_btn">
-          <a href="http://www.babience.co.kr/m/index.jsp" target="_blank"><img src="images/gift_btn.jpg" /></a>
+          <a href="http://babience.com/m/event/150701/event.jsp" target="_blank"><img src="images/gift_btn.jpg" /></a>
         </div>                    
       </div><!--inner-->
     </div>

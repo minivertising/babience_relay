@@ -118,7 +118,7 @@
           <div class="btn"><a href="#" onclick="copy_url($('#serial_number').text())"><img src="images/popup/btn_copy.png" /></a></div>
         </div>
         <div class="block_btn_home">
-          <a href="http://www.babience.co.kr/index.jsp" target="_blank"><img src="images/popup/btn_home.png" /></a>
+          <a href="http://babience.com/event/150701/event.jsp" target="_blank"><img src="images/popup/btn_home.png" /></a>
         </div>
         <div class="btn_sns_block">
           <a href="#" onclick="sns_share('fb');return false;"><img src="images/popup/btn_share_fb.png" alt=""/></a>
@@ -245,7 +245,7 @@
           </div>
           <div class="block_go_home">
             <div class="btn_block">
-              <a href="http://www.babience.co.kr/index.jsp" target="_blank"><img src="images/popup/btn_go_home.png" alt=""/></a>
+              <a href="http://babience.com/event/150701/event.jsp" target="_blank"><img src="images/popup/btn_go_home.png" alt=""/></a>
             </div>
             <div class="notice">
               <img src="images/popup/notice_gift_num.png" alt=""/>
