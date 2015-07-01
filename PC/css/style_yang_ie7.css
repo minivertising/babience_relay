@@ -331,6 +331,7 @@ body.main{
 	height:1383px;
 	width:997px;
 	z-index:100;
+	left:0px;
 }
 .sec_give .img_give_graphic .mull{
 	position:absolute;
