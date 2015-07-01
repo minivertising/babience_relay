@@ -22,27 +22,27 @@
 	if ($b_idx == "1")
 	{
 ?>
-          <a href="http://vazzanga.blog.me/220406355379" target="_blank"><img src="images/popup/bloger_name_1.png" width="109" /></a>
+          <a href="http://vazzanga.blog.me/220406355379?target=web" target="_blank"><img src="images/popup/bloger_name_1.png" width="109" /></a>
 <?
 	}else if ($b_idx == "2"){
 ?>
-          <a href="http://blog.naver.com/goeun061133/220406179689" target="_blank"><img src="images/popup/bloger_name_2.png" width="110"/></a>
+          <a href="http://blog.naver.com/goeun061133/220406179689?target=web" target="_blank"><img src="images/popup/bloger_name_2.png" width="110"/></a>
 <?
 	}else if ($b_idx == "3"){
 ?>
-          <a href="http://blog.naver.com/luckyj407/220406414442" target="_blank"><img src="images/popup/bloger_name_3.png" width="155"/></a>
+          <a href="http://blog.naver.com/luckyj407/220406414442?target=web" target="_blank"><img src="images/popup/bloger_name_3.png" width="155"/></a>
 <?
 	}else if ($b_idx == "4"){
 ?>
-          <a href="http://jinjuseo.blog.me/220406575011" target="_blank"><img src="images/popup/bloger_name_4.png" width="160"/></a>
+          <a href="http://jinjuseo.blog.me/220406575011?target=web" target="_blank"><img src="images/popup/bloger_name_4.png" width="160"/></a>
 <?
 	}else if ($b_idx == "5"){
 ?>
-          <a href="http://lovewjs012.blog.me/220406442563" target="_blank"><img src="images/popup/bloger_name_5.png" width="110"/></a>
+          <a href="http://lovewjs012.blog.me/220406442563?target=web" target="_blank"><img src="images/popup/bloger_name_5.png" width="110"/></a>
 <?
 	}else if ($b_idx == "6"){
 ?>
-          <a href="http://clever_fox.blog.me/220406173165" target="_blank"><img src="images/popup/bloger_name_6.png" width="125"/></a>
+          <a href="http://clever_fox.blog.me/220406173165?target=web" target="_blank"><img src="images/popup/bloger_name_6.png" width="125"/></a>
 <?
 	}
 ?>
@@ -60,27 +60,27 @@
 	if ($b_idx == "1")
 	{
 ?>
-          <a href="http://vazzanga.blog.me/220406355379" target="_blank"><img src="images/popup/posting_1.png" /></a>
+          <a href="http://vazzanga.blog.me/220406355379?target=web" target="_blank"><img src="images/popup/posting_1.png" /></a>
 <?
 	}else if ($b_idx == "2"){
 ?>
-          <a href="http://blog.naver.com/goeun061133/220406179689" target="_blank"><img src="images/popup/posting_2.png" /></a>
+          <a href="http://blog.naver.com/goeun061133/220406179689?target=web" target="_blank"><img src="images/popup/posting_2.png" /></a>
 <?
 	}else if ($b_idx == "3"){
 ?>
-          <a href="http://blog.naver.com/luckyj407/220406414442" target="_blank"><img src="images/popup/posting_3.png" /></a>
+          <a href="http://blog.naver.com/luckyj407/220406414442?target=web" target="_blank"><img src="images/popup/posting_3.png" /></a>
 <?
 	}else if ($b_idx == "4"){
 ?>
-          <a href="http://jinjuseo.blog.me/220406575011" target="_blank"><img src="images/popup/posting_4.png" /></a>
+          <a href="http://jinjuseo.blog.me/220406575011?target=web" target="_blank"><img src="images/popup/posting_4.png" /></a>
 <?
 	}else if ($b_idx == "5"){
 ?>
-          <a href="http://lovewjs012.blog.me/220406442563" target="_blank"><img src="images/popup/posting_5.png" /></a>
+          <a href="http://lovewjs012.blog.me/220406442563?target=web" target="_blank"><img src="images/popup/posting_5.png" /></a>
 <?
 	}else if ($b_idx == "6"){
 ?>
-          <a href="http://clever_fox.blog.me/220406173165" target="_blank"><img src="images/popup/posting_6.png" /></a>
+          <a href="http://clever_fox.blog.me/220406173165?target=web" target="_blank"><img src="images/popup/posting_6.png" /></a>
 <?
 	}
 ?>
