@@ -228,7 +228,7 @@
     <img src="images/img_howto.jpg" alt="" usemap="#Map"/>
     <map name="Map">
 <?
-	if ($IE8 == "Y")
+	if ($IE8 == "Y" || $IE7 == "Y")
 	{
 ?>
       <area shape="rect" coords="698,406,866,468" href="#" onclick="go_gift();" style="outline:none;">
