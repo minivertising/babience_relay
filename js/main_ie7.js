@@ -86,7 +86,7 @@ function auto_comment(num)
 		url: "../main_exec.php",
 		success: function(response){
 			var comment_txt	= response.split("||");
-			$("#comment_view").html(comment_txt[0]);
+			$("#comment_view" + num).html(comment_txt[0]);
 			timerId = setInterval("comment_rolling("+comment_txt[1]+","+num+")",2500);
 		}
 	});

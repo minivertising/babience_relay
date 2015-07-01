@@ -241,7 +241,7 @@
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>','detail');"><span><?=number_format($d_info[1]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
-          <div class="txt" id="comment_view">
+          <div class="txt" id="comment_view1">
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -320,7 +320,7 @@
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>','detail');"><span><?=number_format($d_info[2]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
-          <div class="txt" id="comment_view">
+          <div class="txt" id="comment_view2">
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -399,7 +399,7 @@
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>','detail');"><span><?=number_format($d_info[3]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
-          <div class="txt" id="comment_view">
+          <div class="txt" id="comment_view3">
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -478,7 +478,7 @@
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>','detail');"><span><?=number_format($d_info[4]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
-          <div class="txt" id="comment_view">
+          <div class="txt" id="comment_view4">
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -557,7 +557,7 @@
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>','detail');"><span><?=number_format($d_info[5]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
-          <div class="txt" id="comment_view">
+          <div class="txt" id="comment_view5">
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
@@ -636,7 +636,7 @@
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>','detail');"><span><?=number_format($d_info[6]['b_recommend'])?>명의 맘</span></a></div>
         </div>
         <div class="block_comment clearfix">
-          <div class="txt" id="comment_view">
+          <div class="txt" id="comment_view6">
             <span>베비언스** </span>
             <span class="t">좋아요! 너무 좋아요</span>
           </div>
