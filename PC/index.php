@@ -367,6 +367,8 @@ $(document).ready(function() {
 var chk_ins = 0;
 $(document).ready(function() {
 	setInterval("auto_count()",1000);
+	setInterval("auto_give_count()",1000);
+	setInterval("auto_give_count2()",1000);
 
 	var width = $(".block_movie").width();
 	var youtube_height = (width / 16) * 9;
