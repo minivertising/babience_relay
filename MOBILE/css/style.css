@@ -425,7 +425,51 @@ body{
 }
 .sec_lms_gift .list_block .list_one div.gift_name,
 .sec_lms_gift .list_block .list_one div.gift_num{
-	padding-top:3px;
+	padding-top:2px;
+}
+
+.sec_lms_gift .list_block .list_one div.gift_name{
+	margin-top:3px;
+}
+
+
+.gift_name.g_1{
+	background:url(../images/g_1.png) no-repeat 50% 50%;
+	background-size:contain;
+}
+.gift_name.g_2{
+	background:url(../images/g_2.png) no-repeat 50% 50%;
+	background-size:contain;
+}
+.gift_name.g_3{
+	background:url(../images/g_3.png) no-repeat 50% 50%;
+	background-size:contain;
+}
+.gift_name.g_4{
+	background:url(../images/g_4.png) no-repeat 50% 50%;
+	background-size:contain;
+}
+.gift_name.g_5{
+	background:url(../images/g_5.png) no-repeat 50% 50%;
+	background-size:contain;
+}
+.gift_name.g_6{
+	background:url(../images/g_6.png) no-repeat 50% 50%;
+	background-size:contain;
+}
+.gift_name.g_7{
+	background:url(../images/g_7.png) no-repeat 50% 50%;
+	background-size:contain;
+}
+.gift_name{
+	
+	height:14px;
+}
+.copy_notice{
+	text-align:center;
+	padding:10px 0;
+	color:#777;
+	font-size:12px;
 }
 .sec_lms_gift .list_block .list_one div.btn{
 	width:20%;
