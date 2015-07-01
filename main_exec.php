@@ -237,6 +237,8 @@ switch ($_REQUEST['exec'])
 		$innerHTML	.= "<div class='gift_name'>선물</div>";
 		$innerHTML	.= "<div class='gift_num'>선물 번호</div>";
 		$innerHTML	.= "</div>";
+		$innerHTML	.= "<div class='copy_notice'>아래 선물 번호를 선택하여 복사해주세요!</div>";
+    
 
 		while ($search_data = mysqli_fetch_array($result))
 		{
