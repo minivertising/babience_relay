@@ -104,7 +104,6 @@ window._fbq.push(['track', '6028282329497', {'value':'0.00','currency':'USD'}]);
 
 	$i = 0;
 	$style_css	= "";
-	$winner_gift	= "";
 	while ($data = mysqli_fetch_array($result))
 	{
 		if ($i > 5)
@@ -112,23 +111,23 @@ window._fbq.push(['track', '6028282329497', {'value':'0.00','currency':'USD'}]);
 
 		if ($data['mb_winner'] == "CASH")
 		{
-			$winner_gift	="g_7";
+			$winner_gift	="베비언스 3천원 쿠폰";
 		}else if ($data['mb_winner'] == "CAMERA"){
-			$winner_gift	="g_1";
+			$winner_gift	="DSLR 카메라";
 		}else if ($data['mb_winner'] == "HOTEL"){
-			$winner_gift	="g_2";
+			$winner_gift	="하얏트 호텔 숙박권";
 		}else if ($data['mb_winner'] == "WG"){
-			$winner_gift	="g_3";
+			$winner_gift	="베베프람 웨건";
 		}else if ($data['mb_winner'] == "MILK"){
-			$winner_gift	="g_4";
+			$winner_gift	="베비언스 분유 1년치";
 		}else if ($data['mb_winner'] == "WATER"){
-			$winner_gift	="g_5";
+			$winner_gift	="베이비워터 24병";
 		}else if ($data['mb_winner'] == "WASH"){
-			$winner_gift	="g_6";
+			$winner_gift	="메소드 핸드워시";
 		}
 ?>
     <div class="list_one clearfix view_info" <?=$style_css?>>
-      <div class="gift_name <?=$winner_gift?>"></div>
+      <div class="gift_name"><?=$winner_gift?></div>
       <div class="gift_num"><?=$data['mb_serialnumber']?></div>
       <!-- <div class="btn"><a href="#" onclick="copy_url('<?=$data['mb_serialnumber']?>')"><img src="images/btn_copy.png" alt=""/></a></div> -->
     </div>

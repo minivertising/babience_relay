@@ -232,12 +232,11 @@ switch ($_REQUEST['exec'])
 
 		$i = 0;
 		$style_css = "";
-		$winner_gift = "";
+
 		$innerHTML	= "<div class='list_one label clearfix'>";
 		$innerHTML	.= "<div class='gift_name'>선물</div>";
 		$innerHTML	.= "<div class='gift_num'>선물 번호</div>";
 		$innerHTML	.= "</div>";
-		$innerHTML	.= " <div class='copy_notice'>아래 선물 번호를 선택하여 복사해주세요!</div>";
 
 		while ($search_data = mysqli_fetch_array($result))
 		{
@@ -246,27 +245,26 @@ switch ($_REQUEST['exec'])
 
 			if ($search_data['mb_winner'] == "CASH")
 			{
-				$winner_gift	="g_7";
+				$winner_gift	="베비언스 3천원 쿠폰";
 			}else if ($search_data['mb_winner'] == "CAMERA"){
-				$winner_gift	="g_1";
+				$winner_gift	="DSLR 카메라";
 			}else if ($search_data['mb_winner'] == "HOTEL"){
-				$winner_gift	="g_2";
+				$winner_gift	="하얏트 호텔 숙박권";
 			}else if ($search_data['mb_winner'] == "WG"){
-				$winner_gift	="g_3";
+				$winner_gift	="베베프람 웨건";
 			}else if ($search_data['mb_winner'] == "MILK"){
-				$winner_gift	="g_4";
+				$winner_gift	="베비언스 분유 1년치";
 			}else if ($search_data['mb_winner'] == "WATER"){
-				$winner_gift	="g_5";
+				$winner_gift	="베이비워터 24병";
 			}else if ($search_data['mb_winner'] == "WASH"){
-				$winner_gift	="g_6";
+				$winner_gift	="메소드 핸드워시";
 			}
 			$innerHTML		.="<div class='list_one clearfix' ".$style_css.">";
-			$innerHTML		.="<div class='gift_name ".$winner_gift."'></div>";
+			$innerHTML		.="<div class='gift_name'>".$winner_gift."</div>";
 			$innerHTML		.="<div class='gift_num'>".$search_data['mb_serialnumber']."</div>";
 			//$innerHTML		.="<div class='btn'><a href='#' onclick=copy_url('".$search_data['mb_serialnumber']."')><img src='images/btn_copy.png' /></a></div>";
 			$innerHTML		.="</div>";
 			$i++;
-
 		}
 		if ($i > 6)
 		{
