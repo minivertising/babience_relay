@@ -59,8 +59,8 @@
 				}
 			}
 		}*/
-		$water_array = array(450,1850,4550);
-		$coffee_array = array(530,1560,2050,2250,2550,3050,4050,5050,6050,7050);
+		$water_array = array(350,400,600);
+		$coffee_array = array(360,460,550,650,700,710,730,780,810,970);
 
 		// 오늘의 이벤트 참여자 수 구하기
 		$total_query		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_regdate like '%".date("Y-m-d")."%'";
