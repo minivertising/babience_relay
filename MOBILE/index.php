@@ -3,7 +3,7 @@
 
 	$comment_info = select_comment();
 	
-	$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+	$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 	$member_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
 	$query 		= "SELECT * FROM ".$_gl['blogger_info_table']." WHERE week_num=1";
@@ -63,7 +63,7 @@
   <a href="#" onclick="move_area('gift')">선물보기</a>
   <div class="cnt_man" id="total_cnt">
 <?
-	$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+	$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 	$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
 	$len_cnt	= strlen($total_cnt);
@@ -148,7 +148,7 @@
 
   <div class="img_give_graphic">
     <div class="runner"><img src="images/runner.png" alt=""/></div>
-    <div class="percent"><?=round($per_cnt,2)?>%</div>
+    <div class="percent"><?=round($per_cnt,2)*100?>%</div>
     <div class="bar">
       <div class="inner">
         <div class="ps" id="mommy_gage"></div>

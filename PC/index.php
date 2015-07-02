@@ -3,7 +3,7 @@
 	
 	$comment_info = select_comment();
 	
-	$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+	$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 	$member_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
 	$query 		= "SELECT * FROM ".$_gl['blogger_info_table']." WHERE week_num=1";
@@ -85,7 +85,7 @@
     <div class="block_title">
       <div class="block_p_num">
 <?
-	$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+	$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 	$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
 	$len_cnt	= strlen($total_cnt);
