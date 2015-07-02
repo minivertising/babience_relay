@@ -19,7 +19,7 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "total_member" :
-		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
 		$len_cnt	= strlen($total_cnt);
@@ -35,7 +35,7 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "m_total_member" :
-		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 
 		$len_cnt	= strlen($total_cnt);
@@ -52,7 +52,7 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "total_give_member" :
-		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 		
 		$innerHTML = number_format($total_cnt)."개";
@@ -61,7 +61,7 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "m_total_give_member" :
-		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 		
 		$innerHTML = number_format($total_cnt)."개";
@@ -70,7 +70,7 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "total_give_member2" :
-		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 		
 		$len_cnt	= strlen($total_cnt);
@@ -87,7 +87,7 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "m_total_give_member2" :
-		$query 		= "SELECT * FROM ".$_gl['member_info_table']."";
+		$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 		
 		$len_give_cnt		= strlen($total_cnt);
