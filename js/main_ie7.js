@@ -341,7 +341,7 @@ function input_info()
 					open_pop('pop_dupli_div','pop_event_input');
 				}else if (response == "E"){
 					//open_pop('pop_dupli_div','pop_event_input');
-					alert("오늘 참여 횟수 다 썼다!");
+					alert("오늘 참여 횟수를 다 쓰셨습니다. 내일 또 참여해 주세요.");
 				}else{
 					open_pop('pop_thanks_div','pop_event_input');
 					var giftArr	= response.split("||");
