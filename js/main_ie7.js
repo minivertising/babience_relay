@@ -122,6 +122,7 @@ function go_recom(num, detail)
 		{
 			//popup_desc('pop_event_input', num);
 			open_pop('pop_event_input','');
+			$("#blogger_num").val(num);
 		}else{
 			//$.magnificPopup.close();
 			//setTimeout("popup_desc('pop_event_input', "+num+");",500);
