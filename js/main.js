@@ -1,7 +1,19 @@
+/*
 $("#all_agree").click(function() {
 		
 		$("input[name=agree]:checkbox").attr("checked", true);
 });
+*/
+function all_check()
+{
+	var chk = $("#all_agree").is(':checked');
+
+    if (chk) {
+        $("input[name=agree]:checkbox").prop('checked', true);
+    } else {
+        $("input[name=agree]:checkbox").prop('checked', false);
+    }
+}
 
 function sns_share(media)
 {

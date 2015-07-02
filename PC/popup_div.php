@@ -50,7 +50,7 @@
         <div class="check_block">
           <div class="check_one first clearfix">
             <div class="in_check">
-              <input type="checkbox" name="all_agree" id="all_agree" class="all_chk_cl">
+              <input type="checkbox" name="all_agree" id="all_agree" class="all_chk_cl" onclick="all_check()">
             </div>
             <div class="txt_check">
               <img src="images/popup/label_agree_all.png" alt=""/>
