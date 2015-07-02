@@ -347,8 +347,6 @@ $(document).ready(function() {
 	$(".mask").click(function(){
 		$(".mask").fadeOut(300);
 		$(".popup_wrap").fadeOut(300);
-		$("input[name=agree]:checkbox").prop('checked', false);
-		chk_ins = 0;
 	});
 
 	$( '#move_top' ).click( function() {
@@ -427,6 +425,8 @@ $(document).ready(function() {
 	$(".mask").click(function(){
 		$(".mask").fadeOut(300);
 		$(".popup_wrap").fadeOut(300);
+		$("input[name=agree]:checkbox").prop('checked', false);
+		chk_ins = 0;
 	});
 
 	$( '#move_top' ).click( function() {
