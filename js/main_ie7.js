@@ -405,16 +405,16 @@ function search_gift()
 	});
 }
 
-function input_comment()
+function input_comment(num)
 {
-	var mb_nickname	= $("#mb_nickname").val();
-	var mb_comment	= $("#mb_comment").val();
+	var mb_nickname	= $("#mb_nickname"+num).val();
+	var mb_comment	= $("#mb_comment"+num).val();
 	var blogger_idx		= $("#blogger_idx").val();
 	if (mb_nickname== "")
 	{
 		alert('닉네임을 입력해 주세요.');
 
-		$("#mb_nickname").focus();
+		$("#mb_nickname"+num).focus();
 		return false;
 	}
 
@@ -422,7 +422,7 @@ function input_comment()
 	{
 		alert('응원 댓글을 입력해 주세요.');
 
-		$("#mb_comment").focus();
+		$("#mb_comment"+num).focus();
 		return false;
 	}
 

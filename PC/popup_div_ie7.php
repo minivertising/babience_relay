@@ -271,7 +271,7 @@
             닉네임
             </div>
             <div class="input">
-              <input type="text" name="mb_nickname" id="mb_nickname">
+              <input type="text" name="mb_nickname" id="mb_nickname1">
             </div>
           </div>
           <div class="input_one textarea clearfix">
@@ -279,12 +279,12 @@
             댓글
             </div>
             <div class="input">
-              <textarea name="mb_comment" id="mb_comment"></textarea>
+              <textarea name="mb_comment" id="mb_comment1"></textarea>
             </div>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+          <a href="#" onclick="input_comment('1');"><img src="images/popup/btn_comment.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
@@ -348,7 +348,7 @@
             닉네임
             </div>
             <div class="input">
-              <input type="text" name="mb_nickname" id="mb_nickname">
+              <input type="text" name="mb_nickname" id="mb_nickname2">
             </div>
           </div>
           <div class="input_one textarea clearfix">
@@ -356,12 +356,12 @@
             댓글
             </div>
             <div class="input">
-              <textarea name="mb_comment" id="mb_comment"></textarea>
+              <textarea name="mb_comment" id="mb_comment2"></textarea>
             </div>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+          <a href="#" onclick="input_comment('2');"><img src="images/popup/btn_comment.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
@@ -425,7 +425,7 @@
             닉네임
             </div>
             <div class="input">
-              <input type="text" name="mb_nickname" id="mb_nickname">
+              <input type="text" name="mb_nickname" id="mb_nickname3">
             </div>
           </div>
           <div class="input_one textarea clearfix">
@@ -433,12 +433,12 @@
             댓글
             </div>
             <div class="input">
-              <textarea name="mb_comment" id="mb_comment"></textarea>
+              <textarea name="mb_comment" id="mb_comment3"></textarea>
             </div>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+          <a href="#" onclick="input_comment('3');"><img src="images/popup/btn_comment.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
@@ -502,7 +502,7 @@
             닉네임
             </div>
             <div class="input">
-              <input type="text" name="mb_nickname" id="mb_nickname">
+              <input type="text" name="mb_nickname" id="mb_nickname4">
             </div>
           </div>
           <div class="input_one textarea clearfix">
@@ -510,12 +510,12 @@
             댓글
             </div>
             <div class="input">
-              <textarea name="mb_comment" id="mb_comment"></textarea>
+              <textarea name="mb_comment" id="mb_comment4"></textarea>
             </div>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+          <a href="#" onclick="input_comment('4');"><img src="images/popup/btn_comment.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
@@ -579,7 +579,7 @@
             닉네임
             </div>
             <div class="input">
-              <input type="text" name="mb_nickname" id="mb_nickname">
+              <input type="text" name="mb_nickname" id="mb_nickname5">
             </div>
           </div>
           <div class="input_one textarea clearfix">
@@ -587,12 +587,12 @@
             댓글
             </div>
             <div class="input">
-              <textarea name="mb_comment" id="mb_comment"></textarea>
+              <textarea name="mb_comment" id="mb_comment5"></textarea>
             </div>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+          <a href="#" onclick="input_comment('5');"><img src="images/popup/btn_comment.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
@@ -656,7 +656,7 @@
             닉네임
             </div>
             <div class="input">
-              <input type="text" name="mb_nickname" id="mb_nickname">
+              <input type="text" name="mb_nickname" id="mb_nickname6">
             </div>
           </div>
           <div class="input_one textarea clearfix">
@@ -664,12 +664,12 @@
             댓글
             </div>
             <div class="input">
-              <textarea name="mb_comment" id="mb_comment"></textarea>
+              <textarea name="mb_comment" id="mb_comment6"></textarea>
             </div>
           </div>
         </div>
         <div class="btn_block">
-          <a href="#" onclick="input_comment();"><img src="images/popup/btn_comment.png" alt=""/></a>
+          <a href="#" onclick="input_comment('6');"><img src="images/popup/btn_comment.png" alt=""/></a>
         </div>
       </div><!--inner-->
     </div>
