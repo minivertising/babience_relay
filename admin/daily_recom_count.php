@@ -44,7 +44,20 @@
 		$total_count = 0;
 		while ($b_data = mysqli_fetch_array($result))
 		{
-			$blogger_info[$i]	= $b_data['cnt'];
+			if ($b_data['mb_blogger'] == "1")
+			{
+				$blogger_info[1]	= $b_data['cnt'];
+			}else if ($b_data['mb_blogger'] == "2"){
+				$blogger_info[2]	= $b_data['cnt'];
+			}else if ($b_data['mb_blogger'] == "3"){
+				$blogger_info[3]	= $b_data['cnt'];
+			}else if ($b_data['mb_blogger'] == "4"){
+				$blogger_info[4]	= $b_data['cnt'];
+			}else if ($b_data['mb_blogger'] == "5"){
+				$blogger_info[5]	= $b_data['cnt'];
+			}else if ($b_data['mb_blogger'] == "6"){
+				$blogger_info[6]	= $b_data['cnt'];
+			}
 			$total_count			= $total_count + $b_data['cnt'];
 			$i++;
 		}
