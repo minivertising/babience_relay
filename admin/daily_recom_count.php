@@ -5,6 +5,8 @@
 
 	include "./head.php";
 
+	echo "수정중";
+	exit;
 ?>
 
 <div id="page-wrapper">
