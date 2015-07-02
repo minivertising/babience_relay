@@ -255,7 +255,7 @@
 
 <!--------------------- 파워블로거1 코멘트 입력 팝업 --------------------->
 <div id="pop_comment_input1" class="popup_wrap" style="position:absolute;width:500px;margin-left:-250px;margin-top:-225px;top:50%;left:50%;z-index:99999;display:none;">
-  <input type="hidden" name="blogger_idx" id="blogger_idx" value="1">
+  <input type="hidden" name="blogger_idx" id="blogger_idx1" value="1">
   <div class="p_mid_comment p_position">
     <div class="block_close clearfix">
       <a href="#" onclick="open_pop('pop_detail_view1','pop_comment_input1');" class="btn_close"><img src="images/popup/btn_close.png" /></a>
@@ -332,7 +332,7 @@
 
 <!--------------------- 파워블로거2 코멘트 입력 팝업 --------------------->
 <div id="pop_comment_input2" class="popup_wrap" style="position:absolute;width:500px;margin-left:-250px;margin-top:-225px;top:50%;left:50%;z-index:99999;display:none;">
-  <input type="hidden" name="blogger_idx" id="blogger_idx" value="2">
+  <input type="hidden" name="blogger_idx" id="blogger_idx2" value="2">
   <div class="p_mid_comment p_position">
     <div class="block_close clearfix">
       <a href="#" onclick="open_pop('pop_detail_view2','pop_comment_input2');" class="btn_close"><img src="images/popup/btn_close.png" /></a>
@@ -409,7 +409,7 @@
 
 <!--------------------- 파워블로거3 코멘트 입력 팝업 --------------------->
 <div id="pop_comment_input3" class="popup_wrap" style="position:absolute;width:500px;margin-left:-250px;margin-top:-225px;top:50%;left:50%;z-index:99999;display:none;">
-  <input type="hidden" name="blogger_idx" id="blogger_idx" value="3">
+  <input type="hidden" name="blogger_idx" id="blogger_idx3" value="3">
   <div class="p_mid_comment p_position">
     <div class="block_close clearfix">
       <a href="#" onclick="open_pop('pop_detail_view3','pop_comment_input3');" class="btn_close"><img src="images/popup/btn_close.png" /></a>
@@ -486,7 +486,7 @@
 
 <!--------------------- 파워블로거4 코멘트 입력 팝업 --------------------->
 <div id="pop_comment_input4" class="popup_wrap" style="position:absolute;width:500px;margin-left:-250px;margin-top:-225px;top:50%;left:50%;z-index:99999;display:none;">
-  <input type="hidden" name="blogger_idx" id="blogger_idx" value="4">
+  <input type="hidden" name="blogger_idx" id="blogger_idx4" value="4">
   <div class="p_mid_comment p_position">
     <div class="block_close clearfix">
       <a href="#" onclick="open_pop('pop_detail_view4','pop_comment_input4');" class="btn_close"><img src="images/popup/btn_close.png" /></a>
@@ -563,7 +563,7 @@
 
 <!--------------------- 파워블로거5 코멘트 입력 팝업 --------------------->
 <div id="pop_comment_input5" class="popup_wrap" style="position:absolute;width:500px;margin-left:-250px;margin-top:-225px;top:50%;left:50%;z-index:99999;display:none;">
-  <input type="hidden" name="blogger_idx" id="blogger_idx" value="5">
+  <input type="hidden" name="blogger_idx" id="blogger_idx5" value="5">
   <div class="p_mid_comment p_position">
     <div class="block_close clearfix">
       <a href="#" onclick="open_pop('pop_detail_view5','pop_comment_input5');" class="btn_close"><img src="images/popup/btn_close.png" /></a>
@@ -640,7 +640,7 @@
 
 <!--------------------- 파워블로거6 코멘트 입력 팝업 --------------------->
 <div id="pop_comment_input6" class="popup_wrap" style="position:absolute;width:500px;margin-left:-250px;margin-top:-225px;top:50%;left:50%;z-index:99999;display:none;">
-  <input type="hidden" name="blogger_idx" id="blogger_idx" value="6">
+  <input type="hidden" name="blogger_idx" id="blogger_idx6" value="6">
   <div class="p_mid_comment p_position">
     <div class="block_close clearfix">
       <a href="#" onclick="open_pop('pop_detail_view6','pop_comment_input6');" class="btn_close"><img src="images/popup/btn_close.png" /></a>

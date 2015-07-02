@@ -409,7 +409,7 @@ function input_comment(num)
 {
 	var mb_nickname	= $("#mb_nickname"+num).val();
 	var mb_comment	= $("#mb_comment"+num).val();
-	var blogger_idx		= $("#blogger_idx").val();
+	var blogger_idx		= $("#blogger_idx"+num).val();
 	if (mb_nickname== "")
 	{
 		alert('닉네임을 입력해 주세요.');
@@ -436,7 +436,6 @@ function input_comment(num)
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			alert(response);
 			if (response == "Y")
 			{
 				if (blogger_idx == 1)
