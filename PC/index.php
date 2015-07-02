@@ -347,6 +347,7 @@ $(document).ready(function() {
 	$(".mask").click(function(){
 		$(".mask").fadeOut(300);
 		$(".popup_wrap").fadeOut(300);
+		location.reload();
 	});
 
 	$( '#move_top' ).click( function() {
