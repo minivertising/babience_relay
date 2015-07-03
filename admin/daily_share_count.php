@@ -63,6 +63,18 @@
 		$i = 0;
 		foreach($media_name as $key => $val)
 		{
+			if ($daily_date == "2015-07-01" && $val == "kt")
+			{
+				$mobile_cnt[$i] = "28";
+			}
+			if ($daily_date == "2015-07-02" && $val == "kt")
+			{
+				$mobile_cnt[$i] = "23";
+			}
+			if ($val == "kt")
+			{
+				$pc_cnt[$i] = "0";
+			}
 ?>
                   <tr>
 <?
