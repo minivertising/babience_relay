@@ -16,7 +16,7 @@
 	}
 	else
 	{
-		$img_url	= str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.8/", $member_info['mb_image']);
+		$img_url	= str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.6/", $member_info['mb_image']);
 	}
 
 ?>
