@@ -79,24 +79,16 @@
 				$winner_info[7]	= $b_data['cnt'];
 			}
 	}
-	foreach($buyer_info as $key => $val)
-	{
-	//	$shop_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE idx='".$buyer_info[$key]['shop_idx']."'";
-	//	$res = mysqli_query($my_db, $shop_query);
-	//	$shop_name	= @mysqli_fetch_array($res);
 ?>
               <tr>
-                <td><?php echo $PAGE_UNCOUNT--?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $buyer_info[$key]['shop_name']?></td>
-                <td><?php echo $buyer_info[$key]['shop_addr']?></td>
-                <td><?php echo $buyer_info[$key]['shop_phone']?></td>
-                <td><?php echo $buyer_info[$key]['req_cnt']?></td>
-                <td><?php echo $buyer_info[$key]['sel_count']?></td>
-                <td><?php echo $buyer_info[$key]['sel_count']?></td>
+                <td><?php echo $winner_info[1]?></td>	<!-- No. 하나씩 감소 -->
+                <td><?php echo $winner_info[2]?></td>
+                <td><?php echo $winner_info[3]?></td>
+                <td><?php echo $winner_info[4]?></td>
+                <td><?php echo $winner_info[5]?></td>
+                <td><?php echo $winner_info[6]?></td>
+                <td><?php echo $winner_info[7]?></td>
               </tr>
-<?php 
-	}
-?>
             </tbody>
           </table>
         </div>
