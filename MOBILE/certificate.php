@@ -30,16 +30,6 @@
 	} else {
 			$img_url	= str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.6/", $member_info['mb_image']);
 	}
-
-		if(file_exists($img_url))
-		{
-			$img_url	= $img_url;
-		}
-		else
-		{
-			$img_url	= str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.6/", $member_info['mb_image']);
-		}
-
 ?>
 <!doctype html>
 <html>
