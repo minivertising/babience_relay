@@ -9,7 +9,15 @@
 	$query	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serialnumber='".$serial."'";
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
-
+	$img_url = str_replace("http://www.babience-giveandtake.com/", "218.54.46.7", $member_info['mb_image']);
+	if(file_exists($img_url))
+	{
+		$img_url	= $img_url;
+	}
+	else
+	{
+		$img_url	= str_replace("http://www.babience-giveandtake.com/", "218.54.46.8", $member_info['mb_image'])
+	}
 
 ?>
 <!doctype html>
@@ -23,7 +31,7 @@
     <meta property="og:title" content="베비언스">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?=$long_url	?>" />
-    <meta property="og:image" content="<?=$member_info['mb_image']?>" />
+    <meta property="og:image" content="<?=$img_url?>" />
     <meta property="og:description" content="우리 아기 몸과 마음 모두 성장하는 기부 앤 테이크 릴레이 캠페인에 꼭 참여해주세요!">
 
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
@@ -184,7 +192,7 @@ function c_sns_share(media)
 		  container: '#kakao-link-btn',
 		  label: "[우리 아기 첫 기부 증서]\r\n\r\n우리 아기 몸과 마음 모두 성장하는 기부 앤 테이크 릴레이 캠페인에 꼭 참여해주세요!",
 		  image: {
-			src: "<?=$member_info['mb_image']?>",
+			src: "<?=$img_url?>",
 			width: '1200',
 			height: '630'
 		  },
