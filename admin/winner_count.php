@@ -59,9 +59,9 @@
 	$buyer_list_query = "SELECT mb_winner, count(mb_winner) cnt FROM ".$_gl['member_info_table']." WHERE 1 GROUP BY mb_winner";
 	$res = mysqli_query($my_db, $buyer_list_query);
 
+	$b_data['cnt']	= 0;
 	while ($b_data = @mysqli_fetch_array($res))
 	{
-			$b_data['cnt']	= 0;
 			if ($b_data['mb_winner'] == "CASH")
 			{
 				$winner_info[1]	= $b_data['cnt'];
