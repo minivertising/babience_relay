@@ -59,35 +59,48 @@
 	$buyer_list_query = "SELECT mb_winner, count(mb_winner) cnt FROM ".$_gl['member_info_table']." WHERE 1 GROUP BY mb_winner";
 	$res = mysqli_query($my_db, $buyer_list_query);
 
-	$b_data['cnt']	= 0;
 	while ($b_data = @mysqli_fetch_array($res))
 	{
-			if ($b_data['mb_winner'] == "CASH")
-			{
-				$winner_info[1]	= $b_data['cnt'];
-			}else if ($b_data['mb_winner'] == "WASH"){
-				$winner_info[2]	= $b_data['cnt'];
-			}else if ($b_data['mb_winner'] == "WATER"){
-				$winner_info[3]	= $b_data['cnt'];
-			}else if ($b_data['mb_winner'] == "MILK"){
-				$winner_info[4]	= $b_data['cnt'];
-			}else if ($b_data['mb_winner'] == "WG"){
-				$winner_info[5]	= $b_data['cnt'];
-			}else if ($b_data['mb_winner'] == "HOTEL"){
-				$winner_info[6]	= $b_data['cnt'];
-			}else if ($b_data['mb_winner'] == "CAMERA"){
-				$winner_info[7]	= $b_data['cnt'];
-			}
+		if ($b_data['mb_winner'] == "CASH")
+		{
+			$winner_info[1]	= $b_data['cnt'];
+		}else if ($b_data['mb_winner'] == "WASH"){
+			$winner_info[2]	= $b_data['cnt'];
+		}else if ($b_data['mb_winner'] == "WATER"){
+			$winner_info[3]	= $b_data['cnt'];
+		}else if ($b_data['mb_winner'] == "MILK"){
+			$winner_info[4]	= $b_data['cnt'];
+		}else if ($b_data['mb_winner'] == "WG"){
+			$winner_info[5]	= $b_data['cnt'];
+		}else if ($b_data['mb_winner'] == "HOTEL"){
+			$winner_info[6]	= $b_data['cnt'];
+		}else if ($b_data['mb_winner'] == "CAMERA"){
+			$winner_info[7]	= $b_data['cnt'];
+		}
 	}
+	if (!$winner_info[1])
+		$winner_info[1] = 0;
+	else if (!$winner_info[2])
+		$winner_info[2] = 0;
+	else if (!$winner_info[3])
+		$winner_info[3] = 0;
+	else if (!$winner_info[4])
+		$winner_info[4] = 0;
+	else if (!$winner_info[5])
+		$winner_info[5] = 0;
+	else if (!$winner_info[6])
+		$winner_info[6] = 0;
+	else if (!$winner_info[7])
+		$winner_info[7] = 0;
 ?>
               <tr>
-                <td><?php echo $winner_info[1]?></td>	<!-- No. 하나씩 감소 -->
-                <td><?php echo $winner_info[2]?></td>
-                <td><?php echo $winner_info[3]?></td>
-                <td><?php echo $winner_info[4]?></td>
-                <td><?php echo $winner_info[5]?></td>
+                <td><?php echo $winner_info[7]?></td>	<!-- No. 하나씩 감소 -->
                 <td><?php echo $winner_info[6]?></td>
-                <td><?php echo $winner_info[7]?></td>
+                <td><?php echo $winner_info[5]?></td>
+                <td><?php echo $winner_info[4]?></td>
+                <td><?php echo $winner_info[3]?></td>
+                <td><?php echo $winner_info[2]?></td>
+                <td><?php echo $winner_info[1]?></td>
               </tr>
             </tbody>
           </table>
