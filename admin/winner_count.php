@@ -14,16 +14,6 @@
 
 	include "./head.php";
 
-	if(isset($_REQUEST['search_type']) == false)
-		$search_type = "";
-	else
-		$search_type = $_REQUEST['search_type'];
-
-	if(isset($_REQUEST['search_txt']) == false)
-		$search_txt	= "";
-	else
-		$search_txt	= $_REQUEST['search_txt'];
-	
 	if(isset($_REQUEST['pg']) == false)
 		$pg = "1";
 	else
@@ -43,57 +33,52 @@
   <!-- Page Heading -->
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header">더페이스샵 매장 목록</h1>
+        <h1 class="page-header">경품별 당첨자 수</h1>
       </div>
     </div>
     <!-- /.row -->
     <div class="row">
       <div class="col-lg-12">
         <div class="table-responsive">
-          <ol class="breadcrumb">
-            <form name="frm_execute" method="POST" onsubmit="return checkfrm()">
-              <input type="hidden" name="pg" value="<?=$pg?>">
-              <select name="search_type">
-                <option value="shop_name" <?php if($search_type == "shop_name"){?>selected<?php }?>>매장명</option>
-                <option value="shop_addr" <?php if($search_type == "shop_addr"){?>selected<?php }?>>매장주소</option>
-              </select>
-              <input type="text" name="search_txt" value="<?php echo $search_txt?>">
-              <input type="submit" value="검색">
-            </form>
-          </ol>
           <table id="entry_list" class="table table-hover">
             <thead>
               <tr>
-                <th>순번</th>
-                <th>매장이름</th>
-                <th>매장주소</th>
-                <th>매장전화번호</th>
-                <th>할당된갯수</th>
-                <th>선택받은갯수</th>
+                <th>DSLR 카메라(1명)</th>
+                <th>하얏트 호텔 숙박권(3명)</th>
+                <th>베베프람 웨건(5명)</th>
+                <th>베비언스 분유 1년치(5명)</th>
+                <th>베이비워터 24병(100명)</th>
+                <th>메소드 핸드워시(300명)</th>
+                <th>베비언스 3천원 쿠폰</th>
               </tr>
             </thead>
             <tbody>
 <?php 
-	$where = "";
-	if ($search_txt != "")
-		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
+	$buyer_count_query = "SELECT count(*) FROM ".$_gl['member_info_table']." WHERE 1";
 
-	$buyer_count_query = "SELECT count(*) FROM ".$_gl['shop_info_table']." WHERE 1 ".$where."";
-//1을 넣는다.
-	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
-	$PAGE_CLASS = new Page($pg,$buyer_count,$page_size,$block_size);
-
-	$BLOCK_LIST = $PAGE_CLASS->blockList();
-	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
-
-	$buyer_list_query = "SELECT * FROM ".$_gl['shop_info_table']." WHERE 1 ".$where." Order by sel_count DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT mb_winner, count(mb_winner) cnt FROM ".$_gl['member_info_table']." WHERE 1 GROUP BY mb_winner";
 	$res = mysqli_query($my_db, $buyer_list_query);
 
-	while ($buyer_data = @mysqli_fetch_array($res))
+	while ($b_data = @mysqli_fetch_array($res))
 	{
-    $buyer_info[] = $buyer_data; 
+			$b_data['cnt']	= 0;
+			if ($b_data['mb_winner'] == "CASH")
+			{
+				$winner_info[1]	= $b_data['cnt'];
+			}else if ($b_data['mb_winner'] == "WASH"){
+				$winner_info[2]	= $b_data['cnt'];
+			}else if ($b_data['mb_winner'] == "WATER"){
+				$winner_info[3]	= $b_data['cnt'];
+			}else if ($b_data['mb_winner'] == "MILK"){
+				$winner_info[4]	= $b_data['cnt'];
+			}else if ($b_data['mb_winner'] == "WG"){
+				$winner_info[5]	= $b_data['cnt'];
+			}else if ($b_data['mb_winner'] == "HOTEL"){
+				$winner_info[6]	= $b_data['cnt'];
+			}else if ($b_data['mb_winner'] == "CAMERA"){
+				$winner_info[7]	= $b_data['cnt'];
+			}
 	}
-
 	foreach($buyer_info as $key => $val)
 	{
 	//	$shop_query = "SELECT shop_name FROM ".$_gl['shop_info_table']." WHERE idx='".$buyer_info[$key]['shop_idx']."'";
@@ -107,11 +92,11 @@
                 <td><?php echo $buyer_info[$key]['shop_phone']?></td>
                 <td><?php echo $buyer_info[$key]['req_cnt']?></td>
                 <td><?php echo $buyer_info[$key]['sel_count']?></td>
+                <td><?php echo $buyer_info[$key]['sel_count']?></td>
               </tr>
 <?php 
 	}
 ?>
-              <tr><td colspan="7"><div class="pageing"><?php echo $BLOCK_LIST?></div></td></tr>
             </tbody>
           </table>
         </div>
