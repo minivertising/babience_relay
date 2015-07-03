@@ -10,14 +10,35 @@
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
 	$img_url = str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.7/", $member_info['mb_image']);
-	if(file_exists($img_url))
-	{
-		$img_url	= $img_url;
+
+ 
+	function remoteFileExist($filepath) {
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL,$filepath);
+		curl_setopt($ch, CURLOPT_NOBODY, 1);
+		curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		if(curl_exec($ch)!==false) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-	else
-	{
-		$img_url	= str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.6/", $member_info['mb_image']);
+
+	if(remoteFileExist($img_url) == 1) {
+			$img_url	= $img_url;
+	} else {
+			$img_url	= str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.6/", $member_info['mb_image']);
 	}
+
+		if(file_exists($img_url))
+		{
+			$img_url	= $img_url;
+		}
+		else
+		{
+			$img_url	= str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.6/", $member_info['mb_image']);
+		}
 
 ?>
 <!doctype html>
