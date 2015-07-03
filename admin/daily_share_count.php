@@ -66,12 +66,28 @@
 			if ($daily_date == "2015-07-01" && $val == "kt")
 			{
 				$mobile_cnt[$i] = "28";
+				$media_cnt[$i] = "28";
 			}
 			if ($daily_date == "2015-07-02" && $val == "kt")
 			{
 				$mobile_cnt[$i] = "23";
+				$media_cnt[$i] = "23";
 			}
 			if ($val == "kt")
+			{
+				$pc_cnt[$i] = "0";
+			}
+			if ($daily_date == "2015-07-01" && $val == "baby_kt")
+			{
+				$mobile_cnt[$i] = "14";
+				$media_cnt[$i] = "14";
+			}
+			if ($daily_date == "2015-07-02" && $val == "baby_kt")
+			{
+				$mobile_cnt[$i] = "16";
+				$media_cnt[$i] = "16";
+			}
+			if ($val == "baby_kt")
 			{
 				$pc_cnt[$i] = "0";
 			}
