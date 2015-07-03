@@ -159,7 +159,7 @@ switch ($_REQUEST['exec'])
 					//$objFont->angle = 45;
 					$objFont->font  = "/home/babience/nanumBold.ttf";
 
-					$szFilePath     = "/home/babience/MOBILE/images/img_sns_give_paper_share.jpg";
+					$szFilePath     = "/home/babience/MOBILE/images/img_sns_give_paper_share_new.jpg";
 
 					$cImage = getPrintToImage($szFilePath, $objFont, $serial, LEFT | MIDDLE);
 
