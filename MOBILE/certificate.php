@@ -9,14 +9,14 @@
 	$query	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serialnumber='".$serial."'";
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
-	$img_url = str_replace("http://www.babience-giveandtake.com/", "218.54.46.7", $member_info['mb_image']);
+	$img_url = str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.7/", $member_info['mb_image']);
 	if(file_exists($img_url))
 	{
 		$img_url	= $img_url;
 	}
 	else
 	{
-		$img_url	= str_replace("http://www.babience-giveandtake.com/", "218.54.46.8", $member_info['mb_image']);
+		$img_url	= str_replace("http://www.babience-giveandtake.com/", "http://218.54.46.8/", $member_info['mb_image']);
 	}
 
 ?>
