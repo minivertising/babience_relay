@@ -47,7 +47,7 @@ function auto_count()
 		},
 		url: "../main_exec.php",
 		success: function(response){
-			$("#total_num").html(response);
+			$(".block_p_num").html(response);
 		}
 	});
 }
