@@ -59,8 +59,8 @@
 				}
 			}
 		}*/
-		$water_array = array(350,600,650);
-		$coffee_array = array(360,460,550,650,700,710,730,780,810,970);
+		$water_array = array(630);
+		$coffee_array = array(360,460,550,660,680,690,710,720,730,740,750,760,770,780,790,800,810,820,830,840,850,860,870,880,890,900);
 
 		// 오늘의 이벤트 참여자 수 구하기
 		$total_query		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_regdate like '%".date("Y-m-d")."%'";
@@ -83,7 +83,7 @@
 			{
 				if ($total_num == $val)
 				{
-					$winner = "WATER";
+					$winner = "WG";
 					break;
 				}
 				$winner = "CASH";
