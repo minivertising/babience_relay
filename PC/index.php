@@ -432,7 +432,8 @@ $(document).ready(function() {
 		$( 'html, body' ).animate( { scrollTop : 0 }, 800 );
 			return false;
 	} );
-	$('#mommy_gage').css('width','<?=$per_cnt?>%');
+	$('#mommy_gage').css('width','<?=$per_cnt*100?>%');
+	$('.runner').css('left','<?=$per_cnt*1000?>px');
 	$('.mull').css('bottom','<?=$per_bottle?>px');
 
 });
