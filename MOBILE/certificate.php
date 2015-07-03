@@ -9,6 +9,8 @@
 	$query	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_serialnumber='".$serial."'";
 	$result 	= mysqli_query($my_db, $query);
 	$member_info	= mysqli_fetch_array($result);
+
+
 ?>
 <!doctype html>
 <html>
