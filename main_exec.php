@@ -52,6 +52,7 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "total_give_member" :
+		$innerHTML = "";
 		$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 		
@@ -61,6 +62,7 @@ switch ($_REQUEST['exec'])
 	break;
 
 	case "m_total_give_member" :
+		$innerHTML = "";
 		$query 		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_blogger <> 0";
 		$total_cnt 	= mysqli_num_rows(mysqli_query($my_db, $query));
 		
