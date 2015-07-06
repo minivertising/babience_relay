@@ -288,9 +288,9 @@
 var chk_ins = 0;
 $(document).ready(function() {
 	Kakao.init('b9c52d3d573fd09cbe25e306fafc5df6');
-	setInterval("auto_count()",5000);
-	setInterval("auto_give_count()",5000);
-	setInterval("auto_give_count2()",5000);
+	//setInterval("auto_count()",5000);
+	//setInterval("auto_give_count()",5000);
+	//setInterval("auto_give_count2()",5000);
 
 	var width = $(".block_movie").width();
 	var youtube_height = (width / 16) * 9;
@@ -366,9 +366,9 @@ $(document).ready(function() {
 <script type="text/javascript">
 var chk_ins = 0;
 $(document).ready(function() {
-	setInterval("auto_count()",5000);
-	setInterval("auto_give_count()",5000);
-	setInterval("auto_give_count2()",5000);
+	//setInterval("auto_count()",5000);
+	//setInterval("auto_give_count()",5000);
+	//setInterval("auto_give_count2()",5000);
 
 	var width = $(".block_movie").width();
 	var youtube_height = (width / 16) * 9;

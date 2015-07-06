@@ -198,9 +198,9 @@ $(document).ready(function() {
 	var youtube_height = (width / 16) * 9;
 	$("#ytplayer").width(width);
 	$("#ytplayer").height(youtube_height);
-	setInterval("m_auto_count()",5000);
-	setInterval("m_auto_give_count()",5000);
-	setInterval("m_auto_give_count2()",5000);
+	//setInterval("m_auto_count()",5000);
+	//setInterval("m_auto_give_count()",5000);
+	//setInterval("m_auto_give_count2()",5000);
 
 	var width = $(".block_movie").width();
 	var youtube_height = (width / 16) * 9;
