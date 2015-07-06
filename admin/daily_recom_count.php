@@ -38,7 +38,7 @@
 	
 	while ($date_data = @mysqli_fetch_array($res))
 	{		
-		$b_query		= "SELECT mb_blogger, count(mb_blogger) cnt FROM ".$_gl['member_info_table']." WHERE mb_blogger<>0 mb_regdate LIKE  '%".$date_data['mb_date']."%' GROUP BY mb_blogger";
+		$b_query		= "SELECT mb_blogger, count(mb_blogger) cnt FROM ".$_gl['member_info_table']." WHERE mb_blogger<>0 AND mb_regdate LIKE  '%".$date_data['mb_date']."%' GROUP BY mb_blogger";
 		$result		= mysqli_query($my_db, $b_query);
 		$i = 1;
 		$total_count = 0;
