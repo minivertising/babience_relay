@@ -38,7 +38,7 @@
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
 		$daily_date		= substr($date_daily_data['mb_regdate'],0,10);
-		$media_query	= "SELECT mb_media, COUNT( mb_media ) media_cnt FROM ".$_gl['member_info_table']." WHERE mb_regdate LIKE  '%".$daily_date."%' GROUP BY mb_media";
+		$media_query	= "SELECT mb_media, COUNT( mb_media ) media_cnt FROM ".$_gl['member_info_table']." WHERE mb_blogger<>0 AND mb_regdate LIKE  '%".$daily_date."%' GROUP BY mb_media";
 		$media_res		= mysqli_query($my_db, $media_query);
 		
 		unset($media_name);
