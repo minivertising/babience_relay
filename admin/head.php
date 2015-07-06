@@ -83,7 +83,7 @@ if (isset($_SESSION['ss_mb_name']) == false)
                     <a href="daily_recom_count.php">일자별 블로거별 추천 수</a>
                   </li>
                   <li>
-                    <a href="daily_media_count.php">일자별 매체별 참여자 수</a>
+                    <a href="daily_media_count.php">일자별 매체당 참여자 수</a>
                   </li>
                 </ul>
               </li>
