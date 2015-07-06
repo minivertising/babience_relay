@@ -33,12 +33,12 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT tracking_date FROM ".$_gl['tracking_info_table']." Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
+	$daily_date_query	= "SELECT mb_regdate FROM ".$_gl['member_info_table']." Group by substr(mb_regdate,1,10) ORDER BY mb_regdate DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
-		$daily_date		= substr($date_daily_data['tracking_date'],0,10);
-		$media_query	= "SELECT tracking_media, COUNT( tracking_media ) media_cnt, tracking_ipaddr FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' GROUP BY tracking_media";
+		$daily_date		= substr($date_daily_data['mb_regdate'],0,10);
+		$media_query	= "SELECT mb_media, COUNT( mb_media ) media_cnt FROM ".$_gl['member_info_table']." WHERE mb_regdate LIKE  '%".$daily_date."%' GROUP BY mb_media";
 		$media_res		= mysqli_query($my_db, $media_query);
 		
 		unset($media_name);
@@ -50,11 +50,11 @@
 		$total_pc_cnt = 0;    
 		while ($media_daily_data = mysqli_fetch_array($media_res))
 		{
-			$media_name[]	= $media_daily_data['tracking_media'];
+			$media_name[]	= $media_daily_data['mb_media'];
 			$media_cnt[]	= $media_daily_data['media_cnt'];
-			$pc_query		= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='PC'";
+			$pc_query		= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_regdate LIKE  '%".$daily_date."%' AND mb_media='".$media_daily_data['mb_media']."' AND mb_gubun='PC'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl['tracking_info_table']." WHERE tracking_date LIKE  '%".$daily_date."%' AND tracking_media='".$media_daily_data['tracking_media']."' AND tracking_gubun='MOBILE'";
+			$mobile_query	= "SELECT * FROM ".$_gl['member_info_table']." WHERE mb_regdate LIKE  '%".$daily_date."%' AND mb_media='".$media_daily_data['mb_media']."' AND mb_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			$pc_cnt[]		= $pc_count;
 			$mobile_cnt[]	= $mobile_count;

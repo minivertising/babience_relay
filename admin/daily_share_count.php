@@ -109,7 +109,7 @@
 			$i++;
 		}
 ?>
-                  <tr>
+                  <tr bgcolor="skyblue">
                     <td colspan="2">합계</td>
                     <td><?php echo number_format($total_pc_cnt)?></td>
                     <td><?php echo number_format($total_mobile_cnt)?></td>
