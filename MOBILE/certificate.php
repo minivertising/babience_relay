@@ -222,6 +222,7 @@ function c_sns_share(media)
 			}
 		});
 	}else{
+/*
 		// 로그인 창을 띄웁니다.
 		Kakao.Auth.login({
 			success: function() {
@@ -266,6 +267,12 @@ function c_sns_share(media)
 				alert(JSON.stringify(err))
 			},
 		});
+*/
+        Kakao.Story.share({
+          url: '<?=$long_url_ks	?>',
+          text: '우리 아기 첫 기부 증서\r\n\r\nhttp://www.babience-giveandtake.com/?media=baby_ks'
+        });
+
 
 	}
 }
