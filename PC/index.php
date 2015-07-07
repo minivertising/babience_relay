@@ -354,7 +354,7 @@ $(document).ready(function() {
 			return false;
 	} );
 	$('#mommy_gage').css('width','<?=$per_cnt*100?>%');
-	$('.runner').css('left','<?=$per_cnt*1000-30?>px');
+	$('.runner').css('left','<?=$per_cnt*1000-40?>px');
 	$('.mull').css('bottom','<?=$per_bottle?>px');
 
 });
@@ -433,7 +433,7 @@ $(document).ready(function() {
 			return false;
 	} );
 	$('#mommy_gage').css('width','<?=$per_cnt*100?>%');
-	$('.runner').css('left','<?=$per_cnt*1000-30?>px');
+	$('.runner').css('left','<?=$per_cnt*1000-40?>px');
 	$('.mull').css('bottom','<?=$per_bottle?>px');
 
 });
