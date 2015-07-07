@@ -238,7 +238,7 @@ function c_sns_share(media)
 						url : '/v1/api/story/post/link',
 						data : {
 						link_info : res,
-							content:"우리 아기 첫 기부 증서\r\n\r\nhttp://www.babience-giveandtake.com"
+							content:"우리 아기 첫 기부 증서\r\n\r\nhttp://www.babience-giveandtake.com/?media=baby_ks"
 						}
 					});
 				}).then(function(res) {
