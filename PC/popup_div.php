@@ -276,17 +276,17 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="http://vazzanga.blog.me/220406355379" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://vazzanga.blog.me/220406355379" id="b_name_url1" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+            <a href="#" onclick="show_story('1','1');"><img src="images/popup/tab_menu_1_on.png" id="b1_tab1"/></a>
+            <a href="#" onclick="show_story('1','2');"><img src="images/popup/tab_menu_2_off.png" id="b1_tab2" /></a>
+            <a href="#" onclick="show_story('1','3');"><img src="images/popup/tab_menu_3_off.png" id="b1_tab3" /></a>
+            <a href="#" onclick="show_story('1','4');"><img src="images/popup/tab_menu_4_off.png" id="b1_tab4" /></a>
           </div>
         </div>
-        <div class="txt_posting">
-          <a href="http://vazzanga.blog.me/220406355379" target="_blank"><img src="images/popup/bloger_img_1.png" alt=""/></a>
+        <div class="txt_posting" id="post_area1">
+          <a href="http://vazzanga.blog.me/220406355379" target="_blank"><img src="images/popup/bloger_img_1_1.png" alt=""/></a>
         </div>
         <div class="btn_block">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[1]['idx']?>','detail');"><span><?=number_format($d_info[1]['b_recommend'])?>명의 맘</span></a></div>
@@ -355,17 +355,17 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="http://blog.naver.com/goeun061133/220406179689" target="_blank"><img src="images/popup/bloger_name_2.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://blog.naver.com/goeun061133/220406179689" id="b_name_url2" target="_blank"><img src="images/popup/bloger_name_2.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+            <a href="#" onclick="show_story('2','1');"><img src="images/popup/tab_menu_1_on.png" id="b2_tab1" /></a>
+            <a href="#" onclick="show_story('2','2');"><img src="images/popup/tab_menu_2_off.png" id="b2_tab2" /></a>
+            <a href="#" onclick="show_story('2','3');"><img src="images/popup/tab_menu_3_off.png" id="b2_tab3" /></a>
+            <a href="#" onclick="show_story('2','4');"><img src="images/popup/tab_menu_4_off.png" id="b2_tab4" /></a>
           </div>
         </div>
-        <div class="txt_posting">
-          <a href="http://blog.naver.com/goeun061133/220406179689" target="_blank"><img src="images/popup/bloger_img_2.png" alt=""/></a>
+        <div class="txt_posting" id="post_area2">
+          <a href="http://blog.naver.com/goeun061133/220406179689" target="_blank"><img src="images/popup/bloger_img_2_1.png" alt=""/></a>
         </div>
         <div class="btn_block">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[2]['idx']?>','detail');"><span><?=number_format($d_info[2]['b_recommend'])?>명의 맘</span></a></div>
@@ -434,17 +434,17 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="http://blog.naver.com/luckyj407/220406414442" target="_blank"><img src="images/popup/bloger_name_3.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://blog.naver.com/luckyj407/220406414442" id="b_name_url3" target="_blank"><img src="images/popup/bloger_name_3.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+            <a href="#" onclick="show_story('3','1');"><img src="images/popup/tab_menu_1_on.png" id="b3_tab1" /></a>
+            <a href="#" onclick="show_story('3','2');"><img src="images/popup/tab_menu_2_off.png" id="b3_tab2" /></a>
+            <a href="#" onclick="show_story('3','3');"><img src="images/popup/tab_menu_3_off.png" id="b3_tab3" /></a>
+            <a href="#" onclick="show_story('3','4');"><img src="images/popup/tab_menu_4_off.png" id="b3_tab4" /></a>
           </div>
         </div>
-        <div class="txt_posting">
-          <a href="http://blog.naver.com/luckyj407/220406414442" target="_blank"><img src="images/popup/bloger_img_3.png" alt=""/></a>
+        <div class="txt_posting" id="post_area3">
+          <a href="http://blog.naver.com/luckyj407/220406414442" target="_blank"><img src="images/popup/bloger_img_3_1.png" alt=""/></a>
         </div>
         <div class="btn_block">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[3]['idx']?>','detail');"><span><?=number_format($d_info[3]['b_recommend'])?>명의 맘</span></a></div>
@@ -513,17 +513,17 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="http://jinjuseo.blog.me/220406575011" target="_blank"><img src="images/popup/bloger_name_4.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://jinjuseo.blog.me/220406575011" id="b_name_url4" target="_blank"><img src="images/popup/bloger_name_4.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+            <a href="#" onclick="show_story('4','1');"><img src="images/popup/tab_menu_1_on.png" id="b4_tab1" /></a>
+            <a href="#" onclick="show_story('4','2');"><img src="images/popup/tab_menu_2_off.png" id="b4_tab2" /></a>
+            <a href="#" onclick="show_story('4','3');"><img src="images/popup/tab_menu_3_off.png" id="b4_tab3" /></a>
+            <a href="#" onclick="show_story('4','4');"><img src="images/popup/tab_menu_4_off.png" id="b4_tab4" /></a>
           </div>
         </div>
-        <div class="txt_posting">
-          <a href="http://jinjuseo.blog.me/220406575011" target="_blank"><img src="images/popup/bloger_img_4.png" alt=""/></a>
+        <div class="txt_posting" id="post_area4">
+          <a href="http://jinjuseo.blog.me/220406575011" target="_blank"><img src="images/popup/bloger_img_4_1.png" alt=""/></a>
         </div>
         <div class="btn_block">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[4]['idx']?>','detail');"><span><?=number_format($d_info[4]['b_recommend'])?>명의 맘</span></a></div>
@@ -592,17 +592,17 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="http://lovewjs012.blog.me/220406442563" target="_blank"><img src="images/popup/bloger_name_5.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://lovewjs012.blog.me/220406442563" id="b_name_url5" target="_blank"><img src="images/popup/bloger_name_5.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+            <a href="#" onclick="show_story('5','1');"><img src="images/popup/tab_menu_1_on.png" id="b5_tab1" /></a>
+            <a href="#" onclick="show_story('5','2');"><img src="images/popup/tab_menu_2_off.png" id="b5_tab2" /></a>
+            <a href="#" onclick="show_story('5','3');"><img src="images/popup/tab_menu_3_off.png" id="b5_tab3" /></a>
+            <a href="#" onclick="show_story('5','4');"><img src="images/popup/tab_menu_4_off.png" id="b5_tab4" /></a>
           </div>
         </div>
-        <div class="txt_posting">
-          <a href="http://lovewjs012.blog.me/220406442563" target="_blank"><img src="images/popup/bloger_img_5.png" alt=""/></a>
+        <div class="txt_posting" id="post_area5">
+          <a href="http://lovewjs012.blog.me/220406442563" target="_blank"><img src="images/popup/bloger_img_5_1.png" alt=""/></a>
         </div>
         <div class="btn_block">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[5]['idx']?>','detail');"><span><?=number_format($d_info[5]['b_recommend'])?>명의 맘</span></a></div>
@@ -671,17 +671,17 @@
       <div class="inner">
         <div class="post_top clearfix">
           <div class="title">
-            <a href="http://clever_fox.blog.me/220406173165" target="_blank"><img src="images/popup/bloger_name_6.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
+            <a href="http://clever_fox.blog.me/220406173165" id="b_name_url6" target="_blank"><img src="images/popup/bloger_name_6.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#"><img src="images/popup/tab_menu_1_on.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_2_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_3_off.png" /></a>
-            <a href="#" onclick="alert('곧 오픈됩니다!');"><img src="images/popup/tab_menu_4_off.png" /></a>
+            <a href="#" onclick="show_story('6','1');"><img src="images/popup/tab_menu_1_on.png" id="b6_tab1" /></a>
+            <a href="#" onclick="show_story('6','2');"><img src="images/popup/tab_menu_2_off.png" id="b6_tab2" /></a>
+            <a href="#" onclick="show_story('6','3');"><img src="images/popup/tab_menu_3_off.png" id="b6_tab3" /></a>
+            <a href="#" onclick="show_story('6','4');"><img src="images/popup/tab_menu_4_off.png" id="b6_tab4" /></a>
           </div>
         </div>
-        <div class="txt_posting">
-          <a href="http://clever_fox.blog.me/220406173165" target="_blank"><img src="images/popup/bloger_img_6.png" alt=""/></a>
+        <div class="txt_posting" id="post_area6">
+          <a href="http://clever_fox.blog.me/220406173165" target="_blank"><img src="images/popup/bloger_img_6_1.png" alt=""/></a>
         </div>
         <div class="btn_block">
           <div class="bt"><a href="#" onclick="go_recom('<?=$d_info[6]['idx']?>','detail');"><span><?=number_format($d_info[6]['b_recommend'])?>명의 맘</span></a></div>

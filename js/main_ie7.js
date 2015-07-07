@@ -498,3 +498,96 @@ function close_pop(param)
 	location.reload();
 }
 
+/*
+** param1 : 파워블로거 순번 (1~6)
+** param2 : 주차 (1~4)
+*/
+var b_sel_num	= "1";
+var b_url = "";
+function show_story(param1, param2)
+{
+	if (param1 == "1")
+	{
+		if (param2 == "1")
+		{
+			b_url = "http://vazzanga.blog.me/220406355379";
+		}else if (param2 == "2"){
+			b_url = "http://vazzanga.blog.me/220406355379";
+		}else if (param2 == "3"){
+			b_url = "http://vazzanga.blog.me/220406355379";
+		}else if (param2 == "4"){
+			b_url = "http://vazzanga.blog.me/220406355379";
+		}
+	}else if (param1 == "2"){
+		if (param2 == "1")
+		{
+			b_url = "http://blog.naver.com/goeun061133/220406179689";
+		}else if (param2 == "2"){
+			b_url = "http://blog.naver.com/goeun061133/220406179689";
+		}else if (param2 == "3"){
+			b_url = "http://blog.naver.com/goeun061133/220406179689";
+		}else if (param2 == "4"){
+			b_url = "http://blog.naver.com/goeun061133/220406179689";
+		}
+	}else if (param1 == "3"){
+		if (param2 == "1")
+		{
+			b_url = "http://blog.naver.com/luckyj407/220406414442";
+		}else if (param2 == "2"){
+			b_url = "http://blog.naver.com/luckyj407/220406414442";
+		}else if (param2 == "3"){
+			b_url = "http://blog.naver.com/luckyj407/220406414442";
+		}else if (param2 == "4"){
+			b_url = "http://blog.naver.com/luckyj407/220406414442";
+		}
+	}else if (param1 == "4"){
+		if (param2 == "1")
+		{
+			b_url = "http://jinjuseo.blog.me/220406575011";
+		}else if (param2 == "2"){
+			b_url = "http://jinjuseo.blog.me/220406575011";
+		}else if (param2 == "3"){
+			b_url = "http://jinjuseo.blog.me/220406575011";
+		}else if (param2 == "4"){
+			b_url = "http://jinjuseo.blog.me/220406575011";
+		}
+	}else if (param1 == "5"){
+		if (param2 == "1")
+		{
+			b_url = "http://lovewjs012.blog.me/220406442563";
+		}else if (param2 == "2"){
+			b_url = "http://lovewjs012.blog.me/220406442563";
+		}else if (param2 == "3"){
+			b_url = "http://lovewjs012.blog.me/220406442563";
+		}else if (param2 == "4"){
+			b_url = "http://lovewjs012.blog.me/220406442563";
+		}
+	}else if (param1 == "6"){
+		if (param2 == "1")
+		{
+			b_url = "http://clever_fox.blog.me/220406173165";
+		}else if (param2 == "2"){
+			b_url = "http://clever_fox.blog.me/220406173165";
+		}else if (param2 == "3"){
+			b_url = "http://clever_fox.blog.me/220406173165";
+		}else if (param2 == "4"){
+			b_url = "http://clever_fox.blog.me/220406173165";
+		}
+	}
+
+	if (param2 == "2" || param2 == "3" || param2 == "4")
+	{
+		alert("곧 오픈됩니다!");
+		return false;
+	}
+	$("#post_area"+param1).fadeOut("fast", function(){
+		var post_html = "<a href='"+b_url+"' target='_blank'><img src='images/popup/bloger_img_"+param1+"_"+param2+".png' alt=''/></a>";
+		$("#post_area"+param1).html(post_html);
+		$("#b"+param1+"_tab"+b_sel_num).attr("src","images/popup/tab_menu_"+b_sel_num+"_off.png");
+		$("#post_area"+param1).fadeIn("fast", function(){
+			$("#b"+param1+"_tab"+param2).attr("src","images/popup/tab_menu_"+param2+"_on.png");
+			$("#b_name_url"+param1).attr("href",b_url);
+			b_sel_num = param2;
+		});
+	});
+}
