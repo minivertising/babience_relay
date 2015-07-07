@@ -279,10 +279,10 @@
             <a href="http://vazzanga.blog.me/220406355379" id="b_name_url1" target="_blank"><img src="images/popup/bloger_name_1.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#" onclick="show_story('1','1');"><img src="images/popup/tab_menu_1_on.png" id="b1_tab1"/></a>
-            <a href="#" onclick="show_story('1','2');"><img src="images/popup/tab_menu_2_off.png" id="b1_tab2" /></a>
-            <a href="#" onclick="show_story('1','3');"><img src="images/popup/tab_menu_3_off.png" id="b1_tab3" /></a>
-            <a href="#" onclick="show_story('1','4');"><img src="images/popup/tab_menu_4_off.png" id="b1_tab4" /></a>
+            <a href="#" onclick="show_story('1','1');return false;"><img src="images/popup/tab_menu_1_on.png" id="b1_tab1"/></a>
+            <a href="#" onclick="show_story('1','2');return false;"><img src="images/popup/tab_menu_2_off.png" id="b1_tab2" /></a>
+            <a href="#" onclick="show_story('1','3');return false;"><img src="images/popup/tab_menu_3_off.png" id="b1_tab3" /></a>
+            <a href="#" onclick="show_story('1','4');return false;"><img src="images/popup/tab_menu_4_off.png" id="b1_tab4" /></a>
           </div>
         </div>
         <div class="txt_posting" id="post_area1">
@@ -358,10 +358,10 @@
             <a href="http://blog.naver.com/goeun061133/220406179689" id="b_name_url2" target="_blank"><img src="images/popup/bloger_name_2.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#" onclick="show_story('2','1');"><img src="images/popup/tab_menu_1_on.png" id="b2_tab1" /></a>
-            <a href="#" onclick="show_story('2','2');"><img src="images/popup/tab_menu_2_off.png" id="b2_tab2" /></a>
-            <a href="#" onclick="show_story('2','3');"><img src="images/popup/tab_menu_3_off.png" id="b2_tab3" /></a>
-            <a href="#" onclick="show_story('2','4');"><img src="images/popup/tab_menu_4_off.png" id="b2_tab4" /></a>
+            <a href="#" onclick="show_story('2','1');return false;"><img src="images/popup/tab_menu_1_on.png" id="b2_tab1" /></a>
+            <a href="#" onclick="show_story('2','2');return false;"><img src="images/popup/tab_menu_2_off.png" id="b2_tab2" /></a>
+            <a href="#" onclick="show_story('2','3');return false;"><img src="images/popup/tab_menu_3_off.png" id="b2_tab3" /></a>
+            <a href="#" onclick="show_story('2','4');return false;"><img src="images/popup/tab_menu_4_off.png" id="b2_tab4" /></a>
           </div>
         </div>
         <div class="txt_posting" id="post_area2">
@@ -437,10 +437,10 @@
             <a href="http://blog.naver.com/luckyj407/220406414442" id="b_name_url3" target="_blank"><img src="images/popup/bloger_name_3.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#" onclick="show_story('3','1');"><img src="images/popup/tab_menu_1_on.png" id="b3_tab1" /></a>
-            <a href="#" onclick="show_story('3','2');"><img src="images/popup/tab_menu_2_off.png" id="b3_tab2" /></a>
-            <a href="#" onclick="show_story('3','3');"><img src="images/popup/tab_menu_3_off.png" id="b3_tab3" /></a>
-            <a href="#" onclick="show_story('3','4');"><img src="images/popup/tab_menu_4_off.png" id="b3_tab4" /></a>
+            <a href="#" onclick="show_story('3','1');return false;"><img src="images/popup/tab_menu_1_on.png" id="b3_tab1" /></a>
+            <a href="#" onclick="show_story('3','2');return false;"><img src="images/popup/tab_menu_2_off.png" id="b3_tab2" /></a>
+            <a href="#" onclick="show_story('3','3');return false;"><img src="images/popup/tab_menu_3_off.png" id="b3_tab3" /></a>
+            <a href="#" onclick="show_story('3','4');return false;"><img src="images/popup/tab_menu_4_off.png" id="b3_tab4" /></a>
           </div>
         </div>
         <div class="txt_posting" id="post_area3">
@@ -516,10 +516,10 @@
             <a href="http://jinjuseo.blog.me/220406575011" id="b_name_url4" target="_blank"><img src="images/popup/bloger_name_4.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#" onclick="show_story('4','1');"><img src="images/popup/tab_menu_1_on.png" id="b4_tab1" /></a>
-            <a href="#" onclick="show_story('4','2');"><img src="images/popup/tab_menu_2_off.png" id="b4_tab2" /></a>
-            <a href="#" onclick="show_story('4','3');"><img src="images/popup/tab_menu_3_off.png" id="b4_tab3" /></a>
-            <a href="#" onclick="show_story('4','4');"><img src="images/popup/tab_menu_4_off.png" id="b4_tab4" /></a>
+            <a href="#" onclick="show_story('4','1');return false;"><img src="images/popup/tab_menu_1_on.png" id="b4_tab1" /></a>
+            <a href="#" onclick="show_story('4','2');return false;"><img src="images/popup/tab_menu_2_off.png" id="b4_tab2" /></a>
+            <a href="#" onclick="show_story('4','3');return false;"><img src="images/popup/tab_menu_3_off.png" id="b4_tab3" /></a>
+            <a href="#" onclick="show_story('4','4');return false;"><img src="images/popup/tab_menu_4_off.png" id="b4_tab4" /></a>
           </div>
         </div>
         <div class="txt_posting" id="post_area4">
@@ -595,10 +595,10 @@
             <a href="http://lovewjs012.blog.me/220406442563" id="b_name_url5" target="_blank"><img src="images/popup/bloger_name_5.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#" onclick="show_story('5','1');"><img src="images/popup/tab_menu_1_on.png" id="b5_tab1" /></a>
-            <a href="#" onclick="show_story('5','2');"><img src="images/popup/tab_menu_2_off.png" id="b5_tab2" /></a>
-            <a href="#" onclick="show_story('5','3');"><img src="images/popup/tab_menu_3_off.png" id="b5_tab3" /></a>
-            <a href="#" onclick="show_story('5','4');"><img src="images/popup/tab_menu_4_off.png" id="b5_tab4" /></a>
+            <a href="#" onclick="show_story('5','1');return false;"><img src="images/popup/tab_menu_1_on.png" id="b5_tab1" /></a>
+            <a href="#" onclick="show_story('5','2');return false;"><img src="images/popup/tab_menu_2_off.png" id="b5_tab2" /></a>
+            <a href="#" onclick="show_story('5','3');return false;"><img src="images/popup/tab_menu_3_off.png" id="b5_tab3" /></a>
+            <a href="#" onclick="show_story('5','4');return false;"><img src="images/popup/tab_menu_4_off.png" id="b5_tab4" /></a>
           </div>
         </div>
         <div class="txt_posting" id="post_area5">
@@ -674,10 +674,10 @@
             <a href="http://clever_fox.blog.me/220406173165" id="b_name_url6" target="_blank"><img src="images/popup/bloger_name_6.png" alt=""/></a> <img src="images/popup/txt_update.png" alt=""/>
           </div>
           <div class="tab_menu clearfix">
-            <a href="#" onclick="show_story('6','1');"><img src="images/popup/tab_menu_1_on.png" id="b6_tab1" /></a>
-            <a href="#" onclick="show_story('6','2');"><img src="images/popup/tab_menu_2_off.png" id="b6_tab2" /></a>
-            <a href="#" onclick="show_story('6','3');"><img src="images/popup/tab_menu_3_off.png" id="b6_tab3" /></a>
-            <a href="#" onclick="show_story('6','4');"><img src="images/popup/tab_menu_4_off.png" id="b6_tab4" /></a>
+            <a href="#" onclick="show_story('6','1');return false;"><img src="images/popup/tab_menu_1_on.png" id="b6_tab1" /></a>
+            <a href="#" onclick="show_story('6','2');return false;"><img src="images/popup/tab_menu_2_off.png" id="b6_tab2" /></a>
+            <a href="#" onclick="show_story('6','3');return false;"><img src="images/popup/tab_menu_3_off.png" id="b6_tab3" /></a>
+            <a href="#" onclick="show_story('6','4');return false;"><img src="images/popup/tab_menu_4_off.png" id="b6_tab4" /></a>
           </div>
         </div>
         <div class="txt_posting" id="post_area6">
