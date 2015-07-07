@@ -227,7 +227,7 @@ function m_show_story(param1, param2)
 	}
 
 
-	if (param2 == "3" || param2 == "4")
+	if (param2 == "2" || param2 == "3" || param2 == "4")
 	{
 		alert("곧 오픈됩니다!");
 		return false;
