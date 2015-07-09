@@ -36,6 +36,7 @@
 <body>
     <div id="mobile_menu" class="mobile_menu">
       <ul>
+      	<li><a href="http://www.babience.co.kr/m/index.jsp" target="_blank"><img src="images/btn_bb_home.png"  alt=""/></a></li>
         <li><a href="#" onclick="move_area('story')"><img src="images/btn_story.png"  alt=""/></a></li>
         <li><a href="#" onclick="move_area('give')"><img src="images/btn_give.png"  alt=""/></a></li>
         <li><a href="#" onclick="move_area('message')"><img src="images/btn_suu.png"  alt=""/></a></li>
