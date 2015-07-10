@@ -271,9 +271,9 @@ body{
 .sec_give .img_give_graphic .percent{
 	position: absolute;
 	width:95%;
-	right:5%;
+	left:5%;
 	bottom:49%;
-	text-align:right;
+	text-align:left;
 	z-index:102;
 	color:#000;
 	font-family:'나눔고딕',nanumgothic,'돋움',Dotum,Helvetica,'Apple SD Gothic Neo',Sans-serif;
